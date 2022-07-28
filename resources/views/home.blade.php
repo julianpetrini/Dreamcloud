@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Dreamcloud</title>
     <script src="{{ asset('js/app.js') }}" defer></script>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">    
-
-
 </head>
-<body>
-    <div class="brown">
-        <h1>HELLO I AM WORKING!!!</h1>
+<body class="bg_pattern">
+    <div class="mobile_title">
+        <h1 class="title_home_mobile">dreamcloud</h1>
+        <h2 class="subtitle_home_mobile">a good vibe's collection</h2>
     </div>
-    
+    <button type="button">THE WHY</button>
 </body>
 </html>

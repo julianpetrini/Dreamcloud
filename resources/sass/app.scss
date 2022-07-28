@@ -1,13 +1,50 @@
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap");
 
 // Variables
-@import 'variables';
+@import "variables";
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
-.brown {
-    background-color: brown !important;
+//BACKGROUND
+
+.bg_pattern {
+    background-image:
+    linear-gradient(to bottom, rgba(120, 127, 163, 0.52), rgba(4, 128, 198, 1)),
+    url(/img/bg.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
- 
+
+//title text
+//div container
+.mobile_title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3.6rem;
+}
+.title_home_mobile {
+    font-family: $font-family-FIRST;
+    text-transform: uppercase;
+    font-weight: $font-title-weight;
+    font-size: 2.2rem;
+    color: $font-color-title;
+    letter-spacing: $font-title-spacing;
+    line-height: 0.6;
+}
+.subtitle_home_mobile{
+    @extend .title_home_mobile;
+    font-weight: $font-title-sub-weight;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    font-size: 1rem;
+}
+
+
+
+
+
