@@ -13,6 +13,9 @@
         <h1 class="title_home_mobile">dreamcloud</h1>
         <h2 class="subtitle_home_mobile">a good vibe's collection</h2>
     </div>
-    <button type="button">THE WHY</button>
+    <button type="button"class="botono">
+        <img class="button_lamp"src="/img/lamp.svg">
+        <p class="text-button">THE <br> WHY</p>
+    </button>
 </body>
 </html>

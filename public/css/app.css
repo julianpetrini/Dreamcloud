@@ -10921,12 +10921,12 @@ textarea.form-control-lg {
 
 .title_home_mobile, .subtitle_home_mobile {
   font-family: "Baloo Da 2", cursive;
-  text-transform: uppercase;
   font-weight: 800;
-  font-size: 2.2rem;
   color: #F9FDFF;
   letter-spacing: 3px;
   line-height: 0.6;
+  text-transform: uppercase;
+  font-size: 2.2rem;
 }
 
 .subtitle_home_mobile {
@@ -10934,4 +10934,30 @@ textarea.form-control-lg {
   text-transform: inherit;
   letter-spacing: inherit;
   font-size: 1rem;
+}
+
+.botono {
+  background-color: #DD7973;
+  color: #F9FDFF;
+  border: 4px solid #1EC0EF;
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
+  width: 96px;
+  height: 96px;
+  text-transform: uppercase;
+  border-radius: 50%;
+  margin: 2rem;
+}
+
+.text-button {
+  position: absolute;
+  top: 10.3rem;
+  left: 3.4rem;
+  font-size: 1.5rem;
+  line-height: 0.9;
+}
+
+.button_lamp {
+  height: 80%;
+  opacity: 0.19;
 }
