@@ -21,12 +21,14 @@
             <img class="button_lamp"src="/img/lamp.svg">
             <p class="text-button-why">THE <br> WHY</p>
         </button>
+    </div>
+    <div class="buttons-up-box">
         <button type="button"class="buttonGethome">
             <img class="button_lamp"src="/img/lamp.svg">
             <p class="text-button-get">GET <br> INSPIRED</p>
         </button>
     </div>
-    
+
 </body>
 
 </html>
