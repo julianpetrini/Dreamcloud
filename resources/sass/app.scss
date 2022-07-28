@@ -38,8 +38,6 @@
     line-height: 0.6;
     text-transform: uppercase;
     font-size: 2.2rem;
-
-
 }
 .subtitle_home_mobile {
     @extend .title_home_mobile;
@@ -49,27 +47,62 @@
     font-size: 1rem;
 }
 //BUTTON "THE WHY"
-.botono {
+.buttonWhyhome {
     background-color: $the-why-color;
     color: $font-color-title;
     border: 4px solid $the-why-stroke;
     font-family: $font-family-FIRST;
     font-weight: $font-title-weight;
-    width: 96px;
+    width: auto;
     height: 96px;
     text-transform: uppercase;
     border-radius: 50%;
     margin: 2rem;
-
+    //POSITION
+    position: fixed;
+    left: 1rem;
 }
-.text-button {
+.buttonGethome {
+    @extend .buttonWhyhome;
+    background-color: $get-inspired-color;
+    border: 4px solid $get-inspired-stroke;
+    color: $font-color-title;
+    width: 120px;
+    height: 120px;
+    //POSITION
+    position: fixed;
+    top: 9rem;
+    // right: 1rem;
+    left: 12rem;
+}
+.text-button-why {
     position: absolute;
-    top: 10.3rem;
-    left: 3.4rem;
+    top: 1.4rem;
+    left: 1.18rem;
     font-size: 1.5rem;
     line-height: 0.9;
 }
-.button_lamp{
+.text-button-get {
+    @extend .text-button-why;
+    top: 2.1rem;
+    left: 0.55rem;
+    font-size: 1.4rem;
+}
+.button_lamp {
     height: 80%;
     opacity: 0.19;
+}
+
+
+
+
+
+//CONTAINER OF BUTTONS IN MAIN PAGE
+
+.buttons-up-box{
+    // display: flex;
+    // flex-direction: row;
+     padding: 1rem;
+    // justify-content: space-between;
+    // gap: 29px;
 }
