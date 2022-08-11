@@ -20,7 +20,7 @@
 
         <div class="bubble-wrapper">
             <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__why ">
-                the why
+                the <br> why
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
             <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__inspired ">
