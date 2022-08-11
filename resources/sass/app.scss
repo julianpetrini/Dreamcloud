@@ -59,7 +59,7 @@
     position: absolute;
 }
 .bubble__link {
-    color: #fff;
+    color: $font-color-title;
     font-size: 18px;
     text-decoration: none;
     border-radius: 50%;
@@ -77,6 +77,10 @@
     text-align: center;
     line-height: 0.9;
 }
+// .bubble__link {
+//     color: $font-color-title;
+//     font-size: 20px;
+// }
 .bubble__why {
     border: 3px solid $the-why-stroke;
     background-color: $the-why-color;
@@ -135,6 +139,65 @@
     bottom: 20%;
     right: 14%;
 }
+
+///////////////////////////////////////////////////
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.nav_bubble__why {
+    border: 3px solid $the-why-stroke;
+    background-color: $the-why-color;
+
+    /* bubble size */
+    height: $nav_bubble_size;
+    width: $nav_bubble_size;
+
+}
+.nav_bubble__inspired {
+    @extend .nav_bubble__why;
+    border: 3px solid $get-inspired-stroke;
+    background-color: $get-inspired-color;
+
+}
+.nav_bubble__wish {
+    @extend .nav_bubble__why;
+    border: 3px solid $share-your-wish-stroke;
+    background-color: $share-your-wish-color;
+
+}
+.nav_bubble__dreams {
+    @extend .nav_bubble__why;
+    border: 3px solid $people-dream-stroke;
+    background-color: $people-dream-color;
+}
+.nav_button_lamp{
+    height: 65%;
+    opacity: 1;
+    // position: absolute;
+}
+.nav_bubble{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav_bubble_text{
+    color: $font-color-title;
+    font-size: 8px;
+    margin-top: 7px;
+
+    text-decoration: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+
+    font-family: $font-family-FIRST;
+    font-weight: $font-title-weight;
+}
+
+
+///////////////////////////////////////////////////////
 //GENIO ANIMACION
 .genius {
     position: fixed;

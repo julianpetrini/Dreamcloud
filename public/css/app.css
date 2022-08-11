@@ -10944,7 +10944,7 @@ textarea.form-control-lg {
 }
 
 .bubble__link {
-  color: #fff;
+  color: #F9FDFF;
   font-size: 18px;
   text-decoration: none;
   border-radius: 50%;
@@ -11010,6 +11010,58 @@ textarea.form-control-lg {
   position: absolute;
   bottom: 20%;
   right: 14%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.nav_bubble__why, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
+  border: 3px solid #1EC0EF;
+  background-color: #DD7973;
+  /* bubble size */
+  height: 80px;
+  width: 80px;
+}
+
+.nav_bubble__inspired {
+  border: 3px solid #006FC0;
+  background-color: #55C2DA;
+}
+
+.nav_bubble__wish {
+  border: 3px solid #38C5FF;
+  background-color: #FFBD03;
+}
+
+.nav_bubble__dreams {
+  border: 3px solid #FFFFFF;
+  background-color: #5ADBB5;
+}
+
+.nav_button_lamp {
+  height: 65%;
+  opacity: 1;
+}
+
+.nav_bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_bubble_text {
+  color: #F9FDFF;
+  font-size: 8px;
+  margin-top: 7px;
+  text-decoration: none;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
 }
 
 .genius {
