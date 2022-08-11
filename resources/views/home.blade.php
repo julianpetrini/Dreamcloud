@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends ('layout/master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dreamcloud</title>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
 
-<body class="bg_pattern">
 
     <div class="header">
         <h1 class="header__title">dreamcloud</h1>
@@ -499,6 +489,4 @@
 
     </div>
 
-</body>
 
-</html>
