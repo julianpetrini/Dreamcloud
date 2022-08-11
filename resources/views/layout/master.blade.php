@@ -13,7 +13,7 @@
 <body class="bg_pattern">
     @yield('home')
     @yield('the_why')
-
+   
 
 </body>
 

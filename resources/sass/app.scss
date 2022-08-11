@@ -261,3 +261,32 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .animator-hidden {
     display: none;
 }
+
+
+/////// FOOTER
+
+.footer {
+    
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // margin-top: 3.6rem;
+}
+.footer__title {
+    font-family: $font-family-FIRST;
+    font-weight: $font-title-weight;
+    color: $font-color-title;
+    letter-spacing: $font-title-spacing;
+    line-height: 0.6;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+.footer__description {
+    @extend .footer__title;
+    font-weight: $font-title-sub-weight;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    font-size: 1rem;
+}

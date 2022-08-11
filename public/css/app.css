@@ -11173,3 +11173,26 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .animator-hidden {
   display: none;
 }
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__title, .footer__description {
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
+  color: #F9FDFF;
+  letter-spacing: 3px;
+  line-height: 0.6;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+.footer__description {
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font-size: 1rem;
+}
