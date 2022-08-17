@@ -173,8 +173,18 @@
     border: 3px solid $people-dream-stroke;
     background-color: $people-dream-color;
 }
+.nav_bubble__home {
+    @extend .nav_bubble__why;
+    border: 3px solid $get-inspired-stroke;
+    background-color: $home-button-color;
+}
 .nav_button_lamp{
     height: 65%;
+    opacity: 1;
+    // position: absolute;
+}
+.nav_button_genie{
+    height: 80%;
     opacity: 1;
     // position: absolute;
 }

@@ -11019,7 +11019,7 @@ textarea.form-control-lg {
   justify-content: center;
 }
 
-.nav_bubble__why, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
+.nav_bubble__why, .nav_bubble__home, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
   border: 3px solid #1EC0EF;
   background-color: #DD7973;
   /* bubble size */
@@ -11042,8 +11042,18 @@ textarea.form-control-lg {
   background-color: #5ADBB5;
 }
 
+.nav_bubble__home {
+  border: 3px solid #006FC0;
+  background-color: #F9FDFF;
+}
+
 .nav_button_lamp {
   height: 65%;
+  opacity: 1;
+}
+
+.nav_button_genie {
+  height: 80%;
   opacity: 1;
 }
 
