@@ -196,6 +196,10 @@
     font-weight: $font-title-weight;
 }
 
+.bubble__text {
+    text-decoration: none;
+}
+
 
 ///////////////////////////////////////////////////////
 //GENIO ANIMACION
@@ -294,12 +298,41 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 /////////////THE WHY
 
 .the__why__text_box{
-    background-color: #021E5E;
-    opacity: 0.3;
-    height: 68vh;
+    //background-color: #021E5E;
+    display: inline-block;
+    background-color: rgba(26, 53, 97, 0.8); 
+    // height: 68vh;
+    border-radius: 15px;
 }
 
 .the_why__text{
-    opacity: 1;
+    font-size: 3.7vw;
+    padding: 0.5rem;
+    text-align: left;
+    color: $font-color-title;
+    margin: 0;
     
 }
+
+.title{
+    margin:1rem;
+}
+
+.generic__title {
+    font-family: $font-family-FIRST;
+    font-weight: $font-title-weight;
+    color: $font-color-title;
+    letter-spacing: $font-title-spacing;
+    line-height: 0.6;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.generic__subtitle{
+    @extend .generic__title;
+    font-weight: $font-title-sub-weight;
+    letter-spacing: inherit;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+

@@ -11064,6 +11064,10 @@ textarea.form-control-lg {
   font-weight: 800;
 }
 
+.bubble__text {
+  text-decoration: none;
+}
+
 .genius {
   position: fixed;
   width: 90%;
@@ -11199,11 +11203,37 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 
 .the__why__text_box {
-  background-color: #021E5E;
-  opacity: 0.3;
-  height: 68vh;
+  display: inline-block;
+  background-color: rgba(26, 53, 97, 0.8);
+  border-radius: 15px;
 }
 
 .the_why__text {
-  opacity: 1;
+  font-size: 3.7vw;
+  padding: 0.5rem;
+  text-align: left;
+  color: #F9FDFF;
+  margin: 0;
+}
+
+.title {
+  margin: 1rem;
+}
+
+.generic__title, .generic__subtitle {
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
+  color: #F9FDFF;
+  letter-spacing: 3px;
+  line-height: 0.6;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.generic__subtitle {
+  font-weight: 700;
+  letter-spacing: inherit;
+  font-size: 1rem;
+  margin-top: 1rem;
 }
