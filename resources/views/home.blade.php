@@ -9,7 +9,7 @@
     <div class="bubble-wrapper">
 
         <div class="bubble-wrapper">
-            <a href="why" target="_blank" class="bubble__link bubble__why ">
+            <a href="why" class="bubble__link bubble__why ">
                 the <br> why
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
