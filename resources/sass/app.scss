@@ -59,7 +59,7 @@
     position: absolute;
 }
 .bubble__link {
-    color: #fff;
+    color: $font-color-title;
     font-size: 18px;
     text-decoration: none;
     border-radius: 50%;
@@ -77,6 +77,10 @@
     text-align: center;
     line-height: 0.9;
 }
+// .bubble__link {
+//     color: $font-color-title;
+//     font-size: 20px;
+// }
 .bubble__why {
     border: 3px solid $the-why-stroke;
     background-color: $the-why-color;
@@ -135,6 +139,79 @@
     bottom: 20%;
     right: 14%;
 }
+
+///////////////////////////////////////////////////
+.navbar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.nav_bubble__why {
+    border: 3px solid $the-why-stroke;
+    background-color: $the-why-color;
+
+    /* bubble size */
+    height: $nav_bubble_size;
+    width: $nav_bubble_size;
+
+}
+.nav_bubble__inspired {
+    @extend .nav_bubble__why;
+    border: 3px solid $get-inspired-stroke;
+    background-color: $get-inspired-color;
+
+}
+.nav_bubble__wish {
+    @extend .nav_bubble__why;
+    border: 3px solid $share-your-wish-stroke;
+    background-color: $share-your-wish-color;
+
+}
+.nav_bubble__dreams {
+    @extend .nav_bubble__why;
+    border: 3px solid $people-dream-stroke;
+    background-color: $people-dream-color;
+}
+.nav_bubble__home {
+    @extend .nav_bubble__why;
+    border: 3px solid $get-inspired-stroke;
+    background-color: $home-button-color;
+}
+.nav_button_lamp{
+    height: 65%;
+    opacity: 1;
+    // position: absolute;
+}
+.nav_button_genie{
+    height: 80%;
+    opacity: 1;
+    // position: absolute;
+}
+.nav_bubble{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nav_bubble_text{
+    color: $font-color-title;
+    font-size: 8px;
+    margin-top: 7px;
+
+    text-decoration: none;
+    border-radius: 50%;
+    text-transform: uppercase;
+
+    font-family: $font-family-FIRST;
+    font-weight: $font-title-weight;
+}
+
+.bubble__text {
+    text-decoration: none;
+}
+
+
+///////////////////////////////////////////////////////
 //GENIO ANIMACION
 .genius {
     position: fixed;
@@ -197,4 +274,86 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 .animator-hidden {
     display: none;
+}
+
+
+/////// FOOTER
+
+.footer {
+    
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.7rem;
+}
+.footer__title {
+    font-family: $font-family-FIRST;
+    font-weight: $font-title-weight;
+    color: $font-color-title;
+    letter-spacing: $font-title-spacing;
+    line-height: 0.6;
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+.footer__description {
+    @extend .footer__title;
+    font-weight: $font-title-sub-weight;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    font-size: 1rem;
+}
+
+/////////////THE WHY
+
+.the__why__text_box{
+    //background-color: #021E5E;
+    display: inline-block;
+    background-color: rgba(26, 53, 97, 0.8); 
+    // height: 68vh;
+    border-radius: 15px;
+}
+
+.the_why__text{
+    font-size: 3.7vw;
+    padding: 0.5rem;
+    text-align: left;
+    color: $font-color-title;
+    margin: 0;
+    
+}
+
+.title{
+    margin:1rem;
+}
+
+.generic__title {
+    font-family: $font-family-FIRST;
+    font-weight: $font-title-weight;
+    color: $font-color-title;
+    letter-spacing: $font-title-spacing;
+    line-height: 0.6;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.2rem;
+}
+.generic__subtitle{
+    @extend .generic__title;
+    font-weight: $font-title-sub-weight;
+    letter-spacing: inherit;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+.dreams__title{
+    @extend .generic__title;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+}
+
+.filter__buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
 }

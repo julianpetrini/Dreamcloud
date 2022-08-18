@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends ('layout/master')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Dreamcloud</title>
-    <script src="{{ asset('js/app.js') }}" defer></script>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
 
-<body class="bg_pattern">
 
     <div class="header">
         <h1 class="header__title">dreamcloud</h1>
@@ -19,7 +9,7 @@
     <div class="bubble-wrapper">
 
         <div class="bubble-wrapper">
-            <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__why ">
+            <a href="why" class="bubble__link bubble__why ">
                 the <br> why
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
@@ -31,7 +21,7 @@
                 share <br> your <br> wish
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
-            <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__dreams ">
+            <a href="dreams"  class="bubble__link bubble__dreams ">
                 people's dreams
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
@@ -499,6 +489,4 @@
 
     </div>
 
-</body>
 
-</html>

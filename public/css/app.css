@@ -10944,7 +10944,7 @@ textarea.form-control-lg {
 }
 
 .bubble__link {
-  color: #fff;
+  color: #F9FDFF;
   font-size: 18px;
   text-decoration: none;
   border-radius: 50%;
@@ -11010,6 +11010,72 @@ textarea.form-control-lg {
   position: absolute;
   bottom: 20%;
   right: 14%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.nav_bubble__why, .nav_bubble__home, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
+  border: 3px solid #1EC0EF;
+  background-color: #DD7973;
+  /* bubble size */
+  height: 80px;
+  width: 80px;
+}
+
+.nav_bubble__inspired {
+  border: 3px solid #006FC0;
+  background-color: #55C2DA;
+}
+
+.nav_bubble__wish {
+  border: 3px solid #38C5FF;
+  background-color: #FFBD03;
+}
+
+.nav_bubble__dreams {
+  border: 3px solid #FFFFFF;
+  background-color: #5ADBB5;
+}
+
+.nav_bubble__home {
+  border: 3px solid #006FC0;
+  background-color: #F9FDFF;
+}
+
+.nav_button_lamp {
+  height: 65%;
+  opacity: 1;
+}
+
+.nav_button_genie {
+  height: 80%;
+  opacity: 1;
+}
+
+.nav_bubble {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav_bubble_text {
+  color: #F9FDFF;
+  font-size: 8px;
+  margin-top: 7px;
+  text-decoration: none;
+  border-radius: 50%;
+  text-transform: uppercase;
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
+}
+
+.bubble__text {
+  text-decoration: none;
 }
 
 .genius {
@@ -11120,4 +11186,76 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 .animator-hidden {
   display: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.7rem;
+}
+
+.footer__title, .footer__description {
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
+  color: #F9FDFF;
+  letter-spacing: 3px;
+  line-height: 0.6;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+}
+
+.footer__description {
+  font-weight: 700;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  font-size: 1rem;
+}
+
+.the__why__text_box {
+  display: inline-block;
+  background-color: rgba(26, 53, 97, 0.8);
+  border-radius: 15px;
+}
+
+.the_why__text {
+  font-size: 3.7vw;
+  padding: 0.5rem;
+  text-align: left;
+  color: #F9FDFF;
+  margin: 0;
+}
+
+.title {
+  margin: 1rem;
+}
+
+.generic__title, .dreams__title, .generic__subtitle {
+  font-family: "Baloo Da 2", cursive;
+  font-weight: 800;
+  color: #F9FDFF;
+  letter-spacing: 3px;
+  line-height: 0.6;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.generic__subtitle {
+  font-weight: 700;
+  letter-spacing: inherit;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.dreams__title {
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
