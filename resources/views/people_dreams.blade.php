@@ -49,6 +49,9 @@
 <h2 class="generic__subtitle">select to see</h2>
 
 <div class="filter__buttons">
-    
+   <button class="filter__buttons__dreams">dreams</button>
+   <button class="filter__buttons__goals">goals</button>
+   <button class="filter__buttons__wishes">wishes</button>
+   <button class="filter__buttons__ideas">ideas</button>
 
 </div>

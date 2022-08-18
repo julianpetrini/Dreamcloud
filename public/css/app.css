@@ -11258,4 +11258,27 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  margin: 1rem;
+}
+
+.filter__buttons__dreams, .filter__buttons__ideas, .filter__buttons__wishes, .filter__buttons__goals {
+  background-color: #FFBD03;
+  color: #F9FDFF;
+  border: none;
+  border-radius: 13px;
+  margin-right: 7px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.filter__buttons__goals {
+  background-color: rgb(12, 11, 11);
+}
+
+.filter__buttons__wishes {
+  background-color: #407BFF;
+}
+
+.filter__buttons__ideas {
+  background-color: #DD7973;
 }
