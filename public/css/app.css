@@ -10911,7 +10911,7 @@ textarea.form-control-lg {
   font-family: "Baloo Da 2", cursive;
   background: linear-gradient(121deg, rgb(4, 102, 172) 0%, rgb(4, 156, 220) 21%, rgb(4, 212, 251) 44%, rgb(4, 180, 235) 61%, rgb(27, 196, 236) 82%, rgb(4, 172, 236) 97%, rgb(4, 128, 198) 100%);
   background: url(/img/bg.svg) no-repeat fixed center;
-  color: #faf;
+  color: rgb(255, 255, 255);
 }
 
 .header {
@@ -11027,25 +11027,139 @@ textarea.form-control-lg {
   height: 80px;
   width: 80px;
 }
+.nav_bubble__why:hover, .nav_bubble__home:hover, .nav_bubble__dreams:hover, .nav_bubble__wish:hover, .nav_bubble__inspired:hover {
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@-webkit-keyframes test {
+  0% {
+    background-color: #DD7973;
+  }
+  25% {
+    background-color: #FFBD03;
+  }
+  50% {
+    background-color: #006FC0;
+  }
+  100% {
+    background-color: #DD7973;
+  }
+}
+@keyframes test {
+  0% {
+    background-color: #DD7973;
+  }
+  25% {
+    background-color: #FFBD03;
+  }
+  50% {
+    background-color: #006FC0;
+  }
+  100% {
+    background-color: #DD7973;
+  }
+}
 
 .nav_bubble__inspired {
   border: 3px solid #006FC0;
   background-color: #55C2DA;
+}
+.nav_bubble__inspired:hover {
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@keyframes test {
+  0% {
+    background-color: #DD7973;
+  }
+  25% {
+    background-color: #FFBD03;
+  }
+  50% {
+    background-color: #006FC0;
+  }
+  100% {
+    background-color: #55C2DA;
+  }
 }
 
 .nav_bubble__wish {
   border: 3px solid #38C5FF;
   background-color: #FFBD03;
 }
+.nav_bubble__wish:hover {
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@keyframes test {
+  0% {
+    background-color: #DD7973;
+  }
+  25% {
+    background-color: #FFBD03;
+  }
+  50% {
+    background-color: #006FC0;
+  }
+  100% {
+    background-color: #FFBD03;
+  }
+}
 
 .nav_bubble__dreams {
   border: 3px solid #FFFFFF;
   background-color: #5ADBB5;
 }
+.nav_bubble__dreams:hover {
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@keyframes test {
+  0% {
+    background-color: #DD7973;
+  }
+  25% {
+    background-color: #FFBD03;
+  }
+  50% {
+    background-color: #006FC0;
+  }
+  100% {
+    background-color: #5ADBB5;
+  }
+}
 
 .nav_bubble__home {
   border: 3px solid #006FC0;
   background-color: #F9FDFF;
+}
+.nav_bubble__home:hover {
+  -webkit-animation-name: test;
+          animation-name: test;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+}
+@keyframes test {
+  0% {
+    background-color: #DD7973;
+  }
+  25% {
+    background-color: #FFBD03;
+  }
+  50% {
+    background-color: #006FC0;
+  }
+  100% {
+    background-color: #F9FDFF;
+  }
 }
 
 .nav_button_lamp {
@@ -11251,7 +11365,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
 .dreams__title {
   letter-spacing: 1px;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
 }
 
 .filter__buttons {
@@ -11270,6 +11384,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin-right: 7px;
   text-transform: uppercase;
   font-weight: 800;
+}
+.filter__buttons__dreams:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
+  background-color: #fbab7e;
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 .filter__buttons__goals {
@@ -11318,4 +11436,61 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .dreams__box__ideas {
   background-color: #DD7973;
   color: #F9FDFF;
+}
+
+.img__responsive {
+  width: 100%;
+  height: auto;
+}
+
+input[type=text],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #5adbb5;
+  font-size: 1.5rem;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #F9FDFF;
+}
+
+input[type=submit]:hover {
+  background-color: #407BFF;
+}
+
+.share__form {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.share__form__titles {
+  font-weight: 650;
+}
+
+.share__form__textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  resize: none;
 }
