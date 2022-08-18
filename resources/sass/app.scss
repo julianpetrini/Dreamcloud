@@ -76,6 +76,10 @@
     align-items: center;
     text-align: center;
     line-height: 0.9;
+
+    //////animation
+
+  
 }
 // .bubble__link {
 //     color: $font-color-title;
@@ -154,26 +158,136 @@
     /* bubble size */
     height: $nav_bubble_size;
     width: $nav_bubble_size;
+    // &:hover {
+    //     background-color: #fbab7e;
+    //     background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+    // }
+
+    &:hover {
+        animation-name: test;
+        animation-duration: 4s;
+
+        @keyframes test {
+            // from {background-color: red;}
+            0% {
+                background-color: $the-why-color;
+            }
+            25% {
+                background-color: $share-your-wish-color;
+            }
+            50% {
+                background-color: $get-inspired-stroke;
+            }
+            100% {
+                background-color: $the-why-color;
+            }
+        }
+    }
 }
+
 .nav_bubble__inspired {
     @extend .nav_bubble__why;
     border: 3px solid $get-inspired-stroke;
     background-color: $get-inspired-color;
+
+    &:hover {
+        animation-name: test;
+        animation-duration: 4s;
+
+        @keyframes test {
+            // from {background-color: red;}
+            0% {
+                background-color: $the-why-color;
+            }
+            25% {
+                background-color: $share-your-wish-color;
+            }
+            50% {
+                background-color: $get-inspired-stroke;
+            }
+            100% {
+                background-color: $get-inspired-color;
+            }
+        }
+    }
 }
 .nav_bubble__wish {
     @extend .nav_bubble__why;
     border: 3px solid $share-your-wish-stroke;
     background-color: $share-your-wish-color;
+
+    &:hover {
+        animation-name: test;
+        animation-duration: 4s;
+
+        @keyframes test {
+            // from {background-color: red;}
+            0% {
+                background-color: $the-why-color;
+            }
+            25% {
+                background-color: $share-your-wish-color;
+            }
+            50% {
+                background-color: $get-inspired-stroke;
+            }
+            100% {
+                background-color: $share-your-wish-color;
+            }
+        }
+    }
 }
 .nav_bubble__dreams {
     @extend .nav_bubble__why;
     border: 3px solid $people-dream-stroke;
     background-color: $people-dream-color;
+
+    &:hover {
+        animation-name: test;
+        animation-duration: 4s;
+
+        @keyframes test {
+            // from {background-color: red;}
+            0% {
+                background-color: $the-why-color;
+            }
+            25% {
+                background-color: $share-your-wish-color;
+            }
+            50% {
+                background-color: $get-inspired-stroke;
+            }
+            100% {
+                background-color: $people-dream-color;
+            }
+        }
+    }
 }
 .nav_bubble__home {
     @extend .nav_bubble__why;
     border: 3px solid $get-inspired-stroke;
     background-color: $home-button-color;
+
+    &:hover {
+        animation-name: test;
+        animation-duration: 4s;
+
+        @keyframes test {
+            // from {background-color: red;}
+            0% {
+                background-color: $the-why-color;
+            }
+            25% {
+                background-color: $share-your-wish-color;
+            }
+            50% {
+                background-color: $get-inspired-stroke;
+            }
+            100% {
+                background-color: $home-button-color;
+            }
+        }
+    }
 }
 .nav_button_lamp {
     height: 65%;
@@ -339,7 +453,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .dreams__title {
     @extend .generic__title;
     letter-spacing: 1px;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 /////////////////////////////////////////////////////////////////////
 .filter__buttons {
@@ -359,6 +473,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
     text-transform: uppercase;
     font-weight: $font-title-weight;
+    &:hover {
+        background-color: #fbab7e;
+        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+    }
     // font-size: 0.5rem;
 }
 .filter__buttons__goals {
@@ -424,7 +542,7 @@ select {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    background: rgb(255 255 255 / 80%);;
+    background: rgb(255 255 255 / 80%);
 }
 
 input[type="submit"] {
@@ -468,3 +586,6 @@ input[type="submit"]:hover {
     font-size: 16px;
     resize: none;
 }
+
+
+
