@@ -10911,7 +10911,7 @@ textarea.form-control-lg {
   font-family: "Baloo Da 2", cursive;
   background: linear-gradient(121deg, rgb(4, 102, 172) 0%, rgb(4, 156, 220) 21%, rgb(4, 212, 251) 44%, rgb(4, 180, 235) 61%, rgb(27, 196, 236) 82%, rgb(4, 172, 236) 97%, rgb(4, 128, 198) 100%);
   background: url(/img/bg.svg) no-repeat fixed center;
-  color: #faf;
+  color: rgb(255, 255, 255);
 }
 
 .header {
@@ -11323,4 +11323,56 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .img__responsive {
   width: 100%;
   height: auto;
+}
+
+input[type=text],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #5adbb5;
+  font-size: 1.5rem;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #F9FDFF;
+}
+
+input[type=submit]:hover {
+  background-color: #407BFF;
+}
+
+.share__form {
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.share__form__titles {
+  font-weight: 650;
+}
+
+.share__form__textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
+  resize: none;
 }

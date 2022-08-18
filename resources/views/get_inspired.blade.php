@@ -14,12 +14,12 @@
     </div>
 
     <div class="nav_bubble">
-        <a href="inspired" class="bubble__link nav_bubble__inspired ">
-            {{-- get <br> inspired --}}
+        <a href="why" class="bubble__link nav_bubble__why">
+            {{-- the <br> why --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="inspired" class="bubble__text">
-            <h1 class="nav_bubble_text">get inspired </h1>
+        <a href="why" class="bubble__text">
+            <h1 class="nav_bubble_text">the why</h1>
         </a>
     </div>
     <div class="nav_bubble">
