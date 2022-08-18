@@ -25,3 +25,10 @@ Route::get('/dreams', function () {
     return view('people_dreams');
 });
 
+Route::get('/inspired', function () {
+    return view('get_inspired');
+});
+
+Route::get('/share', function () {
+    return view('share_your_wish');
+});

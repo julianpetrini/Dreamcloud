@@ -13,11 +13,11 @@
                 the <br> why
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
-            <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__inspired ">
+            <a href="inspired" class="bubble__link bubble__inspired ">
                 get inspired
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
-            <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__wish ">
+            <a href="share" class="bubble__link bubble__wish ">
                 share <br> your <br> wish
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>

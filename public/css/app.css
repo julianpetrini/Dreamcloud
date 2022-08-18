@@ -11022,6 +11022,7 @@ textarea.form-control-lg {
 .nav_bubble__why, .nav_bubble__home, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
   border: 3px solid #1EC0EF;
   background-color: #DD7973;
+  margin: 0.2rem;
   /* bubble size */
   height: 80px;
   width: 80px;
@@ -11258,4 +11259,63 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: center;
+  margin: 2rem;
+}
+
+.filter__buttons__dreams, .filter__buttons__ideas, .filter__buttons__wishes, .filter__buttons__goals {
+  background-color: #FFBD03;
+  color: #F9FDFF;
+  border: none;
+  border-radius: 13px;
+  margin-right: 7px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.filter__buttons__goals {
+  background-color: rgb(12, 11, 11);
+}
+
+.filter__buttons__wishes {
+  background-color: #407BFF;
+}
+
+.filter__buttons__ideas {
+  background-color: #DD7973;
+}
+
+.dreams__box__header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dreams__box__title {
+  text-transform: uppercase;
+  font-weight: 650;
+}
+
+.dreams__box__dreams, .dreams__box__ideas, .dreams__box__wishes, .dreams__box__goals {
+  background-color: #FFBD03;
+  color: #F9FDFF;
+  padding: 0.7rem;
+  border-radius: 20px;
+  margin: 0.5rem;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.dreams__box__goals {
+  background-color: rgb(12, 11, 11);
+  color: #F9FDFF;
+}
+
+.dreams__box__wishes {
+  background-color: #407BFF;
+  color: #F9FDFF;
+}
+
+.dreams__box__ideas {
+  background-color: #DD7973;
+  color: #F9FDFF;
 }
