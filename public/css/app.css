@@ -11230,7 +11230,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 1rem;
 }
 
-.generic__title, .generic__subtitle {
+.generic__title, .dreams__title, .generic__subtitle {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
   color: #F9FDFF;
@@ -11246,4 +11246,16 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   letter-spacing: inherit;
   font-size: 1rem;
   margin-top: 1rem;
+}
+
+.dreams__title {
+  letter-spacing: 1px;
+  font-size: 1.6rem;
+}
+
+.filter__buttons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
 }

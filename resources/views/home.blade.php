@@ -21,7 +21,7 @@
                 share <br> your <br> wish
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>
-            <a href="https://www.google.com/" target="_blank" class="bubble__link bubble__dreams ">
+            <a href="dreams"  class="bubble__link bubble__dreams ">
                 people's dreams
                 <img class="button_lamp"src="/img/lamp.svg">
             </a>

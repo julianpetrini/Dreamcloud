@@ -345,4 +345,15 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     font-size: 1rem;
     margin-top: 1rem;
 }
+.dreams__title{
+    @extend .generic__title;
+    letter-spacing: 1px;
+    font-size: 1.6rem;
+}
 
+.filter__buttons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}

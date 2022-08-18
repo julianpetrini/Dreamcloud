@@ -21,3 +21,7 @@ Route::get('/why', function () {
     return view('the_why');
 });
 
+Route::get('/dreams', function () {
+    return view('people_dreams');
+});
+
