@@ -150,7 +150,7 @@
 .nav_bubble__why {
     border: 3px solid $the-why-stroke;
     background-color: $the-why-color;
-
+    margin: 0.2rem;
     /* bubble size */
     height: $nav_bubble_size;
     width: $nav_bubble_size;
@@ -347,7 +347,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
-    margin: 1rem;
+    margin: 2rem;
 }
 .filter__buttons__dreams {
     background-color: $share-your-wish-color;
@@ -376,4 +376,40 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     @extend .filter__buttons__dreams;
     background-color: $the-why-color;
 
+}
+
+////////////////////////////////////////////
+.dreams__box__header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+.dreams__box__title{
+    text-transform: uppercase;
+    font-weight: 650;
+}
+.dreams__box__dreams{
+    background-color: $share-your-wish-color;
+    color: $font-color-title;
+    padding: 0.7rem;
+    border-radius: 20px;
+    margin: 0.5rem;
+    text-transform: uppercase;
+    font-weight: $font-title-weight;
+}
+.dreams__box__goals{
+    @extend .dreams__box__dreams;
+    background-color: $goals-button-color;
+    color: $font-color-title;
+}
+.dreams__box__wishes{
+    @extend .dreams__box__dreams;
+    background-color: $wishes-button-color;
+    color: $font-color-title;
+}
+.dreams__box__ideas{
+    @extend .dreams__box__dreams;
+    background-color: $the-why-color;
+    color: $font-color-title;
 }
