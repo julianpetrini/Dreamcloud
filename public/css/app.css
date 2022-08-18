@@ -11319,3 +11319,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   background-color: #DD7973;
   color: #F9FDFF;
 }
+
+.img__responsive {
+  width: 100%;
+  height: auto;
+}
