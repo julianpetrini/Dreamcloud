@@ -32,3 +32,8 @@ Route::get('/inspired', function () {
 Route::get('/share', function () {
     return view('share_your_wish');
 });
+
+
+Route::get('/messages', [MessageController::class, 'showAll']);
+
+Route::post('/create', [MessageController::class, 'create']);

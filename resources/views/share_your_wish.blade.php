@@ -47,7 +47,7 @@
     <h1 class="dreams__title">share your wish</h1>
 </div>
 
-<div class="share__form">
+{{-- <div class="share__form">   PROTECTED FORM 
     <form action="/action_page.php">
         <label for="fname" class="share__form__titles">Tell the genie your name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name.." >
@@ -67,6 +67,32 @@
 
         <br>
         <input type="submit" value="share it !" >
+    </form>
+</div> --}}
+
+<div class="share__form">
+    <form action="share" method="post">
+        <label for="username" class="share__form__titles">Tell the genie your name</label>
+        <input type="text" id="username" name="firstname" placeholder="Your name..">
+
+        <label for="lname" class="share__form__titles">it's about ... </label>
+
+        <select id="wishtype" name="category">
+            <option value="australia">dreams</option>
+            <option value="canada">goals</option>
+            <option value="usa">wishes</option>
+            <option value="usa">ideas</option>
+        </select>
+
+        <textarea class="share__form__textarea" placeholder="Your wish is my command" name="comment"></textarea>
+
+        @error('title')
+            <h1 class="asign-danger">Please fill both title and content</h1>
+        @enderror
+
+        <br>
+        @csrf
+        <input type="submit" value="share it !">
     </form>
 </div>
 
