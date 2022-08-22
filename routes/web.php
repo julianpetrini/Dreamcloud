@@ -37,3 +37,9 @@ Route::get('/share', function () {
 Route::get('/messages', [MessageController::class, 'showAll']);
 
 Route::post('/create', [MessageController::class, 'create']);
+
+Route::get('/message/{id}', [MessageController::class, 'editData']);
+
+Route::delete('/message/{id}', [MessageController::class, 'delete']);
+
+Route::post('/update/{id}', [MessageController::class, 'update']);

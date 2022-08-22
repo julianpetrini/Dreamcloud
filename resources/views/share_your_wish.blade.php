@@ -71,17 +71,17 @@
 </div> --}}
 
 <div class="share__form">
-    <form action="share" method="post">
+    <form action="create" method="post">
         <label for="username" class="share__form__titles">Tell the genie your name</label>
         <input type="text" id="username" name="firstname" placeholder="Your name..">
 
         <label for="lname" class="share__form__titles">it's about ... </label>
 
         <select id="wishtype" name="category">
-            <option value="australia">dreams</option>
-            <option value="canada">goals</option>
-            <option value="usa">wishes</option>
-            <option value="usa">ideas</option>
+            <option value="dreams">dreams</option>
+            <option value="goals">goals</option>
+            <option value="wishes">wishes</option>
+            <option value="ideas">ideas</option>
         </select>
 
         <textarea class="share__form__textarea" placeholder="Your wish is my command" name="comment"></textarea>
