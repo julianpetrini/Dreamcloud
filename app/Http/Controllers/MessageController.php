@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Message;
 
 class MessageController extends Controller
 {
@@ -10,30 +11,33 @@ class MessageController extends Controller
     {
         $messages = Message::all()->sortByDesc('created_at');
 
-        return view('messages', ['messages' => $messages]);
+        return view('share', ['messages' => $messages]);
     }
 
     public function create(Request $request)
     {   
         //TO MAKE IT REQUIRED
-        $request->validate([
-            'username'=>'required | min:4',
-            'comment'=>'required | min:2',
-              ]);
+        // $request->validate([
+        //     'username'=>'required | min:4',
+        //     'comment'=>'required | min:2',
+        //       ]);
+
+// dd($request);
 
         // we create a new Message-Object
         $message = new Message();
-        // we set the properties title and content
-        // with the values that we got in the post-request
+        // // we set the properties title and content
+        // // with the values that we got in the post-request
         $message->username = $request->username;
+        $message->category =$request->category;
         $message->comment = $request->comment;
 
-        // we save the new Message-Object in the messages
-        // table in our database
+        // // we save the new Message-Object in the messages
+        // // table in our database
         $message->save();
 
         // at the end we make a redirect to the url /messages
-        return redirect('/share');
+        return view ('share_your_wish');
     }
 
     // public function details($id)

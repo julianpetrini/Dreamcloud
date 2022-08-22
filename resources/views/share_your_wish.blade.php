@@ -71,9 +71,9 @@
 </div> --}}
 
 <div class="share__form">
-    <form action="create" method="post">
+    <form action="{{ route('create') }}" method="post">
         <label for="username" class="share__form__titles">Tell the genie your name</label>
-        <input type="text" id="username" name="firstname" placeholder="Your name..">
+        <input type="text" id="username" name="username" placeholder="Your name..">
 
         <label for="lname" class="share__form__titles">it's about ... </label>
 
