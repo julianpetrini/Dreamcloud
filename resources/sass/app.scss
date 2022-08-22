@@ -78,8 +78,6 @@
     line-height: 0.9;
 
     //////animation
-
-  
 }
 // .bubble__link {
 //     color: $font-color-title;
@@ -587,5 +585,103 @@ input[type="submit"]:hover {
     resize: none;
 }
 
+// MEDIAQ
 
+@media (min-width: 768px) {
+    //TABLET
+    // GET INSPIRED SECTION
 
+    .the_why__text {
+        font-size: 1.5rem;
+    }
+    .generic__subtitle {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    .img__responsive {
+        width: 63vw;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    //DESKTOP
+    //GENERAL
+    .bg_pattern {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .img__responsive {
+        width: 80%;
+    }
+
+    // GET INSPIRED SECTION
+    .the__why__text_box {
+        max-width: 43vw;
+    }
+
+    .the_why__text {
+        font-size: 1.5rem;
+    }
+    .generic__subtitle {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+
+    // COMMENTS
+
+    .dreams__box__dreams {
+        width: 50vw;
+    }
+    .dreams__box__goals {
+        width: 50vw;
+    }
+    .dreams__box__wishes {
+        width: 50vw;
+    }
+    .dreams__box__ideas {
+        width: 50vw;
+    }
+    .the_why__text {
+    }
+    //HOME
+}
+
+@media (min-width: 1200px) {
+    //LARGE DESKTOP
+    // GET INSPIRED SECTION
+   
+}
+
+//GENIUS
+@media (min-width: 496px) {
+    .genius {
+        position: fixed;
+        width: 70%;
+        bottom: -7rem;
+        left: -3.5rem;
+    }
+}
+
+@media (min-width: 718px) {
+    .genius {
+        position: fixed;
+        width: 50%;
+        bottom: -6rem;
+        left: -1.5rem;
+    }
+}
+@media (min-width: 1200px) {
+    .genius {
+        width: 33%;
+        bottom: -3rem;
+        left: 3.5rem;
+    }
+}
