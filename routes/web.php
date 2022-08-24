@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,10 @@ Route::get('/inspired', function () {
     return view('get_inspired');
 });
 
-Route::get('/share', function () {
-    return view('share_your_wish');
-});
+// Route::get('/share', function () {
+//     return view('share_your_wish');
+// });
+
+Route::get('/share', [MessageController::class, 'showAll']);
+
+Route::post('/create', [MessageController::class, 'create']);

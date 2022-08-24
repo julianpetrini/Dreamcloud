@@ -48,27 +48,41 @@
 </div>
 
 <div class="share__form">
-    <form action="/action_page.php">
+    <form action="/create" method="POST">
         <label for="fname" class="share__form__titles">Tell the genie your name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name.." >
+        <input type="text" id="fname" name="username" placeholder="Your name.." >
 
         <label for="lname" class="share__form__titles">it's about ... </label>
 
         <select id="wishtype" name="wish">
-            <option value="australia">dreams</option>
-            <option value="canada">goals</option>
-            <option value="usa">wishes</option>
-            <option value="usa">ideas</option>
+            <option value="dreams">dreams</option>
+            <option value="goals">goals</option>
+            <option value="wishes">wishes</option>
+            <option value="ideas">ideas</option>
         </select>
 
-        <textarea class="share__form__textarea" placeholder="Your wish is my command"></textarea>
+        <textarea class="share__form__textarea" placeholder="Your wish is my command" name="comment"></textarea>
         
 
-
+        @csrf
         <br>
         <input type="submit" value="share it !" >
     </form>
 </div>
+
+
+@foreach ($messages as $message) 
+   <li>
+       <b>
+           <!-- this link to the message details is created dynamically
+               and will point to /messages/1 for the first message -->
+           <a href="/message/{{$message->id}}">{{$message->username}}:</a>
+       </b><br>
+       {{$message->comment}}<br>
+       {{$message->created_at->diffForHumans()}}           
+   </li>
+@endforeach
+
 
 
 
