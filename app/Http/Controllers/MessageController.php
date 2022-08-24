@@ -13,12 +13,18 @@ class MessageController extends Controller
 
     // return view('products.index-paging')->with('messages', $messages);
 
+    // TODO: Query that lists all messages into $messages_all
     if (Message::all()->sortByDesc('created_at')->count() >= 5) {
         $messages = Message::all()->random(5);
 
     } else {
         $messages = Message::all()->sortByDesc('created_at');
     }
+
+    // TODO: Query that lists all wishes.
+
+    // TODO: trace $messages_wish with dd();
+
     return view('people_dreams', ['messages' => $messages]);
 
 

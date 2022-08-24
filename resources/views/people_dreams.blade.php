@@ -48,6 +48,7 @@
 </div>
 
 @if ($messages->count() == 0)
+
     <h2 class="nodatabase__the__text">Nothing yet to see ! <br>why don't you start sharing some wonderful toughts?</h2>
     <div class="nodatabase__genius">
         <svg class="animated" id="freepik_stories-wishes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"
@@ -503,47 +504,57 @@
         </svg>
     </div>
 @else
+
     <h2 class="generic__subtitle">select to see</h2>
 
     <div class="filter__buttons">
-        <button class="filter__buttons__dreams" onclick="myFunction()">dreams</button>
-        <button class="filter__buttons__goals">goals</button>
-        <button class="filter__buttons__wishes">wishes</button>
-        <button class="filter__buttons__ideas">ideas</button>
+        <button class="filter__buttons__dreams" onclick="changedata(0)">dreams</button>
+        <button class="filter__buttons__goals" onclick="changedata(1)">goals</button>
+        <button class="filter__buttons__wishes" onclick="changedata(2)">wishes</button>
+        <button class="filter__buttons__ideas" onclick="changedata(3)">ideas</button>
 
     </div>
-    @include ('layout/footer')
-@endif
 
 
 
-<script>
-    function myFunction() {
+
+    <script>
+        function changedata(parameter) {
+            if (parameter == 0) {
+                document.getElementById('dreams').classList.toggle('active');
+            } else if (parameter == 1) {
+                document.getElementById('goals').classList.toggle('active');
+            } 
+            else if (parameter == 2) {
+                document.getElementById('wishes').classList.toggle('active');
+            } 
+            else if (parameter == 3) {
+                document.getElementById('ideas').classList.toggle('active');
+            } 
+            else {
+                document.getElementById('mysupplier').classList.toggle('active');
+            }
+        }
+    </script>
 
 
-        const dreams = document.getElementById("dreams")
 
-        if (dreams == document.getElementById) {
-            alert("HOLA MUNDO")
-        } else
-            alert("CHAU")
-
-        document.getElementById("dreams").innerHTML = "Hello World";
-    }
-</script>
-
-
-
-@foreach ($messages as $message)
-    <div class="dreams__box__{{ $message->wish }}" id="{{ $message->wish }}">
-        <div class="dreams__box__header">
-            <h3 class="dreams__box__title">{{ $message->username }}</h3>
-            <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
+    @foreach ($messages as $message)
+        <div class="dreams__box__{{ $message->wish }}" id="{{ $message->wish }}">
+            <div class="dreams__box__header">
+                <h3 class="dreams__box__title">{{ $message->username }}</h3>
+                <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
+            </div>
+            <p class="dreams__box__content">{{ $message->comment }}</p>
         </div>
-        <p class="dreams__box__content">{{ $message->comment }}</p>
-    </div>
-@endforeach
+    @endforeach
 
+
+
+    @include ('layout/footer')
+
+
+@endif
 
 {{-- <div class="dreams__box__goals">
     <div class="dreams__box__header">

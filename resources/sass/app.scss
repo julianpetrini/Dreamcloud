@@ -717,3 +717,24 @@ input[type="submit"]:hover {
         left: 9.5rem;
     }
 }
+
+
+
+//////////// PRUEBA CON JAVASCRIPT
+
+
+#dreams,
+#wishes,
+#goals,
+#ideas{
+font-size: 25px;
+display: none;
+}
+
+
+#dreams.active,
+#ideas.active,
+#wishes.active,
+#goals.active{
+display: block;
+}
