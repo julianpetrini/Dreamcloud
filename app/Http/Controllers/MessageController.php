@@ -9,8 +9,9 @@ class MessageController extends Controller
 {
     public function showAll()
     {
-        $messages = Message::all()->sortByDesc('created_at');
-        // $messages = Message::all()->random(5); TO SHOW ONLY RANDOM 5
+        // $messages = Message::all()->sortByDesc('created_at');
+        $messages = Message::all()->random(5);
+        //  TO SHOW ONLY RANDOM 5
 
         return view('people_dreams', ['messages' => $messages]);
     }
