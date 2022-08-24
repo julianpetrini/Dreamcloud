@@ -9,11 +9,29 @@ class MessageController extends Controller
 {
     public function showAll()
     {
-        // $messages = Message::all()->sortByDesc('created_at');
-        $messages = Message::all()->random(5);
-        //  TO SHOW ONLY RANDOM 5
+    //   FOR PAGINATE THE SITE  $messages = Message::paginate(4);
 
-        return view('people_dreams', ['messages' => $messages]);
+    // return view('products.index-paging')->with('messages', $messages);
+
+    if (Message::all()->sortByDesc('created_at')->count() >= 5) {
+        $messages = Message::all()->random(5);
+
+    } else {
+        $messages = Message::all()->sortByDesc('created_at');
+    }
+    return view('people_dreams', ['messages' => $messages]);
+
+
+        // // $messages = Message::all()->sortByDesc('created_at');
+        // $messages = Message::all()->random(5);
+        // //  TO SHOW ONLY RANDOM 5
+
+        // return view('people_dreams', ['messages' => $messages]);
+
+
+
+
+
     }
 
     // public function showAll1()

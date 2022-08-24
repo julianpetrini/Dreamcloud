@@ -426,6 +426,19 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     color: $font-color-title;
     margin: 0;
 }
+//////////// NO INFO IN THE DATABASE
+
+.nodatabase__the__text {
+    @extend .the_why__text;
+    text-align: center;
+}
+.nodatabase__genius {
+    @extend .genius;
+    position: fixed;
+    width: 90%;
+    bottom: 3rem;
+    left: 0.5rem;
+}
 
 .title {
     margin: 1rem;
@@ -657,7 +670,6 @@ input[type="submit"]:hover {
 @media (min-width: 1200px) {
     //LARGE DESKTOP
     // GET INSPIRED SECTION
-   
 }
 
 //GENIUS
@@ -668,6 +680,12 @@ input[type="submit"]:hover {
         bottom: -7rem;
         left: -3.5rem;
     }
+    .nodatabase__genius {
+        position: fixed;
+        width: 80%;
+        bottom: -2rem;
+        left: 0.5rem;
+    }
 }
 
 @media (min-width: 718px) {
@@ -677,11 +695,25 @@ input[type="submit"]:hover {
         bottom: -6rem;
         left: -1.5rem;
     }
+
+    .nodatabase__genius {
+        position: fixed;
+        width: 60%;
+        bottom: -9rem;
+        left: 0.5rem;
+    }
 }
 @media (min-width: 1200px) {
     .genius {
         width: 33%;
         bottom: -3rem;
         left: 3.5rem;
+    }
+
+    .nodatabase__genius {
+        position: fixed;
+        width: 60%;
+        bottom: -26rem;
+        left: 9.5rem;
     }
 }
