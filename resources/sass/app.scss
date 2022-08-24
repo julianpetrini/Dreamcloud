@@ -723,18 +723,15 @@ input[type="submit"]:hover {
 //////////// PRUEBA CON JAVASCRIPT
 
 
-#dreams,
-#wishes,
-#goals,
-#ideas{
-font-size: 25px;
-display: none;
-}
+// #dreams,
+// #wishes,
+// #goals,
+// #ideas{
+    
+// }
 
 
-#dreams.active,
-#ideas.active,
-#wishes.active,
-#goals.active{
-display: block;
+.inactive {
+    font-size: 25px;
+    display: none;
 }

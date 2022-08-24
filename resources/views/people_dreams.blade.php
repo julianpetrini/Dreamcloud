@@ -520,19 +520,36 @@
 
     <script>
         function changedata(parameter) {
+
+            // TODO: hide all entries
+            setInactive(document.getElementsByName('goals'));
+            setInactive(document.getElementsByName('dreams'));
+            setInactive(document.getElementsByName('wishes'));
+            setInactive(document.getElementsByName('ideas'));
+
             if (parameter == 0) {
-                document.getElementById('dreams').classList.toggle('active');
-            } else if (parameter == 1) {
-                document.getElementById('goals').classList.toggle('active');
+                setActive(document.getElementsByName('dreams'));
             } 
+            else if (parameter == 1) {
+                setActive(document.getElementsByName('goals'));
+            }
             else if (parameter == 2) {
-                document.getElementById('wishes').classList.toggle('active');
-            } 
+                setActive(document.getElementsByName('wishes'));
+            }
             else if (parameter == 3) {
-                document.getElementById('ideas').classList.toggle('active');
-            } 
-            else {
-                document.getElementById('mysupplier').classList.toggle('active');
+                setActive(document.getElementsByName('ideas'));
+            }
+        }
+
+        function setInactive(elements) {
+            for (let elem of elements) {
+                elem.classList.add('inactive');
+            }
+        }
+
+        function setActive(elements) {
+            for (let elem of elements) {
+                elem.classList.remove('inactive');
             }
         }
     </script>
@@ -540,7 +557,7 @@
 
 
     @foreach ($messages as $message)
-        <div class="dreams__box__{{ $message->wish }}" id="{{ $message->wish }}">
+        <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
             <div class="dreams__box__header">
                 <h3 class="dreams__box__title">{{ $message->username }}</h3>
                 <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
