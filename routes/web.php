@@ -30,10 +30,13 @@ Route::get('/inspired', function () {
     return view('get_inspired');
 });
 
-// Route::get('/share', function () {
-//     return view('share_your_wish');
-// });
+Route::get('/share', function () {
+    return view('share_your_wish');
+});
 
-Route::get('/share', [MessageController::class, 'showAll']);
+Route::get('/dreams', [MessageController::class, 'showAll']);
 
 Route::post('/create', [MessageController::class, 'create']);
+
+// Route::get('/why', [MessageController::class, 'showAll1']);
+

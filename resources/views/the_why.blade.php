@@ -47,7 +47,7 @@
     <h1 class="generic__title">the why</h1>
 </div>
 
-
+ 
 <div class="the__why__text_box">
     <h2 class="generic__subtitle">My name is Julian</h2>
     <p class="the_why__text">As every kid, we believe. In possibilities, in magic, in smiles. Later, life goes by.

@@ -10,10 +10,18 @@ class MessageController extends Controller
     public function showAll()
     {
         $messages = Message::all()->sortByDesc('created_at');
+        // $messages = Message::all()->random(5); TO SHOW ONLY RANDOM 5
+
+        return view('people_dreams', ['messages' => $messages]);
+    }
+
+    // public function showAll1()
+    // {
+    //     $messages = Message::all()->sortByDesc('created_at');
         
 
-        return view('share_your_wish', ['messages' => $messages]);
-    }
+    //     return view('the_why', ['messages' => $messages]);
+    // }
 
     public function create(Request $request) {
  
@@ -30,8 +38,14 @@ class MessageController extends Controller
         $message->save();
    
         // at the end we make a redirect to the url /messages
-        return redirect('/share');        
+        return redirect('/dreams');        
     }
  
+    // public function showMessage()
+    // {
+    //     $messages = Message::all()->sortByDesc('created_at');
+    //     return view('people_dreams',['messages' => $messages]);
+    // }
+
 
 }

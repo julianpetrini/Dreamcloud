@@ -71,7 +71,7 @@
 </div>
 
 
-@foreach ($messages as $message) 
+{{-- @foreach ($messages as $message) 
    <li>
        <b>
            <!-- this link to the message details is created dynamically
@@ -81,7 +81,7 @@
        {{$message->comment}}<br>
        {{$message->created_at->diffForHumans()}}           
    </li>
-@endforeach
+@endforeach --}}
 
 
 
