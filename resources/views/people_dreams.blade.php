@@ -504,7 +504,6 @@
         </svg>
     </div>
 @else
-
     <h2 class="generic__subtitle">select to see</h2>
 
     <div class="filter__buttons">
@@ -529,14 +528,11 @@
 
             if (parameter == 0) {
                 setActive(document.getElementsByName('dreams'));
-            } 
-            else if (parameter == 1) {
+            } else if (parameter == 1) {
                 setActive(document.getElementsByName('goals'));
-            }
-            else if (parameter == 2) {
+            } else if (parameter == 2) {
                 setActive(document.getElementsByName('wishes'));
-            }
-            else if (parameter == 3) {
+            } else if (parameter == 3) {
                 setActive(document.getElementsByName('ideas'));
             }
         }
@@ -552,6 +548,17 @@
                 elem.classList.remove('inactive');
             }
         }
+
+        // function myFunction() {
+        //     document.getElementsByClassName("dreams").style.transition = "2s";
+        //     document.getElementsByClassName("goals").style.transition = "2s";
+        //     document.getElementsByClassName("wishes").style.transition = "2s";
+        //     document.getElementsByClassName("ideas").style.transition = "2s";
+
+        // }
+
+        /////
+        
     </script>
 
 

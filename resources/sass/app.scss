@@ -488,7 +488,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
         background-color: #fbab7e;
         background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
     }
-    // font-size: 0.5rem;
+       // font-size: 0.5rem;
 }
 .filter__buttons__goals {
     @extend .filter__buttons__dreams;
@@ -521,6 +521,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     margin: 0.5rem;
     text-transform: uppercase;
     font-weight: $font-title-weight;
+   
+        
 }
 .dreams__box__goals {
     @extend .dreams__box__dreams;
@@ -735,3 +737,4 @@ input[type="submit"]:hover {
     font-size: 25px;
     display: none;
 }
+
