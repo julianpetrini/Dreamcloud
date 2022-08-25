@@ -11327,18 +11327,38 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-size: 1rem;
 }
 
-.the__why__text_box {
-  display: inline-block;
-  background-color: rgba(26, 53, 97, 0.8);
-  border-radius: 15px;
+.get__inspired__text_box {
+  margin-top: 1rem;
+  background-color: rgba(26, 53, 97, 0.3);
+  border-radius: 10px;
+  max-width: 50vw;
 }
 
-.the_why__text, .nodatabase__the__text {
+.the__why__text_box, .get__inspired__big__text__box {
+  background-color: rgba(26, 53, 97, 0.3);
+  border-radius: 15px;
+  display: flex;
+  padding: 1rem;
+  min-height: 60vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.get__inspired__big__text__box {
+  background-color: rgba(26, 53, 97, 0);
+  align-items: center;
+}
+
+.the_why__text, .nodatabase__the__text, .the__get__inspired__text {
   font-size: 3.7vw;
   padding: 0.5rem;
   text-align: left;
   color: #F9FDFF;
   margin: 0;
+}
+
+.the__get__inspired__text {
+  text-align: center;
 }
 
 .nodatabase__the__text {
@@ -11371,7 +11391,6 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-weight: 700;
   letter-spacing: inherit;
   font-size: 1rem;
-  margin-top: 1rem;
 }
 
 .dreams__title, .error__form__text {
@@ -11397,8 +11416,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-weight: 800;
 }
 .filter__buttons__dreams:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
-  background-color: #fbab7e;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-color: #008f58;
 }
 
 .filter__buttons__goals {
@@ -11450,8 +11468,14 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 
 .img__responsive {
-  width: 100%;
+  max-width: 300px;
   height: auto;
+  padding-top: 1rem;
+  border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
+  transition: transform 0.2s;
+}
+.img__responsive:hover {
+  transform: scale(1.08);
 }
 
 input[type=text],
@@ -11507,41 +11531,63 @@ input[type=submit]:hover {
 }
 
 @media (min-width: 768px) {
-  .the_why__text, .nodatabase__the__text {
-    font-size: 1.5rem;
+  .header__title, .header__description {
+    font-size: 4.2rem;
+  }
+  .header__description {
+    font-size: 2rem;
+  }
+  .the_why__text, .the__get__inspired__text, .nodatabase__the__text {
+    font-size: 1.3rem;
   }
   .generic__subtitle {
     font-size: 1.8rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
   }
   .img__responsive {
-    width: 63vw;
+    max-width: 32vw;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  .bubble__why {
+    height: 150;
+    width: 150;
+  }
+  .bubble__inspired {
+    height: 135;
+    width: 135;
+  }
+  .bubble__dreams {
+    height: 165;
+    width: 165;
+  }
+  .bubble__wish {
+    height: 250;
+    width: 250;
+  }
 }
 @media (min-width: 992px) {
+  .get__inspired__big__text__box {
+    max-width: 43vw;
+    align-items: center;
+  }
   .bg_pattern {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .img__responsive {
-    width: 80%;
+    max-width: 32vw;
   }
-  .the__why__text_box {
-    max-width: 43vw;
+  .the__why__text_box, .get__inspired__big__text__box {
+    min-width: 84vw;
   }
-  .the_why__text, .nodatabase__the__text {
-    font-size: 1.5rem;
+  .the_why__text, .the__get__inspired__text, .nodatabase__the__text {
+    font-size: 1.2rem;
   }
   .generic__subtitle {
     font-size: 1.8rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
   }
   .dreams__box__dreams, .dreams__box__goals, .dreams__box__wishes, .dreams__box__ideas {
     width: 50vw;
@@ -11586,9 +11632,9 @@ input[type=submit]:hover {
 }
 @media (min-width: 1200px) {
   .genius, .nodatabase__genius {
-    width: 33%;
-    bottom: -3rem;
-    left: 3.5rem;
+    width: 45%;
+    bottom: -16rem;
+    left: 0.5rem;
   }
   .nodatabase__genius {
     position: fixed;

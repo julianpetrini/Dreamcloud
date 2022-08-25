@@ -47,12 +47,15 @@
     <h1 class="generic__title">get inspired</h1>
 </div>
 @foreach ($posts as $post)
-    <div class="the__why__text_box">
-        {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
-        <h2 class="generic__subtitle">by {{ $post->author }}</h2>
+    <div class="get__inspired__big__text__box">
         <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"
-                    alt="Card image cap">
-        <p class="the_why__text">{{ $post->content }}</p>
+            alt="Card image cap">
+        {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
+
+        <div class="get__inspired__text_box">
+            <p class="the__get__inspired__text">{{ $post->content }}</p>
+            <h2 class="generic__subtitle">by {{ $post->author }}</h2>
+        </div>
 @endforeach
 
 </div>
