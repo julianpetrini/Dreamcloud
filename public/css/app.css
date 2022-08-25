@@ -10970,6 +10970,10 @@ textarea.form-control-lg {
   position: absolute;
   top: 20%;
   left: 10%;
+  transition: transform 0.2s;
+}
+.bubble__why:hover {
+  transform: scale(1.05);
 }
 
 .bubble__inspired {
@@ -10983,6 +10987,10 @@ textarea.form-control-lg {
   top: 20%;
   right: 10%;
   font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+.bubble__inspired:hover {
+  transform: scale(1.05);
 }
 
 .bubble__wish {
@@ -11010,6 +11018,10 @@ textarea.form-control-lg {
   position: absolute;
   bottom: 20%;
   right: 14%;
+  transition: transform 0.2s;
+}
+.bubble__dreams:hover {
+  transform: scale(1.05);
 }
 
 .navbar {
@@ -11198,6 +11210,10 @@ textarea.form-control-lg {
   width: 90%;
   bottom: -6rem;
   left: -4.5rem;
+  transition: transform 0.4s;
+}
+.genius:hover, .nodatabase__genius:hover {
+  transform: scale(1.05);
 }
 
 svg#freepik_stories-wishes:not(.animated) .animable {
