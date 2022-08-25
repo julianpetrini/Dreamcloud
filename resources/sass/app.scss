@@ -27,6 +27,38 @@
     background: url(/img/bg.svg) no-repeat fixed center;
     // background-size: cover;
     color: rgb(255, 255, 255);
+
+    // animation:spin 10s linear infinite;
+    // @keyframes spin{
+    //     from{transform:rotate(0deg)}
+    //     to{transform:rotate(360deg)}	
+    // }
+}
+
+.background-spin{
+
+    // padding: 20px;
+    // margin: 20px;
+    // font-family: $font-family-FIRST;
+    // background: linear-gradient(
+    //     121deg,
+    //     rgba(4, 102, 172, 1) 0%,
+    //     rgba(4, 156, 220, 1) 21%,
+    //     rgba(4, 212, 251, 1) 44%,
+    //     rgba(4, 180, 235, 1) 61%,
+    //     rgba(27, 196, 236, 1) 82%,
+    //     rgba(4, 172, 236, 1) 97%,
+    //     rgba(4, 128, 198, 1) 100%
+    // );
+    // background: url(/img/bg.svg) no-repeat fixed center;
+    // // background-size: cover;
+    // color: rgb(255, 255, 255);
+
+    // animation:spin 10s linear infinite;
+    // @keyframes spin{
+    //     from{transform:rotate(0deg)}
+    //     to{transform:rotate(360deg)}	
+    // }
 }
 
 //title text
@@ -77,8 +109,6 @@
     text-align: center;
     line-height: 0.9;
 
-    
-
     //////animation
 }
 // .bubble__link {
@@ -98,9 +128,9 @@
     top: 20%;
     left: 10%;
 
-    transition: transform .2s;
+    transition: transform 0.2s;
 
-    &:hover{
+    &:hover {
         transform: scale(1.05);
     }
 }
@@ -118,8 +148,8 @@
     right: 10%;
 
     font-size: 1.1rem;
-    transition: transform .2s;
-    &:hover{
+    transition: transform 0.2s;
+    &:hover {
         transform: scale(1.05);
     }
 }
@@ -144,8 +174,6 @@
     // &:hover{
     //     transform: scale(1.05);
     // }
-
-    
 }
 .bubble__dreams {
     border: 3px solid $people-dream-stroke;
@@ -159,8 +187,8 @@
     position: absolute;
     bottom: 20%;
     right: 14%;
-    transition: transform .2s;
-    &:hover{
+    transition: transform 0.2s;
+    &:hover {
         transform: scale(1.05);
     }
 }
@@ -349,10 +377,10 @@
     width: 90%;
     bottom: -6rem;
     left: -4.5rem;
-    transition: transform .4s;
-        &:hover{
-            transform: scale(1.05);
-        }
+    transition: transform 0.4s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 svg#freepik_stories-wishes:not(.animated) .animable {
     opacity: 0;
@@ -598,10 +626,9 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     height: auto;
     padding-top: 1rem;
     border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
-    transition: transform .2s;
+    transition: transform 0.2s;
     &:hover {
-        transform: scale(1.08)
-
+        transform: scale(1.08);
     }
 }
 
@@ -811,8 +838,6 @@ input[type="submit"]:hover {
         width: 45%;
         bottom: -16rem;
         left: 0.5rem;
-
-            
     }
 
     .nodatabase__genius {
