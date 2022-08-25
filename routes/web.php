@@ -36,7 +36,7 @@ Route::get('/share', function () {
 
 Route::get('/dreams', [MessageController::class, 'showAll']);
 
-Route::post('/create', [MessageController::class, 'create']);
+Route::post('/create', [MessageController::class, 'create'])->name('create');
 
 // Route::get('/why', [MessageController::class, 'showAll1']);
 

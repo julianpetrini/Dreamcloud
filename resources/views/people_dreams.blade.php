@@ -549,6 +549,9 @@
             }
         }
 
+
+
+        
         // function myFunction() {
         //     document.getElementsByClassName("dreams").style.transition = "2s";
         //     document.getElementsByClassName("goals").style.transition = "2s";
@@ -558,7 +561,6 @@
         // }
 
         /////
-        
     </script>
 
 

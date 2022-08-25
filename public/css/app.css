@@ -11356,7 +11356,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 1rem;
 }
 
-.generic__title, .dreams__title, .generic__subtitle {
+.generic__title, .dreams__title, .error__form__text, .generic__subtitle {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
   color: #F9FDFF;
@@ -11374,7 +11374,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin-top: 1rem;
 }
 
-.dreams__title {
+.dreams__title, .error__form__text {
   letter-spacing: 1px;
   font-size: 1.8rem;
 }
@@ -11597,6 +11597,12 @@ input[type=submit]:hover {
     left: 9.5rem;
   }
 }
+.error__form__text {
+  line-height: 1;
+  color: #FFBD03;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
 .inactive {
   font-size: 25px;
   display: none;

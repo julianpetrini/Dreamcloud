@@ -664,8 +664,8 @@ input[type="submit"]:hover {
     .dreams__box__ideas {
         width: 50vw;
     }
-    .the_why__text {
-    }
+    // .the_why__text {
+    // }
     //HOME
 }
 
@@ -725,12 +725,13 @@ input[type="submit"]:hover {
 //////////// PRUEBA CON JAVASCRIPT
 
 
-// #dreams,
-// #wishes,
-// #goals,
-// #ideas{
-    
-// }
+.error__form__text{
+    @extend .dreams__title;
+    line-height: 1;
+    color: $share-your-wish-color;
+    //To make a border text, the use of shadows.
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
 
 .inactive {

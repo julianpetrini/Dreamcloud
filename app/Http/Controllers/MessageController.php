@@ -34,10 +34,6 @@ class MessageController extends Controller
 
         // return view('people_dreams', ['messages' => $messages]);
 
-
-
-
-
     }
 
     // public function showAll1()
@@ -50,6 +46,13 @@ class MessageController extends Controller
 
     public function create(Request $request) {
  
+        $request->validate([
+            'username'=>'required | min:2',
+            'comment'=>'required | min:3',
+            'wish'=>'required | min:3',
+              ]);
+             
+
         // we create a new Message-Object
         $message = new Message();
         // we set the properties title and content
