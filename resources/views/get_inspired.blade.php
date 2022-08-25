@@ -8,7 +8,7 @@
             {{-- the <br> why --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="dreams"  class="bubble__text">
+        <a href="dreams" class="bubble__text">
             <h1 class="nav_bubble_text">people's dreams</h1>
         </a>
     </div>
@@ -46,6 +46,15 @@
 <div class="title">
     <h1 class="generic__title">get inspired</h1>
 </div>
+@foreach ($posts as $post)
+    <div class="the__why__text_box">
+        <h2 class="generic__subtitle">{{ $post->title }}</h2>
+        <p class="the_why__text">{{ $post->content }}</p>
+@endforeach
+
+</div>
+
+
 
 
 <div class="the__why__text_box">
@@ -61,11 +70,13 @@
         game to play with another way of thinking. Maybe too philosophical or without strong content to the rules world,
         but don't forget every major development came from some idea most people could comprehend until it was real.
         This is it. It has more than just a share. It is also to create a database in the cloud full of positive and
-        <img src="{{ asset('img/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png') }}" class="img__responsive" alt="">
+        <img src="{{ asset('img/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png') }}" class="img__responsive"
+            alt="">
         encouraging intentions, dreams, and so on. Like a pyramid in the middle of the desert that reflects into the
         galaxy. The cloud.
-        <img src="{{ asset('img/aladdin_disney3.jpg') }}" class="img__responsive" alt=""> </p>
-        
+        <img src="{{ asset('img/aladdin_disney3.jpg') }}" class="img__responsive" alt="">
+    </p>
+
 
 </div>
 

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,3 +41,8 @@ Route::post('/create', [MessageController::class, 'create'])->name('create');
 
 // Route::get('/why', [MessageController::class, 'showAll1']);
 
+
+///// BLOG CONTROLLER
+
+
+Route::get('/inspired', [BlogController::class, 'showAll']);
