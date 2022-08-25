@@ -14,8 +14,8 @@ class MessageController extends Controller
     // return view('products.index-paging')->with('messages', $messages);
 
     // TODO: Query that lists all messages into $messages_all
-    if (Message::all()->sortByDesc('created_at')->count() >= 5) {
-        $messages = Message::all()->random(5);
+    if (Message::all()->sortByDesc('created_at')->count() >= 10) {
+        $messages = Message::all()->random(10);
 
     } else {
         $messages = Message::all()->sortByDesc('created_at');
