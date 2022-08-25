@@ -48,7 +48,10 @@
 </div>
 @foreach ($posts as $post)
     <div class="the__why__text_box">
-        <h2 class="generic__subtitle">{{ $post->title }}</h2>
+        {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
+        <h2 class="generic__subtitle">by {{ $post->author }}</h2>
+        <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"
+                    alt="Card image cap">
         <p class="the_why__text">{{ $post->content }}</p>
 @endforeach
 
@@ -56,8 +59,8 @@
 
 
 
-
-<div class="the__why__text_box">
+{{-- ORIGINAL STYLING --}}
+{{-- <div class="the__why__text_box">
     <h2 class="generic__subtitle">an old tale</h2>
     <p class="the_why__text">As every kid, we believe. In possibilities, in magic, in smiles. Later, life goes by.
         Observing and learning the rules of the structure. How to process information, how to relate, and also how to
@@ -78,7 +81,7 @@
     </p>
 
 
-</div>
+</div> --}}
 
 
 @include ('layout/footer')
