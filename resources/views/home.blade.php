@@ -1,48 +1,22 @@
 @extends ('layout/master')
 
 <script>
+    function genieMessage() {
+        // const bubble_genie = document.getElementById('genie_advice')
+        // document.getElementById("genie_advice").style.display = "none";
 
-function genieMessage() {
-    // const bubble_genie = document.getElementById('genie_advice')
-    // document.getElementById("genie_advice").style.display = "none";
-    
+        var x = document.getElementById("genie_advice");
+        var y = document.getElementById("share_your_wish")
+        if (x.style.display === "flex") {
+            x.style.display = "none";
+            y.style.display = "";
+        } else {
+            x.style.display = "flex";
+            y.style.display = "none";
+        }
 
-  var x = document.getElementById("genie_advice"); 
-  if (x.style.display === "flex") { 
-    x.style.display = "none"; 
-  } else { 
-    x.style.display = "flex"; 
-  } 
-
-
-
-}
-//     document.onload = setTimeout(() => {
-
-//             const bubble-wrapper = document.getElementsByName('bubble-wrapper');
-
-//             // 👇️ removes element from DOM
-//             bubble-wrapper.style.display = 'none';
-
-//             // 👇️ hides element (still takes up space on page)
-//             bubble-wrapper.style.visibility = 'hidden';
-//         }, 8000);
-
-       
-// }
-
-
-
-    // setTimeout(() => {
-
-    //     const bubble_genie = document.getElementById('genie_advice');
-
-    //     // 👇️ removes element from DOM
-    //     bubble_genie.style.display = 'none';
-
-    //     // 👇️ hides element (still takes up space on page)
-    //     bubble_genie.style.visibility = 'hidden';
-    // }, 8000);
+    }
+  
 </script>
 
 <div class="header">
@@ -66,7 +40,7 @@ function genieMessage() {
         get inspired
         <img class="button_lamp"src="/img/lamp.svg">
     </a>
-    <a href="share" class="bubble__link bubble__wish ">
+    <a href="share" class="bubble__link bubble__wish "id="share_your_wish">
         share <br> your <br> wish
         <img class="button_lamp"src="/img/lamp.svg">
     </a>

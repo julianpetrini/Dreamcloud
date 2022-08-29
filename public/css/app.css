@@ -10911,6 +10911,8 @@ textarea.form-control-lg {
   background: linear-gradient(121deg, rgb(4, 102, 172) 0%, rgb(4, 156, 220) 21%, rgb(4, 212, 251) 44%, rgb(4, 180, 235) 61%, rgb(27, 196, 236) 82%, rgb(4, 172, 236) 97%, rgb(4, 128, 198) 100%);
   background: url(/img/bg.svg) no-repeat fixed center;
   color: rgb(255, 255, 255);
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .header {
@@ -10971,8 +10973,8 @@ textarea.form-control-lg {
   left: 10%;
   -webkit-animation: 4s Infinite floating;
           animation: 4s Infinite floating;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
   transition: transform 0.2s;
 }
 .bubble__why:hover {
@@ -11010,15 +11012,28 @@ textarea.form-control-lg {
   width: 180px;
   /* for absolute positioning */
   position: absolute;
-  top: 53%;
+  top: 35%;
   left: 26%;
   z-index: 1;
   font-size: 1rem;
-  -webkit-animation: 3s Infinite dream_breath;
-          animation: 3s Infinite dream_breath;
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
-  transition: transform 0.4s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .bubble__wish {
@@ -11475,6 +11490,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   text-transform: uppercase;
   text-align: center;
   font-size: 2.2rem;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 
 .generic__subtitle {
@@ -11545,19 +11564,16 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   text-transform: uppercase;
   font-weight: 800;
   box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 rgba(13, 202, 240, 0.0901960784);
-  -webkit-animation: 10s Infinite dream_messages;
-          animation: 10s Infinite dream_messages;
+  -webkit-animation: 5s Infinite dream_messages;
+          animation: 5s Infinite dream_messages;
   transition: transform 0.4s;
 }
 @-webkit-keyframes dream_messages {
   0% {
     transform: scale(1);
   }
-  25% {
-    transform: scale(1.01);
-  }
-  50% {
-    transform: scale(1.04);
+  65% {
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -11567,11 +11583,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   0% {
     transform: scale(1);
   }
-  25% {
-    transform: scale(1.01);
-  }
-  50% {
-    transform: scale(1.04);
+  65% {
+    transform: scale(1.05);
   }
   100% {
     transform: scale(1);
@@ -11711,6 +11724,9 @@ input[type=submit]:hover {
     -webkit-animation: none;
             animation: none;
   }
+  .bubble__genie__advice {
+    top: 40%;
+  }
 }
 @media (min-width: 992px) {
   .get__inspired__big__text__box {
@@ -11747,6 +11763,23 @@ input[type=submit]:hover {
     width: 50vw;
   }
 }
+@media (min-height: 890px) and (min-width: 414px) {
+  .bubble__genie__advice {
+    height: 250;
+    width: 250;
+    font-size: 1.3rem;
+  }
+}
+@media (min-height: 667px) and (min-width: 375px) {
+  .bubble__genie__advice {
+    top: 40%;
+  }
+}
+@media (min-height: 740px) and (min-width: 360px) {
+  .bubble__genie__advice {
+    top: 50%;
+  }
+}
 @media (min-width: 496px) {
   .genius, .nodatabase__genius {
     position: fixed;
@@ -11762,6 +11795,12 @@ input[type=submit]:hover {
   }
   .bubble__wish {
     left: 36%;
+  }
+  .bubble__genie__advice {
+    top: 30%;
+    height: 250;
+    width: 250;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 718px) {
@@ -11791,6 +11830,9 @@ input[type=submit]:hover {
     left: 9.5rem;
   }
   .bubble__wish {
+    left: 40%;
+  }
+  .bubble__genie__advice {
     left: 40%;
   }
 }

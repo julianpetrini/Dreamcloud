@@ -27,7 +27,7 @@
     background: url(/img/bg.svg) no-repeat fixed center;
     // background-size: cover;
     color: rgb(255, 255, 255);
-
+    animation: fadeIn 1s;
     // animation:spin 10s linear infinite;
     // @keyframes spin{
     //     from{transform:rotate(0deg)}
@@ -131,7 +131,7 @@
 
     //ANIMATION FLOATING
     animation: 4s Infinite floating;
-    animation-delay: 1s;
+    animation-delay: 0.3s;
 
     transition: transform 0.2s;
 
@@ -163,12 +163,10 @@
     }
 }
 .bubble__genie__advice {
-
-    display: none; 
+    display: none;
     border: 3px solid $share-your-wish-stroke;
-    border-radius: 43% 57% 100% 0% / 76% 57% 43% 24% ;
+    border-radius: 43% 57% 100% 0% / 76% 57% 43% 24%;
     background-color: $wishes-button-color;
-
 
     /* bubble size */
     height: 180px;
@@ -176,16 +174,25 @@
 
     /* for absolute positioning */
     position: absolute;
-    top: 53%;
+    top: 35%;
     left: 26%;
     z-index: 1;
 
     font-size: 1rem;
-    animation: 3s Infinite dream_breath;
-    animation-delay: 0.5s;
-    transition: transform 0.4s;
+    // animation: 3s Infinite dream_breath;
 
-    
+    animation: fadeIn 2s;
+    // animation-delay: 0.5s;
+    // transition: transform 0.4s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
 }
 
 .bubble__wish {
@@ -615,6 +622,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-transform: uppercase;
     text-align: center;
     font-size: 2.2rem;
+    animation-delay: 2s;
+    animation: fadeIn 2s;
 }
 .generic__subtitle {
     @extend .generic__title;
@@ -690,7 +699,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
     box-shadow: $box-shadow-dreams;
 
-    animation: 10s Infinite dream_messages;
+    animation: 5s Infinite dream_messages;
 
     @keyframes dream_messages {
         // from {background-color: red;}
@@ -698,11 +707,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
         0% {
             transform: scale(1);
         }
-        25% {
-            transform: scale(1.01);
-        }
-        50% {
-            transform: scale(1.04);
+        65% {
+            transform: scale(1.05);
         }
         100% {
             transform: scale(1);
@@ -866,6 +872,9 @@ input[type="submit"]:hover {
     .dreams__box__dreams {
         animation: none;
     }
+    .bubble__genie__advice {
+        top: 40%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -925,6 +934,28 @@ input[type="submit"]:hover {
     //LARGE DESKTOP
     // GET INSPIRED SECTION
 }
+//SPECIAL GENIE MESSAGGE FOR MOBILES
+@media (min-height: 890px) and (min-width: 414px) {
+    .bubble__genie__advice {
+        height: 250;
+        width: 250;
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-height: 667px) and (min-width: 375px) {
+    .bubble__genie__advice {
+        top: 40%;
+    }
+}
+
+@media (min-height: 740px) and (min-width: 360px) {
+    .bubble__genie__advice {
+        top: 50%;
+    }
+}
+
+
 
 //GENIUS and Bubble
 @media (min-width: 496px) {
@@ -942,6 +973,12 @@ input[type="submit"]:hover {
     }
     .bubble__wish {
         left: 36%;
+    }
+    .bubble__genie__advice {
+        top: 30%;
+        height: 250;
+        width: 250;
+        font-size: 1.6rem;
     }
 }
 
@@ -978,6 +1015,9 @@ input[type="submit"]:hover {
         left: 9.5rem;
     }
     .bubble__wish {
+        left: 40%;
+    }
+    .bubble__genie__advice{
         left: 40%;
     }
 }
