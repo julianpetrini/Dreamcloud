@@ -10957,8 +10957,6 @@ textarea.form-control-lg {
   align-items: center;
   text-align: center;
   line-height: 0.9;
-  -webkit-animation: 3s Infinite floating;
-          animation: 3s Infinite floating;
 }
 
 .bubble__why {
@@ -11014,10 +11012,8 @@ textarea.form-control-lg {
   left: 26%;
   /* move circle in the actual middle */
   font-size: 2.3rem;
-  -webkit-animation-name: dream_breath;
-          animation-name: dream_breath;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation: 3s Infinite dream_breath;
+          animation: 3s Infinite dream_breath;
   transition: transform 0.4s;
 }
 
@@ -11441,6 +11437,11 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
 .container__of__vh {
   min-height: 52vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .generic__title, .dreams__title, .error__form__text, .generic__subtitle {
@@ -11473,7 +11474,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 2rem;
 }
 
-.filter__buttons__dreams, .filter__buttons__ideas, .filter__buttons__wishes, .filter__buttons__goals {
+.filter__buttons__dreams, .filter__buttons__all, .filter__buttons__ideas, .filter__buttons__wishes, .filter__buttons__goals {
   background-color: #FFBD03;
   color: #F9FDFF;
   border: none;
@@ -11482,8 +11483,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   text-transform: uppercase;
   font-weight: 800;
 }
-.filter__buttons__dreams:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
-  background-color: #008f58;
+.filter__buttons__dreams:hover, .filter__buttons__all:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
+  background-color: #000000;
 }
 
 .filter__buttons__goals {
@@ -11496,6 +11497,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
 .filter__buttons__ideas {
   background-color: #DD7973;
+}
+
+.filter__buttons__all {
+  background-color: #5ADBB5;
 }
 
 .dreams__box__header {
@@ -11517,6 +11522,11 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 0.5rem;
   text-transform: uppercase;
   font-weight: 800;
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 rgba(13, 202, 240, 0.0901960784);
+  transition: transform 0.4s;
+}
+.dreams__box__dreams:hover, .dreams__box__ideas:hover, .dreams__box__wishes:hover, .dreams__box__goals:hover {
+  transform: scale(1.05);
 }
 
 .dreams__box__goals {
@@ -11609,6 +11619,12 @@ input[type=submit]:hover {
   }
   .generic__subtitle {
     font-size: 1.8rem;
+  }
+  .container__of__vh {
+    align-items: center;
+  }
+  .dreams__box__dreams, .dreams__box__goals, .dreams__box__wishes, .dreams__box__ideas {
+    width: 50vw;
   }
   .img__responsive {
     max-width: 32vw;

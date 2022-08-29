@@ -108,7 +108,7 @@
     text-align: center;
     line-height: 0.9;
     //TO FLOAT
-    animation: 3s Infinite floating;
+    // animation: 3s Infinite floating;
 
     //////animation
 }
@@ -184,9 +184,9 @@
 
     // animation: 3s Infinite floating;
     // animation-delay: 1.2s;
-
-    animation-name: dream_breath;
-    animation-duration: 4s;
+    animation: 3s Infinite dream_breath;
+    // animation-name: dream_breath; 
+    // animation-duration: 4s Infinite;
 
     transition: transform .4s;
     // &:hover{
@@ -573,6 +573,11 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
 .container__of__vh {
     min-height: 52vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
 }
 .generic__title {
     font-family: $font-family-FIRST;
@@ -615,7 +620,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-transform: uppercase;
     font-weight: $font-title-weight;
     &:hover {
-        background-color: #008f58;
+        background-color: #000000;
         // background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
     }
     // font-size: 0.5rem;
@@ -631,6 +636,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .filter__buttons__ideas {
     @extend .filter__buttons__dreams;
     background-color: $the-why-color;
+}
+.filter__buttons__all {
+    @extend .filter__buttons__dreams;
+    background-color: $people-dream-color;
 }
 
 ////////////////////////////////////////////
@@ -651,6 +660,13 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     margin: 0.5rem;
     text-transform: uppercase;
     font-weight: $font-title-weight;
+
+    box-shadow: 1px 1px 0 #ffffff1f, -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 #0dcaf017;
+    transition: transform 0.4s;
+    &:hover{
+          transform: scale(1.05);
+        }
+
 }
 .dreams__box__goals {
     @extend .dreams__box__dreams;
@@ -754,6 +770,14 @@ input[type="submit"]:hover {
         font-size: 1.8rem;
         // margin-top: 3rem;
         // margin-bottom: 2rem;
+    }
+
+    .container__of__vh{
+        align-items: center;
+    }
+
+    .dreams__box__dreams{
+        width: 50vw;
     }
 
     .img__responsive {

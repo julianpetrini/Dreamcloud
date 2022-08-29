@@ -511,6 +511,8 @@
         <button class="filter__buttons__goals" onclick="changedata(1)">goals</button>
         <button class="filter__buttons__wishes" onclick="changedata(2)">wishes</button>
         <button class="filter__buttons__ideas" onclick="changedata(3)">ideas</button>
+        <button class="filter__buttons__all" onclick="changedata(4)">all</button>
+        
 
     </div>
 
@@ -521,10 +523,7 @@
         function changedata(parameter) {
 
             // TODO: hide all entries
-            setInactive(document.getElementsByName('goals'));
-            setInactive(document.getElementsByName('dreams'));
-            setInactive(document.getElementsByName('wishes'));
-            setInactive(document.getElementsByName('ideas'));
+            showFiltered(['goals', 'dreams', 'wishes', 'ideas'], false);
 
             if (parameter == 0) {
                 setActive(document.getElementsByName('dreams'));
@@ -534,6 +533,22 @@
                 setActive(document.getElementsByName('wishes'));
             } else if (parameter == 3) {
                 setActive(document.getElementsByName('ideas'));
+            }
+            else if (parameter == 4) {
+                showFiltered(['goals', 'dreams', 'wishes', 'ideas'], true);
+            }  
+        }
+
+        function showFiltered(buttons, active) {
+            if (active) {
+                for (let b = 0; b < buttons.length; b++) {
+                    setActive(document.getElementsByName(buttons[b]));
+                }
+            }
+            else {
+                for (let b = 0; b < buttons.length; b++) {
+                    setInactive(document.getElementsByName(buttons[b]));
+                }
             }
         }
 
