@@ -162,6 +162,32 @@
         transform: scale(1.05);
     }
 }
+.bubble__genie__advice {
+
+    display: none; 
+    border: 3px solid $share-your-wish-stroke;
+    border-radius: 43% 57% 100% 0% / 76% 57% 43% 24% ;
+    background-color: $wishes-button-color;
+
+
+    /* bubble size */
+    height: 180px;
+    width: 180px;
+
+    /* for absolute positioning */
+    position: absolute;
+    top: 53%;
+    left: 26%;
+    z-index: 1;
+
+    font-size: 1rem;
+    animation: 3s Infinite dream_breath;
+    animation-delay: 0.5s;
+    transition: transform 0.4s;
+
+    
+}
+
 .bubble__wish {
     border: 3px solid $share-your-wish-stroke;
     background-color: $share-your-wish-color;
@@ -517,9 +543,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     box-shadow: $box-shadow;
     border-radius: 10px;
     max-width: 50vw;
-
 }
-
 
 .the__why__text_box {
     //background-color: #021E5E;

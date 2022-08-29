@@ -11000,6 +11000,27 @@ textarea.form-control-lg {
   transform: scale(1.05);
 }
 
+.bubble__genie__advice {
+  display: none;
+  border: 3px solid #38c5ff;
+  border-radius: 43% 57% 100% 0%/76% 57% 43% 24%;
+  background-color: #407bff;
+  /* bubble size */
+  height: 180px;
+  width: 180px;
+  /* for absolute positioning */
+  position: absolute;
+  top: 53%;
+  left: 26%;
+  z-index: 1;
+  font-size: 1rem;
+  -webkit-animation: 3s Infinite dream_breath;
+          animation: 3s Infinite dream_breath;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  transition: transform 0.4s;
+}
+
 .bubble__wish {
   border: 3px solid #38c5ff;
   background-color: #ffbd03;
