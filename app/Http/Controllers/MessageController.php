@@ -35,7 +35,34 @@ class MessageController extends Controller
         // return view('people_dreams', ['messages' => $messages]);
 
     }
+////////////////////////
 
+public function showOne()
+{
+  
+    $messages = Message::orderBy('created_at','asc')->get();
+//  $messages=Message::all()->first();
+//  all()->sortByDesc('created_at')->first();
+
+return view('dream_download', ['messages' => $messages]);
+
+
+}
+
+/// ACA CREE EL CONTROLADOR. CREO QUE LE PUEDO HACER UN FILTRO CON JAVASCRIPT. O BUSCAR COMO SOLO ENVIAR EL ULTIMO
+
+
+// public function details($id) {
+ 
+
+//     $post = Post::findOrFail($id);
+    
+//     return view('postDetail', ['post' => $post]);
+// }
+
+
+
+///////////////////////
     // public function showAll1()
     // {
     //     $messages = Message::all()->sortByDesc('created_at');
@@ -66,7 +93,7 @@ class MessageController extends Controller
         $message->save();
    
         // at the end we make a redirect to the url /messages
-        return redirect('/dreams');        
+        return redirect('/result');        
     }
  
     // public function showMessage()

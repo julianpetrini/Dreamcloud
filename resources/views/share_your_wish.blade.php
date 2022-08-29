@@ -50,7 +50,7 @@
 <div class="share__form">
     <form action="{{ route('create') }}" method="POST" name="share_your_wish_form">
         <label for="fname" class="share__form__titles">Tell the genie your name</label>
-        <input type="text" id="fname" name="username" placeholder="Your name..">
+        <input type="text" id="username" name="username" placeholder="Your name..">
 
         <label for="lname" class="share__form__titles">it's about ... </label>
 
@@ -61,7 +61,7 @@
             <option value="ideas">ideas</option>
         </select>
 
-        <textarea class="share__form__textarea" placeholder="Your wish is my command" name="comment"></textarea>
+        <textarea class="share__form__textarea" placeholder="Your wish is my command" name="comment" id="dream_comment"></textarea>
 
         <div class="title">
             @error('username')
@@ -78,18 +78,6 @@
         <input type="submit" value="share it !">
     </form>
 </div>
-
-<script>
-    // //// VALIDATION 
-
-    // function validateForm() {
-    //     let x = document.forms["share_your_wish_form"]["fname"].value["comment"].value;
-    //     if (x == "") {
-    //         alert("Please fill out the info so the genie can do his work ! ");
-    //         return false;
-    //     }
-    // }
-</script>
 
 {{-- @foreach ($messages as $message) 
    <li>

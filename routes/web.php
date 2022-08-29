@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/result', function () {
+    return view('dream_download');
+});
+
 Route::get('/why', function () {
     return view('the_why');
 });
@@ -34,6 +38,8 @@ Route::get('/inspired', function () {
 Route::get('/share', function () {
     return view('share_your_wish');
 });
+
+Route::get('/result', [MessageController::class, 'showOne']);
 
 Route::get('/dreams', [MessageController::class, 'showAll']);
 
