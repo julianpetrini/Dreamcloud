@@ -8,7 +8,7 @@
             {{-- the <br> why --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="dreams"  class="bubble__text">
+        <a href="dreams" class="bubble__text">
             <h1 class="nav_bubble_text">people's dreams</h1>
         </a>
     </div>
@@ -46,9 +46,24 @@
 <div class="title">
     <h1 class="generic__title">get inspired</h1>
 </div>
+@foreach ($posts as $post)
+    <div class="get__inspired__big__text__box">
+        <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"
+            alt="Card image cap">
+        {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
+
+        <div class="get__inspired__text_box">
+            <p class="the__get__inspired__text">{{ $post->content }}</p>
+            <h2 class="generic__subtitle">by {{ $post->author }}</h2>
+        </div>
+@endforeach
+
+</div>
 
 
-<div class="the__why__text_box">
+
+{{-- ORIGINAL STYLING --}}
+{{-- <div class="the__why__text_box">
     <h2 class="generic__subtitle">an old tale</h2>
     <p class="the_why__text">As every kid, we believe. In possibilities, in magic, in smiles. Later, life goes by.
         Observing and learning the rules of the structure. How to process information, how to relate, and also how to
@@ -61,13 +76,15 @@
         game to play with another way of thinking. Maybe too philosophical or without strong content to the rules world,
         but don't forget every major development came from some idea most people could comprehend until it was real.
         This is it. It has more than just a share. It is also to create a database in the cloud full of positive and
-        <img src="{{ asset('img/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png') }}" class="img__responsive" alt="">
+        <img src="{{ asset('img/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png') }}" class="img__responsive"
+            alt="">
         encouraging intentions, dreams, and so on. Like a pyramid in the middle of the desert that reflects into the
         galaxy. The cloud.
-        <img src="{{ asset('img/aladdin_disney3.jpg') }}" class="img__responsive" alt=""> </p>
-        
+        <img src="{{ asset('img/aladdin_disney3.jpg') }}" class="img__responsive" alt="">
+    </p>
 
-</div>
+
+</div> --}}
 
 
 @include ('layout/footer')

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MessageController;
+use App\Http\Controllers\BlogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,10 +31,18 @@ Route::get('/inspired', function () {
     return view('get_inspired');
 });
 
-// Route::get('/share', function () {
-//     return view('share_your_wish');
-// });
+Route::get('/share', function () {
+    return view('share_your_wish');
+});
 
-Route::get('/share', [MessageController::class, 'showAll']);
+Route::get('/dreams', [MessageController::class, 'showAll']);
 
-Route::post('/create', [MessageController::class, 'create']);
+Route::post('/create', [MessageController::class, 'create'])->name('create');
+
+// Route::get('/why', [MessageController::class, 'showAll1']);
+
+
+///// BLOG CONTROLLER
+
+
+Route::get('/inspired', [BlogController::class, 'showAll']);

@@ -11,10 +11,11 @@
 </head>
 
 <body class="bg_pattern">
+    {{-- <div class="background-spin"> --}}
     @yield('home')
     @yield('the_why')
    
-
+</div>
 </body>
 
 </html>

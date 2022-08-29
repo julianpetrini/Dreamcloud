@@ -27,6 +27,38 @@
     background: url(/img/bg.svg) no-repeat fixed center;
     // background-size: cover;
     color: rgb(255, 255, 255);
+
+    // animation:spin 10s linear infinite;
+    // @keyframes spin{
+    //     from{transform:rotate(0deg)}
+    //     to{transform:rotate(360deg)}	
+    // }
+}
+
+.background-spin{
+
+    // padding: 20px;
+    // margin: 20px;
+    // font-family: $font-family-FIRST;
+    // background: linear-gradient(
+    //     121deg,
+    //     rgba(4, 102, 172, 1) 0%,
+    //     rgba(4, 156, 220, 1) 21%,
+    //     rgba(4, 212, 251, 1) 44%,
+    //     rgba(4, 180, 235, 1) 61%,
+    //     rgba(27, 196, 236, 1) 82%,
+    //     rgba(4, 172, 236, 1) 97%,
+    //     rgba(4, 128, 198, 1) 100%
+    // );
+    // background: url(/img/bg.svg) no-repeat fixed center;
+    // // background-size: cover;
+    // color: rgb(255, 255, 255);
+
+    // animation:spin 10s linear infinite;
+    // @keyframes spin{
+    //     from{transform:rotate(0deg)}
+    //     to{transform:rotate(360deg)}	
+    // }
 }
 
 //title text
@@ -95,6 +127,12 @@
     position: absolute;
     top: 20%;
     left: 10%;
+
+    transition: transform 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .bubble__inspired {
     border: 3px solid $get-inspired-stroke;
@@ -110,6 +148,10 @@
     right: 10%;
 
     font-size: 1.1rem;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .bubble__wish {
     border: 3px solid $share-your-wish-stroke;
@@ -127,6 +169,11 @@
     /* move circle in the actual middle */
 
     font-size: 2.3rem;
+
+    // transition: transform .4s;
+    // &:hover{
+    //     transform: scale(1.05);
+    // }
 }
 .bubble__dreams {
     border: 3px solid $people-dream-stroke;
@@ -140,6 +187,10 @@
     position: absolute;
     bottom: 20%;
     right: 14%;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 ///////////////////////////////////////////////////
@@ -326,6 +377,10 @@
     width: 90%;
     bottom: -6rem;
     left: -4.5rem;
+    transition: transform 0.4s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 svg#freepik_stories-wishes:not(.animated) .animable {
     opacity: 0;
@@ -391,6 +446,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     flex-direction: column;
     align-items: center;
     margin-top: 1.7rem;
+
+    // margin-top: 157px;
 }
 .footer__title {
     font-family: $font-family-FIRST;
@@ -410,13 +467,34 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 
 /////////////THE WHY
+.get__inspired__text_box {
+    margin-top: 1rem;
+    background-color: rgba(26, 53, 97, 0.3);
+    border-radius: 10px;
+    max-width: 50vw;
+}
 
 .the__why__text_box {
     //background-color: #021E5E;
-    display: inline-block;
-    background-color: rgba(26, 53, 97, 0.8);
-    // height: 68vh;
+    // display: inline-block;
+    background-color: rgba(26, 53, 97, 0.3);
+    // // height: 68vh;
     border-radius: 15px;
+    // padding: 1rem;
+
+    display: flex;
+    // background-color: rgba(26, 53, 97, 0.8);
+    // border-radius: 15px;
+    padding: 1rem;
+    min-height: 60vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.get__inspired__big__text__box {
+    @extend .the__why__text_box;
+    background-color: rgba(26, 53, 97, 0);
+    align-items: center;
 }
 
 .the_why__text {
@@ -425,6 +503,24 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-align: left;
     color: $font-color-title;
     margin: 0;
+}
+
+.the__get__inspired__text {
+    @extend .the_why__text;
+    text-align: center;
+}
+//////////// NO INFO IN THE DATABASE
+
+.nodatabase__the__text {
+    @extend .the_why__text;
+    text-align: center;
+}
+.nodatabase__genius {
+    @extend .genius;
+    position: fixed;
+    width: 90%;
+    bottom: 3rem;
+    left: 0.5rem;
 }
 
 .title {
@@ -446,7 +542,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     font-weight: $font-title-sub-weight;
     letter-spacing: inherit;
     font-size: 1rem;
-    margin-top: 1rem;
+    // margin-top: 1rem;
 }
 .dreams__title {
     @extend .generic__title;
@@ -472,8 +568,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-transform: uppercase;
     font-weight: $font-title-weight;
     &:hover {
-        background-color: #fbab7e;
-        background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+        background-color: #008f58;
+        // background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
     }
     // font-size: 0.5rem;
 }
@@ -525,8 +621,15 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     color: $font-color-title;
 }
 .img__responsive {
-    width: 100%;
+    // width: 100%;
+    max-width: 300px;
     height: auto;
+    padding-top: 1rem;
+    border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.08);
+    }
 }
 
 ////////////////////
@@ -590,49 +693,85 @@ input[type="submit"]:hover {
 @media (min-width: 768px) {
     //TABLET
     // GET INSPIRED SECTION
+    .header__title {
+        font-size: 4.2rem;
+    }
+    .header__description {
+        font-size: 2rem;
+    }
 
     .the_why__text {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .generic__subtitle {
         font-size: 1.8rem;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
+        // margin-top: 3rem;
+        // margin-bottom: 2rem;
     }
 
     .img__responsive {
-        width: 63vw;
+        max-width: 32vw;
         height: auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    ///BUBBLES
+
+    .bubble__why {
+        height: 150;
+        width: 150;
+    }
+
+    .bubble__inspired {
+        height: 135;
+        width: 135;
+    }
+
+    .bubble__dreams {
+        height: 165;
+        width: 165;
+    }
+
+    .bubble__wish {
+        height: 250;
+        width: 250;
     }
 }
 
 @media (min-width: 992px) {
     //DESKTOP
     //GENERAL
+
+    .get__inspired__big__text__box {
+        max-width: 43vw;
+
+        align-items: center;
+    }
     .bg_pattern {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
     .img__responsive {
-        width: 80%;
+        // width: 80%;
+        max-width: 32vw;
     }
 
     // GET INSPIRED SECTION
     .the__why__text_box {
-        max-width: 43vw;
+        // max-width: 43vw;
+        min-width: 84vw;
     }
 
     .the_why__text {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .generic__subtitle {
         font-size: 1.8rem;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
+        // margin-top: 3rem;
+        // margin-bottom: 2rem;
     }
 
     // COMMENTS
@@ -649,15 +788,14 @@ input[type="submit"]:hover {
     .dreams__box__ideas {
         width: 50vw;
     }
-    .the_why__text {
-    }
+    // .the_why__text {
+    // }
     //HOME
 }
 
 @media (min-width: 1200px) {
     //LARGE DESKTOP
     // GET INSPIRED SECTION
-   
 }
 
 //GENIUS
@@ -668,6 +806,12 @@ input[type="submit"]:hover {
         bottom: -7rem;
         left: -3.5rem;
     }
+    .nodatabase__genius {
+        position: fixed;
+        width: 80%;
+        bottom: -2rem;
+        left: 0.5rem;
+    }
 }
 
 @media (min-width: 718px) {
@@ -677,11 +821,44 @@ input[type="submit"]:hover {
         bottom: -6rem;
         left: -1.5rem;
     }
+
+    .nodatabase__genius {
+        position: fixed;
+        width: 60%;
+        bottom: -9rem;
+        left: 0.5rem;
+    }
 }
 @media (min-width: 1200px) {
     .genius {
-        width: 33%;
-        bottom: -3rem;
-        left: 3.5rem;
+        // width: 33%;
+        // bottom: -3rem;
+        // left: 3.5rem;
+
+        width: 45%;
+        bottom: -16rem;
+        left: 0.5rem;
     }
+
+    .nodatabase__genius {
+        position: fixed;
+        width: 60%;
+        bottom: -26rem;
+        left: 9.5rem;
+    }
+}
+
+//////////// PRUEBA CON JAVASCRIPT
+
+.error__form__text {
+    @extend .dreams__title;
+    line-height: 1;
+    color: $share-your-wish-color;
+    //To make a border text, the use of shadows.
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.inactive {
+    font-size: 25px;
+    display: none;
 }

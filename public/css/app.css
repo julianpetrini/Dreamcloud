@@ -10970,6 +10970,10 @@ textarea.form-control-lg {
   position: absolute;
   top: 20%;
   left: 10%;
+  transition: transform 0.2s;
+}
+.bubble__why:hover {
+  transform: scale(1.05);
 }
 
 .bubble__inspired {
@@ -10983,6 +10987,10 @@ textarea.form-control-lg {
   top: 20%;
   right: 10%;
   font-size: 1.1rem;
+  transition: transform 0.2s;
+}
+.bubble__inspired:hover {
+  transform: scale(1.05);
 }
 
 .bubble__wish {
@@ -11010,6 +11018,10 @@ textarea.form-control-lg {
   position: absolute;
   bottom: 20%;
   right: 14%;
+  transition: transform 0.2s;
+}
+.bubble__dreams:hover {
+  transform: scale(1.05);
 }
 
 .navbar {
@@ -11193,11 +11205,15 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
-.genius {
+.genius, .nodatabase__genius {
   position: fixed;
   width: 90%;
   bottom: -6rem;
   left: -4.5rem;
+  transition: transform 0.4s;
+}
+.genius:hover, .nodatabase__genius:hover {
+  transform: scale(1.05);
 }
 
 svg#freepik_stories-wishes:not(.animated) .animable {
@@ -11327,13 +11343,29 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-size: 1rem;
 }
 
-.the__why__text_box {
-  display: inline-block;
-  background-color: rgba(26, 53, 97, 0.8);
-  border-radius: 15px;
+.get__inspired__text_box {
+  margin-top: 1rem;
+  background-color: rgba(26, 53, 97, 0.3);
+  border-radius: 10px;
+  max-width: 50vw;
 }
 
-.the_why__text {
+.the__why__text_box, .get__inspired__big__text__box {
+  background-color: rgba(26, 53, 97, 0.3);
+  border-radius: 15px;
+  display: flex;
+  padding: 1rem;
+  min-height: 60vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.get__inspired__big__text__box {
+  background-color: rgba(26, 53, 97, 0);
+  align-items: center;
+}
+
+.the_why__text, .nodatabase__the__text, .the__get__inspired__text {
   font-size: 3.7vw;
   padding: 0.5rem;
   text-align: left;
@@ -11341,11 +11373,26 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 0;
 }
 
+.the__get__inspired__text {
+  text-align: center;
+}
+
+.nodatabase__the__text {
+  text-align: center;
+}
+
+.nodatabase__genius {
+  position: fixed;
+  width: 90%;
+  bottom: 3rem;
+  left: 0.5rem;
+}
+
 .title {
   margin: 1rem;
 }
 
-.generic__title, .dreams__title, .generic__subtitle {
+.generic__title, .dreams__title, .error__form__text, .generic__subtitle {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
   color: #F9FDFF;
@@ -11360,10 +11407,9 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-weight: 700;
   letter-spacing: inherit;
   font-size: 1rem;
-  margin-top: 1rem;
 }
 
-.dreams__title {
+.dreams__title, .error__form__text {
   letter-spacing: 1px;
   font-size: 1.8rem;
 }
@@ -11386,12 +11432,11 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-weight: 800;
 }
 .filter__buttons__dreams:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
-  background-color: #fbab7e;
-  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-color: #008f58;
 }
 
 .filter__buttons__goals {
-  background-color: rgb(12, 11, 11);
+  background-color: rgb(31, 135, 161);
 }
 
 .filter__buttons__wishes {
@@ -11424,7 +11469,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 
 .dreams__box__goals {
-  background-color: rgb(12, 11, 11);
+  background-color: rgb(31, 135, 161);
   color: #F9FDFF;
 }
 
@@ -11439,8 +11484,14 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 
 .img__responsive {
-  width: 100%;
+  max-width: 300px;
   height: auto;
+  padding-top: 1rem;
+  border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
+  transition: transform 0.2s;
+}
+.img__responsive:hover {
+  transform: scale(1.08);
 }
 
 input[type=text],
@@ -11496,41 +11547,63 @@ input[type=submit]:hover {
 }
 
 @media (min-width: 768px) {
-  .the_why__text {
-    font-size: 1.5rem;
+  .header__title, .header__description {
+    font-size: 4.2rem;
+  }
+  .header__description {
+    font-size: 2rem;
+  }
+  .the_why__text, .the__get__inspired__text, .nodatabase__the__text {
+    font-size: 1.3rem;
   }
   .generic__subtitle {
     font-size: 1.8rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
   }
   .img__responsive {
-    width: 63vw;
+    max-width: 32vw;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+  .bubble__why {
+    height: 150;
+    width: 150;
+  }
+  .bubble__inspired {
+    height: 135;
+    width: 135;
+  }
+  .bubble__dreams {
+    height: 165;
+    width: 165;
+  }
+  .bubble__wish {
+    height: 250;
+    width: 250;
+  }
 }
 @media (min-width: 992px) {
+  .get__inspired__big__text__box {
+    max-width: 43vw;
+    align-items: center;
+  }
   .bg_pattern {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   .img__responsive {
-    width: 80%;
+    max-width: 32vw;
   }
-  .the__why__text_box {
-    max-width: 43vw;
+  .the__why__text_box, .get__inspired__big__text__box {
+    min-width: 84vw;
   }
-  .the_why__text {
-    font-size: 1.5rem;
+  .the_why__text, .the__get__inspired__text, .nodatabase__the__text {
+    font-size: 1.2rem;
   }
   .generic__subtitle {
     font-size: 1.8rem;
-    margin-top: 3rem;
-    margin-bottom: 2rem;
   }
   .dreams__box__dreams, .dreams__box__goals, .dreams__box__wishes, .dreams__box__ideas {
     width: 50vw;
@@ -11546,25 +11619,53 @@ input[type=submit]:hover {
   }
 }
 @media (min-width: 496px) {
-  .genius {
+  .genius, .nodatabase__genius {
     position: fixed;
     width: 70%;
     bottom: -7rem;
     left: -3.5rem;
   }
+  .nodatabase__genius {
+    position: fixed;
+    width: 80%;
+    bottom: -2rem;
+    left: 0.5rem;
+  }
 }
 @media (min-width: 718px) {
-  .genius {
+  .genius, .nodatabase__genius {
     position: fixed;
     width: 50%;
     bottom: -6rem;
     left: -1.5rem;
   }
+  .nodatabase__genius {
+    position: fixed;
+    width: 60%;
+    bottom: -9rem;
+    left: 0.5rem;
+  }
 }
 @media (min-width: 1200px) {
-  .genius {
-    width: 33%;
-    bottom: -3rem;
-    left: 3.5rem;
+  .genius, .nodatabase__genius {
+    width: 45%;
+    bottom: -16rem;
+    left: 0.5rem;
   }
+  .nodatabase__genius {
+    position: fixed;
+    width: 60%;
+    bottom: -26rem;
+    left: 9.5rem;
+  }
+}
+.error__form__text {
+  line-height: 1;
+  color: #FFBD03;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.inactive {
+  font-size: 25px;
+  display: none;
 }
