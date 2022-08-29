@@ -9,7 +9,7 @@
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
         <a href="dreams" class="bubble__text">
-            <h1 class="nav_bubble_text">people's dreams</h1>
+            <h1 class="nav_bubble_text">dreams</h1>
         </a>
     </div>
 
@@ -28,7 +28,7 @@
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
         <a href="share" class="bubble__text">
-            <h1 class="nav_bubble_text">share your wish</h1>
+            <h1 class="nav_bubble_text">share</h1>
         </a>
     </div>
 

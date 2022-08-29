@@ -10906,7 +10906,6 @@ textarea.form-control-lg {
   }
 }
 .bg_pattern {
-  padding: 20px;
   margin: 20px;
   font-family: "Baloo Da 2", cursive;
   background: linear-gradient(121deg, rgb(4, 102, 172) 0%, rgb(4, 156, 220) 21%, rgb(4, 212, 251) 44%, rgb(4, 180, 235) 61%, rgb(27, 196, 236) 82%, rgb(4, 172, 236) 97%, rgb(4, 128, 198) 100%);
@@ -10958,6 +10957,8 @@ textarea.form-control-lg {
   align-items: center;
   text-align: center;
   line-height: 0.9;
+  -webkit-animation: 3s Infinite floating;
+          animation: 3s Infinite floating;
 }
 
 .bubble__why {
@@ -10970,6 +10971,10 @@ textarea.form-control-lg {
   position: absolute;
   top: 20%;
   left: 10%;
+  -webkit-animation: 4s Infinite floating;
+          animation: 4s Infinite floating;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   transition: transform 0.2s;
 }
 .bubble__why:hover {
@@ -10986,6 +10991,10 @@ textarea.form-control-lg {
   position: absolute;
   top: 20%;
   right: 10%;
+  -webkit-animation: 3s Infinite floating;
+          animation: 3s Infinite floating;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
   font-size: 1.1rem;
   transition: transform 0.2s;
 }
@@ -11001,11 +11010,15 @@ textarea.form-control-lg {
   width: 180px;
   /* for absolute positioning */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 26%;
   /* move circle in the actual middle */
   font-size: 2.3rem;
+  -webkit-animation-name: dream_breath;
+          animation-name: dream_breath;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  transition: transform 0.4s;
 }
 
 .bubble__dreams {
@@ -11014,21 +11027,54 @@ textarea.form-control-lg {
   /* bubble size */
   height: 120px;
   width: 120px;
+  -webkit-animation: 3s Infinite floating;
+          animation: 3s Infinite floating;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   /* for absolute positioning */
   position: absolute;
-  bottom: 20%;
-  right: 14%;
-  transition: transform 0.2s;
+  bottom: 18%;
+  right: 10%;
+  -webkit-animation-name: dream_breath;
+          animation-name: dream_breath;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
-.bubble__dreams:hover {
-  transform: scale(1.05);
+@-webkit-keyframes dream_breath {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dream_breath {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 .nav_bubble__why, .nav_bubble__home, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
@@ -11188,11 +11234,12 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .nav_bubble_text {
   color: #F9FDFF;
-  font-size: 8px;
+  font-size: 13px;
   margin-top: 7px;
   text-decoration: none;
   border-radius: 50%;
@@ -11392,6 +11439,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 1rem;
 }
 
+.container__of__vh {
+  min-height: 52vh;
+}
+
 .generic__title, .dreams__title, .error__form__text, .generic__subtitle {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
@@ -11426,7 +11477,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   background-color: #FFBD03;
   color: #F9FDFF;
   border: none;
-  border-radius: 13px;
+  border-radius: 10px;
   margin-right: 7px;
   text-transform: uppercase;
   font-weight: 800;
@@ -11569,18 +11620,23 @@ input[type=submit]:hover {
   .bubble__why {
     height: 150;
     width: 150;
+    font-size: 2rem;
   }
   .bubble__inspired {
     height: 135;
     width: 135;
+    font-size: 1.6rem;
   }
   .bubble__dreams {
     height: 165;
     width: 165;
+    font-size: 2rem;
   }
   .bubble__wish {
     height: 250;
     width: 250;
+    top: 38%;
+    left: 35%;
   }
 }
 @media (min-width: 992px) {
@@ -11631,6 +11687,9 @@ input[type=submit]:hover {
     bottom: -2rem;
     left: 0.5rem;
   }
+  .bubble__wish {
+    left: 36%;
+  }
 }
 @media (min-width: 718px) {
   .genius, .nodatabase__genius {
@@ -11657,6 +11716,14 @@ input[type=submit]:hover {
     width: 60%;
     bottom: -26rem;
     left: 9.5rem;
+  }
+  .bubble__wish {
+    left: 40%;
+  }
+}
+@media (min-width: 1500px) {
+  .bubble__wish {
+    left: 42%;
   }
 }
 .error__form__text {

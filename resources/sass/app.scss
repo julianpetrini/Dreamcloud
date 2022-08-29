@@ -11,7 +11,7 @@
 //BACKGROUND
 
 .bg_pattern {
-    padding: 20px;
+    // padding: 20px;
     margin: 20px;
     font-family: $font-family-FIRST;
     background: linear-gradient(
@@ -31,35 +31,34 @@
     // animation:spin 10s linear infinite;
     // @keyframes spin{
     //     from{transform:rotate(0deg)}
-    //     to{transform:rotate(360deg)}	
+    //     to{transform:rotate(360deg)}
     // }
 }
 
-.background-spin{
+// .background-spin {
+//     // padding: 20px;
+//     // margin: 20px;
+//     // font-family: $font-family-FIRST;
+//     // background: linear-gradient(
+//     //     121deg,
+//     //     rgba(4, 102, 172, 1) 0%,
+//     //     rgba(4, 156, 220, 1) 21%,
+//     //     rgba(4, 212, 251, 1) 44%,
+//     //     rgba(4, 180, 235, 1) 61%,
+//     //     rgba(27, 196, 236, 1) 82%,
+//     //     rgba(4, 172, 236, 1) 97%,
+//     //     rgba(4, 128, 198, 1) 100%
+//     // );
+//     // background: url(/img/bg.svg) no-repeat fixed center;
+//     // // background-size: cover;
+//     // color: rgb(255, 255, 255);
 
-    // padding: 20px;
-    // margin: 20px;
-    // font-family: $font-family-FIRST;
-    // background: linear-gradient(
-    //     121deg,
-    //     rgba(4, 102, 172, 1) 0%,
-    //     rgba(4, 156, 220, 1) 21%,
-    //     rgba(4, 212, 251, 1) 44%,
-    //     rgba(4, 180, 235, 1) 61%,
-    //     rgba(27, 196, 236, 1) 82%,
-    //     rgba(4, 172, 236, 1) 97%,
-    //     rgba(4, 128, 198, 1) 100%
-    // );
-    // background: url(/img/bg.svg) no-repeat fixed center;
-    // // background-size: cover;
-    // color: rgb(255, 255, 255);
-
-    // animation:spin 10s linear infinite;
-    // @keyframes spin{
-    //     from{transform:rotate(0deg)}
-    //     to{transform:rotate(360deg)}	
-    // }
-}
+//     // animation:spin 10s linear infinite;
+//     // @keyframes spin{
+//     //     from{transform:rotate(0deg)}
+//     //     to{transform:rotate(360deg)}
+//     // }
+// }
 
 //title text
 //div container
@@ -108,6 +107,8 @@
     align-items: center;
     text-align: center;
     line-height: 0.9;
+    //TO FLOAT
+    animation: 3s Infinite floating;
 
     //////animation
 }
@@ -128,6 +129,10 @@
     top: 20%;
     left: 10%;
 
+    //ANIMATION FLOATING
+    animation: 4s Infinite floating;
+    animation-delay: 1s;
+
     transition: transform 0.2s;
 
     &:hover {
@@ -147,6 +152,10 @@
     top: 20%;
     right: 10%;
 
+    //ANIMATION FLOATING
+    animation: 3s Infinite floating;
+    animation-delay: 1.2s;
+
     font-size: 1.1rem;
     transition: transform 0.2s;
     &:hover {
@@ -163,14 +172,23 @@
 
     /* for absolute positioning */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 26%;
+    //OLD STYLING FOR CIRCLE IN CENTER
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     /* move circle in the actual middle */
 
     font-size: 2.3rem;
 
-    // transition: transform .4s;
+    // animation: 3s Infinite floating;
+    // animation-delay: 1.2s;
+
+    animation-name: dream_breath;
+    animation-duration: 4s;
+
+    transition: transform .4s;
     // &:hover{
     //     transform: scale(1.05);
     // }
@@ -183,13 +201,34 @@
     height: 120px;
     width: 120px;
 
+    //ANIMATION FLOATING
+    animation: 3s Infinite floating;
+    animation-delay: 1s;
+
     /* for absolute positioning */
     position: absolute;
-    bottom: 20%;
-    right: 14%;
-    transition: transform 0.2s;
-    &:hover {
-        transform: scale(1.05);
+    bottom: 18%;
+    right: 10%;
+    // OLD STYLING FOR CIRCLE
+    // bottom: 20%;
+    // right: 14%;
+    animation-name: dream_breath;
+    animation-duration: 4s;
+
+    @keyframes dream_breath {
+        // from {background-color: red;}
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.05);
+        }
+        50% {
+            transform: scale(1.08);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 }
 
@@ -198,7 +237,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    // justify-content: center;
+    //NEW STYLE FOR THE BUBBLES TEXT SIZE
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 .nav_bubble__why {
     border: 3px solid $the-why-stroke;
@@ -352,10 +394,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .nav_bubble_text {
     color: $font-color-title;
-    font-size: 8px;
+    //new size, before 8px
+    font-size: 13px;
     margin-top: 7px;
 
     text-decoration: none;
@@ -527,6 +571,9 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     margin: 1rem;
 }
 
+.container__of__vh {
+    min-height: 52vh;
+}
 .generic__title {
     font-family: $font-family-FIRST;
     font-weight: $font-title-weight;
@@ -562,7 +609,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     color: $font-color-title;
 
     border: none;
-    border-radius: 13px;
+    border-radius: 10px;
     margin-right: 7px;
 
     text-transform: uppercase;
@@ -722,21 +769,26 @@ input[type="submit"]:hover {
     .bubble__why {
         height: 150;
         width: 150;
+        font-size: 2rem;
     }
 
     .bubble__inspired {
         height: 135;
         width: 135;
+        font-size: 1.6rem;
     }
 
     .bubble__dreams {
         height: 165;
         width: 165;
+        font-size: 2rem;
     }
 
     .bubble__wish {
         height: 250;
         width: 250;
+        top: 38%;
+        left: 35%;
     }
 }
 
@@ -798,7 +850,7 @@ input[type="submit"]:hover {
     // GET INSPIRED SECTION
 }
 
-//GENIUS
+//GENIUS and Bubble
 @media (min-width: 496px) {
     .genius {
         position: fixed;
@@ -811,6 +863,9 @@ input[type="submit"]:hover {
         width: 80%;
         bottom: -2rem;
         left: 0.5rem;
+    }
+    .bubble__wish {
+        left: 36%;
     }
 }
 
@@ -845,6 +900,14 @@ input[type="submit"]:hover {
         width: 60%;
         bottom: -26rem;
         left: 9.5rem;
+    }
+    .bubble__wish {
+        left: 40%;
+    }
+}
+@media (min-width: 1500px) {
+    .bubble__wish {
+        left: 42%;
     }
 }
 

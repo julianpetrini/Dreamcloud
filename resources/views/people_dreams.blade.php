@@ -28,7 +28,7 @@
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
         <a href="share" class="bubble__text">
-            <h1 class="nav_bubble_text">share your wish</h1>
+            <h1 class="nav_bubble_text">share</h1>
         </a>
     </div>
 
@@ -564,7 +564,7 @@
     </script>
 
 
-
+<div class="container__of__vh">
     @foreach ($messages as $message)
         <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
             <div class="dreams__box__header">
@@ -574,7 +574,7 @@
             <p class="dreams__box__content">{{ $message->comment }}</p>
         </div>
     @endforeach
-
+</div>
 
 
     @include ('layout/footer')
