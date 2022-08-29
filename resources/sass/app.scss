@@ -185,10 +185,10 @@
     // animation: 3s Infinite floating;
     // animation-delay: 1.2s;
     animation: 3s Infinite dream_breath;
-    // animation-name: dream_breath; 
+    // animation-name: dream_breath;
     // animation-duration: 4s Infinite;
 
-    transition: transform .4s;
+    transition: transform 0.4s;
     // &:hover{
     //     transform: scale(1.05);
     // }
@@ -513,10 +513,13 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 /////////////THE WHY
 .get__inspired__text_box {
     margin-top: 1rem;
-    background-color: rgba(26, 53, 97, 0.3);
+    background-color: rgba(26, 53, 97, 0.2);
+    box-shadow: $box-shadow;
     border-radius: 10px;
     max-width: 50vw;
+
 }
+
 
 .the__why__text_box {
     //background-color: #021E5E;
@@ -661,12 +664,31 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-transform: uppercase;
     font-weight: $font-title-weight;
 
-    box-shadow: 1px 1px 0 #ffffff1f, -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 #0dcaf017;
-    transition: transform 0.4s;
-    &:hover{
-          transform: scale(1.05);
-        }
+    box-shadow: $box-shadow-dreams;
 
+    animation: 10s Infinite dream_messages;
+
+    @keyframes dream_messages {
+        // from {background-color: red;}
+
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.01);
+        }
+        50% {
+            transform: scale(1.04);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    transition: transform 0.4s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .dreams__box__goals {
     @extend .dreams__box__dreams;
@@ -690,6 +712,9 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     padding-top: 1rem;
     border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
     transition: transform 0.2s;
+
+    box-shadow: $box-shadow;
+
     &:hover {
         transform: scale(1.08);
     }
@@ -772,11 +797,11 @@ input[type="submit"]:hover {
         // margin-bottom: 2rem;
     }
 
-    .container__of__vh{
+    .container__of__vh {
         align-items: center;
     }
 
-    .dreams__box__dreams{
+    .dreams__box__dreams {
         width: 50vw;
     }
 
@@ -813,6 +838,9 @@ input[type="submit"]:hover {
         width: 250;
         top: 38%;
         left: 35%;
+    }
+    .dreams__box__dreams {
+        animation: none;
     }
 }
 

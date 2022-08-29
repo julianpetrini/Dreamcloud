@@ -2,32 +2,34 @@
 $body-bg: #f8fafc;
 
 // Typography
-$font-family-FIRST:'Baloo Da 2', cursive;
-$font-family-sans-serif: 'Nunito', sans-serif;
+$font-family-FIRST: "Baloo Da 2", cursive;
+$font-family-sans-serif: "Nunito", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
-$font-color-title:#F9FDFF;
-$font-title-weight:800;
-$font-title-sub-weight:700;
-$font-title-spacing:3px;
+$font-color-title: #f9fdff;
+$font-title-weight: 800;
+$font-title-sub-weight: 700;
+$font-title-spacing: 3px;
 
 // BUTTONS COLORS
-$the-why-color:#DD7973;
-$the-why-stroke:#1EC0EF;
-$get-inspired-color:#55C2DA;
-$get-inspired-stroke:#006FC0;
-$share-your-wish-color:#FFBD03;
-$share-your-wish-stroke:#38C5FF;
-$people-dream-color:#5ADBB5;
-$people-dream-stroke:#FFFFFF;
-$home-button-color:#F9FDFF;
-$goals-button-color:rgb(31, 135, 161);
-$wishes-button-color:#407BFF;
+$the-why-color: #dd7973;
+$the-why-stroke: #1ec0ef;
+$get-inspired-color: #55c2da;
+$get-inspired-stroke: #006fc0;
+$share-your-wish-color: #ffbd03;
+$share-your-wish-stroke: #38c5ff;
+$people-dream-color: #5adbb5;
+$people-dream-stroke: #ffffff;
+$home-button-color: #f9fdff;
+$goals-button-color: rgb(31, 135, 161);
+$wishes-button-color: #407bff;
 
-
+//BOX SHADOW
+$box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgb(34 33 81 / 1%),
+    28px 28px 28px 0 rgb(34 33 81 / 25%);
+$box-shadow-dreams: 1px 1px 0 #ffffff1f, -1px 0 28px 0 #0dcaf0,
+    28px 28px 28px 0 #0dcaf017;
 
 // NAV COMMON ATRIBUTES
 
-$nav_bubble_size:80px;
-
-
+$nav_bubble_size: 80px;
