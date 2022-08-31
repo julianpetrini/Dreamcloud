@@ -49,8 +49,7 @@
 @foreach ($posts as $post)
     <div class="get__inspired__big__text__box">
         <a href="inspired">
-        <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"
-            alt="famous quote people"></a>
+        <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"alt="famous quote people"></a>
         {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
 
         <div class="get__inspired__text_box">

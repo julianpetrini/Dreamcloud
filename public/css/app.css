@@ -11740,7 +11740,7 @@ input[type=submit]:hover {
     align-items: center;
   }
   .img__responsive {
-    max-width: 32vw;
+    max-width: 90%;
   }
   .the__why__text_box, .get__inspired__big__text__box {
     min-width: 84vw;
@@ -11855,4 +11855,80 @@ input[type=submit]:hover {
 
 .no_underline {
   text-decoration: none;
+}
+
+.card__box__generic {
+  border-radius: 10px;
+  border: 3px solid #1ec0ef;
+  padding: 1rem;
+  max-width: 400px;
+  height: auto;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.card__box__dreams {
+  background-color: #ffbd03;
+}
+
+.card__box__goals {
+  background-color: rgb(31, 135, 161);
+}
+
+.card__box__wishes {
+  background-color: #407bff;
+}
+
+.card__box__ideas {
+  background-color: #dd7973;
+}
+
+.logo__dreamcloud {
+  text-align: center;
+}
+
+.logo__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 0.1;
+  letter-spacing: 2px;
+}
+
+.logo__subtitle {
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.card__box__dream {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.card__box__author {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.card__box__date {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__box__type {
+  background-color: #ffbd03;
+  color: #f9fdff;
+  border: none;
+  border-radius: 10px;
+  margin-right: 7px;
+  text-transform: uppercase;
+  font-weight: 800;
 }

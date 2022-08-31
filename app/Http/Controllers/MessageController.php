@@ -30,20 +30,17 @@ class MessageController extends Controller
     }
 
 
-public function showOne()
-{
-  
-    $messages = Message::orderBy('created_at','asc')->get();
-//  $messages=Message::all()->first();
-//  all()->sortByDesc('created_at')->first();
+    public function showOne()
+    {
+    
+        $messages = Message::orderBy('created_at','asc')->get();
+    //  $messages=Message::all()->first();
+    //  all()->sortByDesc('created_at')->first();
 
-return view('dream_download', ['messages' => $messages]);
-
-
-}
+    return view('dream_download', ['messages' => $messages]);
 
 
-
+    }
 
     public function create(Request $request) {
  

@@ -683,9 +683,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 }
-.dreams__box__title a{
+.dreams__box__title a {
     text-transform: uppercase;
     font-weight: 650;
     text-decoration: none;
@@ -895,7 +894,7 @@ input[type="submit"]:hover {
     }
     .img__responsive {
         // width: 80%;
-        max-width: 32vw;
+        max-width: 90%;
     }
 
     // GET INSPIRED SECTION
@@ -957,8 +956,6 @@ input[type="submit"]:hover {
     }
 }
 
-
-
 //GENIUS and Bubble
 @media (min-width: 496px) {
     .genius {
@@ -1019,7 +1016,7 @@ input[type="submit"]:hover {
     .bubble__wish {
         left: 40%;
     }
-    .bubble__genie__advice{
+    .bubble__genie__advice {
         left: 40%;
     }
 }
@@ -1044,6 +1041,80 @@ input[type="submit"]:hover {
     display: none;
 }
 
-.no_underline{
+.no_underline {
     text-decoration: none;
+}
+
+///DOWNLOAD DREAM
+
+.card__box__generic {
+    // background: url(/img/bg.svg) no-repeat fixed center;
+    border-radius: 10px;
+    border: 3px solid $the-why-stroke;
+
+    padding: 1rem;
+    
+    max-width: 400px;
+    height: auto;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.card__box__dreams {
+    background-color: $dreams_button_color;
+}
+.card__box__goals {
+    background-color: $goals-button-color;
+}
+.card__box__wishes {
+    background-color: $wishes-button-color;
+}
+.card__box__ideas {
+    background-color: $ideas_button_color;
+}
+
+.logo__dreamcloud{
+    text-align: center;
+    }
+.logo__title{
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 0.1;
+    letter-spacing: 2px;
+}
+.logo__subtitle{
+    font-size: 0.5rem;
+    font-weight: 700;
+}
+
+.card__box__dream{
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem
+}
+.card__box__author{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.95rem
+}
+.card__box__date{
+    font-size: 0.9rem;
+    text-align: center;
+}
+.card__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__box__type{
+    background-color: $share-your-wish-color;
+    color: $font-color-title;
+
+    border: none;
+    border-radius: 10px;
+    margin-right: 7px;
+
+    text-transform: uppercase;
+    font-weight: $font-title-weight;
 }

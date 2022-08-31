@@ -44,7 +44,22 @@
     </div>
 </div>
 
-<h2 class="title_header"><strong>{{ $message->username }}</strong></h2>
+
+
+<div class="card__container">
+    <div class="card__box__{{ $message->wish }} card__box__generic">
+        <h2 class="card__box__type"><strong>{{ $message->wish }}</strong></h2>
+        <img class="img__responsive" src={{ asset('img/Aladdin_John-Hassall.png') }}></a>
+
+        <h1 class="card__box__dream">"...{{ $message->comment }}..."</h1>
+        <h2 class="card__box__author">{{ $message->username }}</h2>
+        <h3 class="card__box__date">{{ $message->created_at->format('Y-m-d') }}</h3>
+        <div class="logo__dreamcloud">
+            <h1 class="logo__title">dreamcloud</h1>
+            <h2 class="logo__subtitle">a good vibe's collection</h2>
+        </div>
+    </div>
+</div>
 
 {{-- <div class="container__of__vh">
     @foreach ($messages as $message)    
