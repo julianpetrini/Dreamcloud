@@ -11550,9 +11550,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   justify-content: space-between;
 }
 
-.dreams__box__title {
+.dreams__box__title a {
   text-transform: uppercase;
   font-weight: 650;
+  text-decoration: none;
 }
 
 .dreams__box__dreams, .dreams__box__ideas, .dreams__box__wishes, .dreams__box__goals {
@@ -11850,4 +11851,8 @@ input[type=submit]:hover {
 .inactive {
   font-size: 25px;
   display: none;
+}
+
+.no_underline {
+  text-decoration: none;
 }

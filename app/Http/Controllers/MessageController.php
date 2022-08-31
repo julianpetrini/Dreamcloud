@@ -27,15 +27,8 @@ class MessageController extends Controller
 
     return view('people_dreams', ['messages' => $messages]);
 
-
-        // // $messages = Message::all()->sortByDesc('created_at');
-        // $messages = Message::all()->random(5);
-        // //  TO SHOW ONLY RANDOM 5
-
-        // return view('people_dreams', ['messages' => $messages]);
-
     }
-////////////////////////
+
 
 public function showOne()
 {
@@ -49,27 +42,8 @@ return view('dream_download', ['messages' => $messages]);
 
 }
 
-/// ACA CREE EL CONTROLADOR. CREO QUE LE PUEDO HACER UN FILTRO CON JAVASCRIPT. O BUSCAR COMO SOLO ENVIAR EL ULTIMO
 
 
-// public function details($id) {
- 
-
-//     $post = Post::findOrFail($id);
-    
-//     return view('postDetail', ['post' => $post]);
-// }
-
-
-
-///////////////////////
-    // public function showAll1()
-    // {
-    //     $messages = Message::all()->sortByDesc('created_at');
-        
-
-    //     return view('the_why', ['messages' => $messages]);
-    // }
 
     public function create(Request $request) {
  
@@ -93,14 +67,15 @@ return view('dream_download', ['messages' => $messages]);
         $message->save();
    
         // at the end we make a redirect to the url /messages
-        return redirect('/result');        
+        return redirect('dreams');        
     }
  
-    // public function showMessage()
-    // {
-    //     $messages = Message::all()->sortByDesc('created_at');
-    //     return view('people_dreams',['messages' => $messages]);
-    // }
+
+    public function resultDetails($id) {
+
+        $messages= Message ::find($id);
+        return view('dream_download', ['message' => $messages]);
+    }
 
 
 }

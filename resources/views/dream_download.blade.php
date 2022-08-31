@@ -5,30 +5,30 @@
 
 <div class="navbar">
     <div class="nav_bubble">
-        <a href="dreams" class="bubble__link nav_bubble__dreams">
+        <a href="/dreams" class="bubble__link nav_bubble__dreams">
             {{-- the <br> why --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="dreams" class="bubble__text">
+        <a href="/dreams" class="bubble__text">
             <h1 class="nav_bubble_text">dreams</h1>
         </a>
     </div>
 
     <div class="nav_bubble">
-        <a href="why" class="bubble__link nav_bubble__why">
+        <a href="/why" class="bubble__link nav_bubble__why">
             {{-- the <br> why --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="why" class="bubble__text">
+        <a href="/why" class="bubble__text">
             <h1 class="nav_bubble_text">the why</h1>
         </a>
     </div>
     <div class="nav_bubble">
-        <a href="share" class="bubble__link nav_bubble__wish">
+        <a href="/share" class="bubble__link nav_bubble__wish">
             {{-- share <br> your <br> wish --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="share" class="bubble__text">
+        <a href="/share" class="bubble__text">
             <h1 class="nav_bubble_text">share</h1>
         </a>
     </div>
@@ -44,10 +44,10 @@
     </div>
 </div>
 
+<h2 class="title_header"><strong>{{ $message->username }}</strong></h2>
 
-
-<div class="container__of__vh">
-    @foreach ($messages as $message)
+{{-- <div class="container__of__vh">
+    @foreach ($messages as $message)    
         <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
             <div class="dreams__box__header">
                 <h3 class="dreams__box__title">{{ $message->username }}</h3>
@@ -56,6 +56,6 @@
             <p class="dreams__box__content">{{ $message->comment }}</p>
         </div>
     @endforeach
-</div>
+</div> --}}
 
 </div>

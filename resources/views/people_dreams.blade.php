@@ -512,7 +512,7 @@
         <button class="filter__buttons__wishes" onclick="changedata(2)">wishes</button>
         <button class="filter__buttons__ideas" onclick="changedata(3)">ideas</button>
         <button class="filter__buttons__all" onclick="changedata(4)">all</button>
-        
+
 
     </div>
 
@@ -533,10 +533,9 @@
                 setActive(document.getElementsByName('wishes'));
             } else if (parameter == 3) {
                 setActive(document.getElementsByName('ideas'));
-            }
-            else if (parameter == 4) {
+            } else if (parameter == 4) {
                 showFiltered(['goals', 'dreams', 'wishes', 'ideas'], true);
-            }  
+            }
         }
 
         function showFiltered(buttons, active) {
@@ -544,8 +543,7 @@
                 for (let b = 0; b < buttons.length; b++) {
                     setActive(document.getElementsByName(buttons[b]));
                 }
-            }
-            else {
+            } else {
                 for (let b = 0; b < buttons.length; b++) {
                     setInactive(document.getElementsByName(buttons[b]));
                 }
@@ -566,7 +564,7 @@
 
 
 
-        
+
         // function myFunction() {
         //     document.getElementsByClassName("dreams").style.transition = "2s";
         //     document.getElementsByClassName("goals").style.transition = "2s";
@@ -578,18 +576,20 @@
         /////
     </script>
 
-
-<div class="container__of__vh">
-    @foreach ($messages as $message)
-        <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
-            <div class="dreams__box__header">
-                <h3 class="dreams__box__title">{{ $message->username }}</h3>
-                <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
-            </div>
-            <p class="dreams__box__content">{{ $message->comment }}</p>
-        </div>
-    @endforeach
-</div>
+    {{-- VAMOS A AGREGAR UN "A" PARA VER EL DETALLE DEL SUENO SELECCIONADO --}}
+    <div class="container__of__vh">
+        @foreach ($messages as $message)
+            <a href="/result/{{ $message->id }}" class="no_underline">
+                <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
+                    <div class="dreams__box__header">
+                        <h3 class="dreams__box__title">{{ $message->username }}</h3>
+                        <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
+                    </div>
+                    <p class="dreams__box__content">{{ $message->comment }}</p>
+                </div>
+            </a>
+        @endforeach
+    </div>
 
 
     @include ('layout/footer')
