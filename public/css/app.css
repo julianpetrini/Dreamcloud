@@ -11937,3 +11937,7 @@ input[type=submit]:hover {
 .card__box__img__responsive {
   max-width: 90%;
 }
+
+canvas {
+  position: relative;
+}

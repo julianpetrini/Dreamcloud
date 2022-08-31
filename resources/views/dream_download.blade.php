@@ -3,7 +3,7 @@
 
 
 <div class="navbar">
-    
+
     <div class="nav_bubble">
         <a href="/inspired" class="bubble__link nav_bubble__inspired ">
             {{-- get <br> inspired --}}
@@ -44,10 +44,12 @@
     </div>
 </div>
 
-
+<button onclick="takeshot()">
+    <a download="output">save</a>
+</button>
 
 <div class="card__container">
-    <div class="card__box__{{ $message->wish }} card__box__generic" id="htmlContent">
+    <div class="card__box__{{ $message->wish }} card__box__generic" id="photo">
         <h2 class="card__box__type"><strong>{{ $message->wish }}</strong></h2>
         <img class="card__box__img__responsive" src={{ asset('img/Aladdin_John-Hassall.png') }}></a>
 
@@ -56,17 +58,41 @@
         <h3 class="card__box__date">{{ $message->created_at->format('d-m-Y') }}</h3>
         <div class="logo__dreamcloud">
 
-            
-            
+
+
             <h1 class="logo__title">dreamcloud</h1>
             <h2 class="logo__subtitle">a good vibe's collection</h2>
         </div>
     </div>
 </div>
 
+
+
+<script type="text/javascript">
+    // Define the function 
+    // to screenshot the div
+    
+    function takeshot() {
+        let div = document.getElementById('photo');
+
+        // Use the html2canvas
+        // function to take a screenshot
+
+
+        // and append it
+        // to the output div
+        html2canvas(div).then(
+            function(canvas) {
+                document.getElementById('output').appendChild(canvas);
+            })
+    }
+</script>
+
+
+
 <div class="nav_bubble">
     <a href="/dreams" class="bubble__link nav_bubble__dreams">
-       
+
         <img class="nav_button_lamp"src="/img/lamp.svg">
     </a>
     <a href="/dreams" class="bubble__text">
@@ -74,8 +100,11 @@
     </a>
 </div>
 
+
+
+<div id="output" class="photo_output">
+
+</div>
+
+
 @include ('layout/footer')
-
-
-  
-  
