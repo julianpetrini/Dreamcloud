@@ -56,15 +56,15 @@
         <h3 class="card__box__date">{{ $message->created_at->format('Y-m-d') }}</h3>
         <div class="logo__dreamcloud">
 
-            <div class="nav_bubble">
+            {{-- <div class="nav_bubble">
                 <a href="/dreams" class="bubble__link nav_bubble__dreams">
-                    {{-- the <br> why --}}
+                   
                     <img class="nav_button_lamp"src="/img/lamp.svg">
                 </a>
                 <a href="/dreams" class="bubble__text">
                     <h1 class="nav_bubble_text">dreams</h1>
                 </a>
-            </div>
+            </div> --}}
             
             <h1 class="logo__title">dreamcloud</h1>
             <h2 class="logo__subtitle">a good vibe's collection</h2>
@@ -72,7 +72,7 @@
     </div>
 </div>
 
-
+@include ('layout/footer')
 
 
   
