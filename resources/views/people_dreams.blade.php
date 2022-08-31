@@ -583,7 +583,7 @@
                 <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
                     <div class="dreams__box__header">
                         <h3 class="dreams__box__title">{{ $message->username }}</h3>
-                        <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
+                        <h3 class="dreams__box__title">{{ $message->created_at->format('d-m-Y') }}</h3>
                         {{-- OPCION PARA VER SI SOLO MUESTRO EL SUENO O CON LA INFO TAMBIEN INCLUIDA --}}
                     </div>
                     <p class="dreams__box__content">{{ $message->comment }}</p>

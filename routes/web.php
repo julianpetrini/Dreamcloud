@@ -39,6 +39,8 @@ Route::get('/share', function () {
     return view('share_your_wish');
 });
 
+Route::get('/card/{id}', [MessageController::class, 'cardCreated']);
+
 Route::get('/result/{id}', [MessageController::class, 'resultDetails']);
 
 // Route::get('/result', [MessageController::class, 'showOne']);

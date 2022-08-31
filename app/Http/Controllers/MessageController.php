@@ -64,7 +64,7 @@ class MessageController extends Controller
         $message->save();
    
         // at the end we make a redirect to the url /messages
-        return redirect('dreams');        
+        return redirect('/card/{id}');        
     }
  
 
@@ -72,6 +72,11 @@ class MessageController extends Controller
 
         $messages= Message ::find($id);
         return view('dream_download', ['message' => $messages]);
+    }
+
+    public function cardCreated (){
+        $messages = Message::latest('id')->first();
+        return view('card_created',['message' => $messages] );
     }
 
 
