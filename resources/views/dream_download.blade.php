@@ -1,16 +1,16 @@
 @extends ('layout/master')
 
 
-{{-- @include('layout/nav') --}}
 
 <div class="navbar">
+    
     <div class="nav_bubble">
-        <a href="/dreams" class="bubble__link nav_bubble__dreams">
-            {{-- the <br> why --}}
+        <a href="/inspired" class="bubble__link nav_bubble__inspired ">
+            {{-- get <br> inspired --}}
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
-        <a href="/dreams" class="bubble__text">
-            <h1 class="nav_bubble_text">dreams</h1>
+        <a href="/inspired" class="bubble__text">
+            <h1 class="nav_bubble_text">get inspired </h1>
         </a>
     </div>
 
@@ -47,30 +47,33 @@
 
 
 <div class="card__container">
-    <div class="card__box__{{ $message->wish }} card__box__generic">
+    <div class="card__box__{{ $message->wish }} card__box__generic" id="htmlContent">
         <h2 class="card__box__type"><strong>{{ $message->wish }}</strong></h2>
-        <img class="img__responsive" src={{ asset('img/Aladdin_John-Hassall.png') }}></a>
+        <img class="card__box__img__responsive" src={{ asset('img/Aladdin_John-Hassall.png') }}></a>
 
         <h1 class="card__box__dream">"...{{ $message->comment }}..."</h1>
         <h2 class="card__box__author">{{ $message->username }}</h2>
         <h3 class="card__box__date">{{ $message->created_at->format('Y-m-d') }}</h3>
         <div class="logo__dreamcloud">
+
+            <div class="nav_bubble">
+                <a href="/dreams" class="bubble__link nav_bubble__dreams">
+                    {{-- the <br> why --}}
+                    <img class="nav_button_lamp"src="/img/lamp.svg">
+                </a>
+                <a href="/dreams" class="bubble__text">
+                    <h1 class="nav_bubble_text">dreams</h1>
+                </a>
+            </div>
+            
             <h1 class="logo__title">dreamcloud</h1>
             <h2 class="logo__subtitle">a good vibe's collection</h2>
         </div>
     </div>
 </div>
 
-{{-- <div class="container__of__vh">
-    @foreach ($messages as $message)    
-        <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
-            <div class="dreams__box__header">
-                <h3 class="dreams__box__title">{{ $message->username }}</h3>
-                <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
-            </div>
-            <p class="dreams__box__content">{{ $message->comment }}</p>
-        </div>
-    @endforeach
-</div> --}}
 
-</div>
+
+
+  
+  
