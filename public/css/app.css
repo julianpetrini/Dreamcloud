@@ -11550,10 +11550,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   justify-content: space-between;
 }
 
-.dreams__box__title a {
+.dreams__box__title {
   text-transform: uppercase;
   font-weight: 650;
-  text-decoration: none;
+  font-size: 1rem;
 }
 
 .dreams__box__dreams, .dreams__box__ideas, .dreams__box__wishes, .dreams__box__goals {
@@ -11562,6 +11562,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   padding: 0.7rem;
   border-radius: 20px;
   margin: 0.5rem;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 800;
   box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 rgba(13, 202, 240, 0.0901960784);

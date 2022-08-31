@@ -684,10 +684,11 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.dreams__box__title a {
+.dreams__box__title {
     text-transform: uppercase;
     font-weight: 650;
-    text-decoration: none;
+    font-size: 1rem;
+    
 }
 .dreams__box__dreams {
     background-color: $share-your-wish-color;
@@ -695,6 +696,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     padding: 0.7rem;
     border-radius: 20px;
     margin: 0.5rem;
+    text-align: center;
     text-transform: uppercase;
     font-weight: $font-title-weight;
 
