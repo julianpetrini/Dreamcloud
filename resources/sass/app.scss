@@ -567,6 +567,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     min-height: 60vh;
     flex-direction: column;
     justify-content: center;
+    margin-bottom:1rem;
 }
 
 .get__inspired__big__text__box {
@@ -886,7 +887,7 @@ input[type="submit"]:hover {
 
     .get__inspired__big__text__box {
         max-width: 43vw;
-
+        
         align-items: center;
     }
     .bg_pattern {
@@ -902,7 +903,8 @@ input[type="submit"]:hover {
     // GET INSPIRED SECTION
     .the__why__text_box {
         // max-width: 43vw;
-        min-width: 84vw;
+        // min-width: 84vw;
+        max-width:45vw;
     }
 
     .the_why__text {

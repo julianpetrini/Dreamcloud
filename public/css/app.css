@@ -11438,6 +11438,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   min-height: 60vh;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .get__inspired__big__text__box {
@@ -11744,7 +11745,7 @@ input[type=submit]:hover {
     width: 80%;
   }
   .the__why__text_box, .get__inspired__big__text__box {
-    min-width: 84vw;
+    max-width: 45vw;
   }
   .the_why__text, .the__get__inspired__text, .nodatabase__the__text {
     font-size: 1.2rem;
