@@ -11865,7 +11865,6 @@ input[type=submit]:hover {
   max-width: 400px;
   height: auto;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .card__box__dreams {
@@ -11938,6 +11937,21 @@ input[type=submit]:hover {
   max-width: 90%;
 }
 
-canvas {
-  position: relative;
+.card__button__back {
+  background-color: #5adbb5;
+  color: #f9fdff;
+  border: none;
+  border-radius: 10px;
+  margin-right: 7px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.soon__text {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem;
+  font-weight: 800;
 }

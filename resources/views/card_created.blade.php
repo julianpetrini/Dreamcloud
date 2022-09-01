@@ -3,7 +3,7 @@
 
 
 <div class="navbar">
-    
+
     <div class="nav_bubble">
         <a href="/inspired" class="bubble__link nav_bubble__inspired ">
             {{-- get <br> inspired --}}
@@ -44,10 +44,15 @@
     </div>
 </div>
 
+<div class="filter__buttons">
+    <a href="/dreams" class="card__button__back">back</a>
+    <button class="filter__buttons__ideas" onclick="takeshot()">Create card image</button>
+</div>
+
 
 
 <div class="card__container">
-    <div class="card__box__{{ $message->wish }} card__box__generic" id="htmlContent">
+    <div class="card__box__{{ $message->wish }} card__box__generic" id="photo">
         <h2 class="card__box__type"><strong>{{ $message->wish }}</strong></h2>
         <img class="card__box__img__responsive" src={{ asset('img/Aladdin_John-Hassall.png') }}></a>
 
@@ -56,26 +61,36 @@
         <h3 class="card__box__date">{{ $message->created_at->format('d-m-Y') }}</h3>
         <div class="logo__dreamcloud">
 
-            
-            
+
+
             <h1 class="logo__title">dreamcloud</h1>
             <h2 class="logo__subtitle">a good vibe's collection</h2>
         </div>
     </div>
 </div>
 
-<div class="nav_bubble">
-    <a href="/dreams" class="bubble__link nav_bubble__dreams">
-       
-        <img class="nav_button_lamp"src="/img/lamp.svg">
-    </a>
-    <a href="/dreams" class="bubble__text">
-        <h1 class="nav_bubble_text">back to <br> dreams</h1>
-    </a>
-</div>
+
+<script type="text/javascript">
+    function takeshot() {
+
+        var result = document.getElementById("output");
+
+        html2canvas(document.getElementById("photo"), {
+            allowTaint: true
+        }).then(function(canvas) {
+
+            // canvas.style.width = '800px';
+            // canvas.style.height = '600px';
+            result.appendChild(canvas);
+            document.getElementById("soon").innerHTML = "Here you will be able to download your card";
+
+        });
+
+
+    }
+</script>
+
+<div class="soon__text" id="soon"></div>
+<div id="output" class="photo_output"></div>
 
 @include ('layout/footer')
-
-
-  
-  

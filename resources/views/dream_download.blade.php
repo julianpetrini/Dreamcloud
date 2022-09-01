@@ -44,11 +44,14 @@
     </div>
 </div>
 
-<button onclick="takeshot()">
-    <a download="output">save</a>
-</button>
 
-<div class="card__container">
+<div class="filter__buttons">
+    <a href="/dreams" class="card__button__back">back</a>
+
+    <button class="filter__buttons__ideas" onclick="takeshot()">Create card image</button>
+</div>
+
+<div canvas="card__container">
     <div class="card__box__{{ $message->wish }} card__box__generic" id="photo">
         <h2 class="card__box__type"><strong>{{ $message->wish }}</strong></h2>
         <img class="card__box__img__responsive" src={{ asset('img/Aladdin_John-Hassall.png') }}></a>
@@ -64,47 +67,48 @@
             <h2 class="logo__subtitle">a good vibe's collection</h2>
         </div>
     </div>
-</div>
+    </canvas>
 
 
 
-<script type="text/javascript">
-    // Define the function 
-    // to screenshot the div
+    <script type="text/javascript">
+        // Define the function 
+        // to screenshot the div
+
+        function takeshot() {
+
+            var result = document.getElementById("output");
+
+            html2canvas(document.getElementById("photo"), {
+                allowTaint: true
+            }).then(function(canvas) {
+
+                // canvas.style.width = '800px';
+                // canvas.style.height = '600px';
+                result.appendChild(canvas);
+            });
+
+        }
+    </script>
+
+
+
+
+
+    {{-- // var el = document.getElementById('myElement');
+        // el.style.fontFeatureSettings = '"liga" 0';
+        // html2canvas(el, options); --}}
+
+
+
+
+
+
     
-    function takeshot() {
-        let div = document.getElementById('photo');
 
-        // Use the html2canvas
-        // function to take a screenshot
+    <div id="output" class="photo_output">
 
-
-        // and append it
-        // to the output div
-        html2canvas(div).then(
-            function(canvas) {
-                document.getElementById('output').appendChild(canvas);
-            })
-    }
-</script>
+    </div>
 
 
-
-<div class="nav_bubble">
-    <a href="/dreams" class="bubble__link nav_bubble__dreams">
-
-        <img class="nav_button_lamp"src="/img/lamp.svg">
-    </a>
-    <a href="/dreams" class="bubble__text">
-        <h1 class="nav_bubble_text">back to <br> dreams</h1>
-    </a>
-</div>
-
-
-
-<div id="output" class="photo_output">
-
-</div>
-
-
-@include ('layout/footer')
+    @include ('layout/footer')
