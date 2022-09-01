@@ -59,7 +59,7 @@
         able to develop themselves. Your way of how you process the info into dreams or goals you aim for. This site is
         developed with another way of thinking. <br>
         Maybe too philosophical.
-        But don't forget most majors developments came from some an idea most people couldn't comprehend until it was
+        But don't forget most majors developments came from some idea most people couldn't comprehend until it was
         real. <br>
         This is it. <br> It has more than just to share. It's to create a database in the cloud full of positive and
         encouraging intentions, dreams, and so on. Like a pyramid in the middle of the desert that reflects into the
