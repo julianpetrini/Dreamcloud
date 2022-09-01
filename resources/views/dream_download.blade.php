@@ -86,29 +86,15 @@
                 // canvas.style.width = '800px';
                 // canvas.style.height = '600px';
                 result.appendChild(canvas);
+                document.getElementById("soon").innerHTML = "Here you will be able to download your card";
             });
 
         }
     </script>
 
 
-
-
-
-    {{-- // var el = document.getElementById('myElement');
-        // el.style.fontFeatureSettings = '"liga" 0';
-        // html2canvas(el, options); --}}
-
-
-
-
-
-
-    
-
-    <div id="output" class="photo_output">
-
-    </div>
+    <div class="soon__text" id="soon"></div>
+    <div id="output" class="photo_output"></div>
 
 
     @include ('layout/footer')
