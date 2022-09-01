@@ -1,5 +1,7 @@
 @extends ('layout/master')
 
+
+
 <body onload="getRandomImage()";>
 
     <div class="navbar">
@@ -68,7 +70,7 @@
         </div>
     </div>
 
-
+   
 
     <script type="text/javascript">
         // Define the function 
@@ -96,16 +98,20 @@
             var randomImage = new Array();
 
             //insert the URL of images in array  
-            randomImage[0] ="https://upload.wikimedia.org/wikipedia/commons/a/aa/Arthur-Rackham-Aladdin-New-lamps-for-old.jpg";
-            randomImage[1] ="https://www.pookpress.co.uk/wp-content/uploads/2019/03/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png";
-            randomImage[2] ="https://upload.wikimedia.org/wikipedia/commons/6/66/Alad.jpg";
-            randomImage[3] ="https://i.pinimg.com/550x/75/50/8c/75508cf75ed680cc02b99cfc8e0d0a9e.jpg";
-            randomImage[4] ="https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arthur-Pyle_The_Enchanter_Merlin.JPG/1200px-Arthur-Pyle_The_Enchanter_Merlin.JPG";
-            randomImage[5] ="https://i.pinimg.com/originals/31/3f/f1/313ff10516fc577859538858c414e325.jpg";
-            randomImage[6] ="https://i.pinimg.com/originals/46/d9/de/46d9decb142f90f7885cfd348e49176c.jpg";
-            randomImage[7] ="https://www.oldbookillustrations.com/wp-content/uploads/2016/12/golden-dream.jpg";
-            randomImage[8] ="https://media.istockphoto.com/illustrations/joseph-interprets-pharaohs-dreams-steel-engraving-published-1841-illustration-id543808004?k=20&m=543808004&s=612x612&w=0&h=66tZBXzgWDDaFKwbVafEUR2LmrxahVAx_cKaXvw8x6s=";
-            randomImage[9] ="https://i.pinimg.com/originals/c2/69/59/c26959ae3cb9b68e2dcaff3fc1128ee5.jpg";
+            randomImage[0] =
+                "https://upload.wikimedia.org/wikipedia/commons/a/aa/Arthur-Rackham-Aladdin-New-lamps-for-old.jpg";
+            randomImage[1] =
+                "https://www.pookpress.co.uk/wp-content/uploads/2019/03/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png";
+            randomImage[2] = "https://upload.wikimedia.org/wikipedia/commons/6/66/Alad.jpg";
+            randomImage[3] = "https://i.pinimg.com/550x/75/50/8c/75508cf75ed680cc02b99cfc8e0d0a9e.jpg";
+            randomImage[4] =
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Arthur-Pyle_The_Enchanter_Merlin.JPG/1200px-Arthur-Pyle_The_Enchanter_Merlin.JPG";
+            randomImage[5] = "https://i.pinimg.com/originals/31/3f/f1/313ff10516fc577859538858c414e325.jpg";
+            randomImage[6] = "https://i.pinimg.com/originals/46/d9/de/46d9decb142f90f7885cfd348e49176c.jpg";
+            randomImage[7] = "https://www.oldbookillustrations.com/wp-content/uploads/2016/12/golden-dream.jpg";
+            randomImage[8] =
+                "https://media.istockphoto.com/illustrations/joseph-interprets-pharaohs-dreams-steel-engraving-published-1841-illustration-id543808004?k=20&m=543808004&s=612x612&w=0&h=66tZBXzgWDDaFKwbVafEUR2LmrxahVAx_cKaXvw8x6s=";
+            randomImage[9] = "https://i.pinimg.com/originals/c2/69/59/c26959ae3cb9b68e2dcaff3fc1128ee5.jpg";
             //generate a number and provide to the image to generate randomly  
             var number = Math.floor(Math.random() * randomImage.length);
 
@@ -113,6 +119,8 @@
             return document.getElementById("card__image").innerHTML = '<img class="card__box__img__responsive" src="' +
                 randomImage[number] + '" />';
         }
+
+       
     </script>
 
 

@@ -11780,7 +11780,7 @@ input[type=submit]:hover {
 }
 @media (min-height: 740px) and (min-width: 360px) {
   .bubble__genie__advice {
-    top: 50%;
+    top: 40%;
   }
 }
 @media (min-width: 496px) {

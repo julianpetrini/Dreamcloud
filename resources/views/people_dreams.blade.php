@@ -563,17 +563,14 @@
         }
 
 
+        const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+        const buttons = document.querySelectorAll("button");
 
-
-        // function myFunction() {
-        //     document.getElementsByClassName("dreams").style.transition = "2s";
-        //     document.getElementsByClassName("goals").style.transition = "2s";
-        //     document.getElementsByClassName("wishes").style.transition = "2s";
-        //     document.getElementsByClassName("ideas").style.transition = "2s";
-
-        // }
-
-        /////
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                audio.play();
+            });
+        });
     </script>
 
     {{-- VAMOS A AGREGAR UN "A" PARA VER EL DETALLE DEL SUENO SELECCIONADO --}}
@@ -597,27 +594,3 @@
 
 
 @endif
-
-{{-- <div class="dreams__box__goals">
-    <div class="dreams__box__header">
-        <h3 class="dreams__box__title">Juan Carlos</h3>
-        <h3 class="dreams__box__title">10.08.2020</h3>
-    </div>
-    <p class="dreams__box__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia expedita in dolorum sequi quidem numquam maiores mollitia vel molestias est natus veritatis doloribus et magni impedit, tenetur dolor illum.</p>
-</div>
-
-<div class="dreams__box__wishes">
-    <div class="dreams__box__header">
-        <h3 class="dreams__box__title">Juan Carlos</h3>
-        <h3 class="dreams__box__title">10.08.2020</h3>
-    </div>
-    <p class="dreams__box__content">Lorem ipsum dolor sit amet consectetur  doloribus et magni impedit, tenetur dolor illum.</p>
-</div>
-
-<div class="dreams__box__ideas">
-    <div class="dreams__box__header">
-        <h3 class="dreams__box__title">Juan Carlos</h3>
-        <h3 class="dreams__box__title">10.08.2020</h3>
-    </div>
-    <p class="dreams__box__content">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-</div> --}}
