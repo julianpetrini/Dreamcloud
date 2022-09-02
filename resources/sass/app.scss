@@ -89,7 +89,6 @@
     height: 80%;
     opacity: 0.19;
     position: absolute;
-    
 }
 
 .bubble__link {
@@ -146,6 +145,8 @@
         transform: scale(1.05);
     }
 }
+
+
 .bubble__inspired {
     border: 3px solid $get-inspired-stroke;
     background-color: $get-inspired-color;
@@ -188,9 +189,8 @@
     transition: transform 0.2s;
     &:hover {
         transform: scale(1.1);
-        background-color:$share-your-wish-color;
-        color:$font-color-title;
-
+        background-color: $share-your-wish-color;
+        color: $font-color-title;
     }
 
     font-size: 1rem;
@@ -483,7 +483,6 @@
         transform: scale(1.2);
     }
 }
-
 
 @keyframes slideLeft {
     0% {

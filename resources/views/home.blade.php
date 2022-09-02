@@ -30,11 +30,10 @@
         Everything flows in life as in this site. <br> You will always find new answers
         <img class="button_lamp"src="/img/lamp.svg">
     </a>
-
-    <a href="why" class="bubble__link bubble__why">
-        the <br> why
-        <img class="button_lamp"src="/img/lamp.svg">
-    </a>
+        <a href="why" class="bubble__link bubble__why">
+            the <br> why
+            <img class="button_lamp"src="/img/lamp.svg">
+        </a>
     <a href="inspired" class="bubble__link bubble__inspired">
         get inspired
         <img class="button_lamp"src="/img/lamp.svg">

@@ -87,7 +87,10 @@
         veröffentlichten Kontaktdaten durch Dritte zu Werbezwecken wird hiermit ausdrücklich widersprochen. Der
         Betreiber behält sich für den Fall unverlangt zugesandter Werbe- oder Informationsmaterialien ausdrücklich
         rechtliche Schritte vor. Sollten einzelne Regelungen oder Formulierungen dieses Haftungsausschlusses unwirksam
-        sein oder werden, bleiben die übrigen Regelungen in ihrem Inhalt und ihrer Gültigkeit hiervon unberührt. </p>
+        sein oder werden, bleiben die übrigen Regelungen in ihrem Inhalt und ihrer Gültigkeit hiervon unberührt.  <br>
+    
+       <strong>   Genie design from : People illustrations by Storyset </strong> <br>
+       storyset.com/people </p>    
 
 </div>
 
