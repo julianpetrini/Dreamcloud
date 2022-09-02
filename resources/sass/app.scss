@@ -66,6 +66,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
     // margin-top: 3.6rem;
 }
 .header__title {
@@ -88,7 +89,9 @@
     height: 80%;
     opacity: 0.19;
     position: absolute;
+    
 }
+
 .bubble__link {
     color: $font-color-title;
     font-size: 18px;
@@ -107,6 +110,10 @@
     align-items: center;
     text-align: center;
     line-height: 0.9;
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.1);
+    }
     //TO FLOAT
     // animation: 3s Infinite floating;
 
@@ -178,6 +185,14 @@
     left: 26%;
     z-index: 1;
 
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.1);
+        background-color:$share-your-wish-color;
+        color:$font-color-title;
+
+    }
+
     font-size: 1rem;
     // animation: 3s Infinite dream_breath;
 
@@ -207,6 +222,7 @@
     position: absolute;
     top: 40%;
     left: 26%;
+    z-index: 1;
     //OLD STYLING FOR CIRCLE IN CENTER
     // top: 50%;
     // left: 50%;
@@ -449,29 +465,26 @@
 
 ///////////////////////////////////////////////////////
 //GENIO ANIMACION
+.genie_pic {
+    max-width: 80vw;
+    animation: 1.6s 1 forwards ease-in lightSpeedLeft,
+        1.5s Infinite linear floating;
+    animation-delay: 0s, 1.6s;
+}
+
 .genius {
     position: fixed;
     width: 90%;
     bottom: -6rem;
     left: -4.5rem;
     transition: transform 0.4s;
+
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.2);
     }
 }
-svg#freepik_stories-wishes:not(.animated) .animable {
-    opacity: 0;
-}
-svg#freepik_stories-wishes.animated #freepik--Floor--inject-7 {
-    animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft,
-        1.5s Infinite linear floating;
-    animation-delay: 0s, 1s;
-}
-svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
-    animation: 1.6s 1 forwards ease-in lightSpeedLeft,
-        1.5s Infinite linear floating;
-    animation-delay: 0s, 1.6s;
-}
+
+
 @keyframes slideLeft {
     0% {
         opacity: 0;
@@ -567,7 +580,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     min-height: 60vh;
     flex-direction: column;
     justify-content: center;
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
 .get__inspired__big__text__box {
@@ -689,7 +702,6 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-transform: uppercase;
     font-weight: 650;
     font-size: 1rem;
-    
 }
 .dreams__box__dreams {
     background-color: $share-your-wish-color;
@@ -887,7 +899,7 @@ input[type="submit"]:hover {
 
     .get__inspired__big__text__box {
         max-width: 43vw;
-        
+
         align-items: center;
     }
     .bg_pattern {
@@ -897,14 +909,13 @@ input[type="submit"]:hover {
     }
     .img__responsive {
         width: 80%;
-        
     }
 
     // GET INSPIRED SECTION
     .the__why__text_box {
         // max-width: 43vw;
         // min-width: 84vw;
-        max-width:45vw;
+        max-width: 45vw;
     }
 
     .the_why__text {
@@ -1006,9 +1017,13 @@ input[type="submit"]:hover {
         // bottom: -3rem;
         // left: 3.5rem;
 
-        width: 45%;
-        bottom: -16rem;
-        left: 0.5rem;
+        // width: 45%;
+        bottom: -8rem;
+        left: 7.5rem;
+    }
+
+    .header {
+        margin-top: 2rem;
     }
 
     .nodatabase__genius {
@@ -1021,7 +1036,10 @@ input[type="submit"]:hover {
         left: 40%;
     }
     .bubble__genie__advice {
-        left: 40%;
+        left: 38%;
+        border-radius: 50%;
+        height: 350;
+        width: 350;
     }
 }
 @media (min-width: 1500px) {
@@ -1057,7 +1075,7 @@ input[type="submit"]:hover {
     border: 3px solid $the-why-stroke;
 
     padding: 1rem;
-    
+
     max-width: 400px;
     height: auto;
     text-align: center;
@@ -1077,41 +1095,41 @@ input[type="submit"]:hover {
     background-color: $ideas_button_color;
 }
 
-.logo__dreamcloud{
+.logo__dreamcloud {
     text-align: center;
-    }
-.logo__title{
+}
+.logo__title {
     font-size: 1rem;
     text-transform: uppercase;
     font-weight: 800;
     line-height: 0.1;
     letter-spacing: 2px;
 }
-.logo__subtitle{
+.logo__subtitle {
     font-size: 0.5rem;
     font-weight: 700;
 }
 
-.card__box__dream{
+.card__box__dream {
     text-align: center;
     margin-top: 1.5rem;
-    font-size: 1rem
+    font-size: 1rem;
 }
-.card__box__author{
+.card__box__author {
     text-transform: uppercase;
     text-align: center;
-    font-size: 0.95rem
+    font-size: 0.95rem;
 }
-.card__box__date{
+.card__box__date {
     font-size: 0.9rem;
     text-align: center;
 }
-.card__container{
+.card__container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.card__box__type{
+.card__box__type {
     background-color: $share-your-wish-color;
     color: $font-color-title;
 
@@ -1120,17 +1138,15 @@ input[type="submit"]:hover {
     margin-right: 7px;
 
     //TRYOUT
-    
 
     text-transform: uppercase;
     font-weight: $font-title-weight;
 }
-.card__box__img__responsive{
+.card__box__img__responsive {
     @extend .img__responsive;
     max-width: 90%;
-    
 }
-.card__button__back{
+.card__button__back {
     background-color: $people-dream-color;
     color: $home-button-color;
     border: none;
@@ -1141,7 +1157,7 @@ input[type="submit"]:hover {
     text-decoration: none;
     padding: 0.5rem;
 }
-.soon__text{
+.soon__text {
     text-transform: uppercase;
     text-align: center;
     margin: 1rem;

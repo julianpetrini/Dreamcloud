@@ -10919,6 +10919,7 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .header__title, .header__description {
@@ -10959,6 +10960,10 @@ textarea.form-control-lg {
   align-items: center;
   text-align: center;
   line-height: 0.9;
+  transition: transform 0.2s;
+}
+.bubble__link:hover {
+  transform: scale(1.1);
 }
 
 .bubble__why {
@@ -11015,9 +11020,15 @@ textarea.form-control-lg {
   top: 35%;
   left: 26%;
   z-index: 1;
+  transition: transform 0.2s;
   font-size: 1rem;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
+}
+.bubble__genie__advice:hover {
+  transform: scale(1.1);
+  background-color: #ffbd03;
+  color: #f9fdff;
 }
 @-webkit-keyframes fadeIn {
   0% {
@@ -11046,6 +11057,7 @@ textarea.form-control-lg {
   position: absolute;
   top: 40%;
   left: 26%;
+  z-index: 1;
   /* move circle in the actual middle */
   font-size: 2.3rem;
   -webkit-animation: 3s Infinite dream_breath;
@@ -11284,6 +11296,14 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+.genie_pic {
+  max-width: 80vw;
+  -webkit-animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
+          animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
+  -webkit-animation-delay: 0s, 1.6s;
+          animation-delay: 0s, 1.6s;
+}
+
 .genius, .nodatabase__genius {
   position: fixed;
   width: 90%;
@@ -11292,25 +11312,7 @@ textarea.form-control-lg {
   transition: transform 0.4s;
 }
 .genius:hover, .nodatabase__genius:hover {
-  transform: scale(1.05);
-}
-
-svg#freepik_stories-wishes:not(.animated) .animable {
-  opacity: 0;
-}
-
-svg#freepik_stories-wishes.animated #freepik--Floor--inject-7 {
-  -webkit-animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft, 1.5s Infinite linear floating;
-          animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft, 1.5s Infinite linear floating;
-  -webkit-animation-delay: 0s, 1s;
-          animation-delay: 0s, 1s;
-}
-
-svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
-  -webkit-animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
-          animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
-  -webkit-animation-delay: 0s, 1.6s;
-          animation-delay: 0s, 1.6s;
+  transform: scale(1.2);
 }
 
 @-webkit-keyframes slideLeft {
@@ -11822,9 +11824,11 @@ input[type=submit]:hover {
 }
 @media (min-width: 1200px) {
   .genius, .nodatabase__genius {
-    width: 45%;
-    bottom: -16rem;
-    left: 0.5rem;
+    bottom: -8rem;
+    left: 7.5rem;
+  }
+  .header {
+    margin-top: 2rem;
   }
   .nodatabase__genius {
     position: fixed;
@@ -11836,7 +11840,10 @@ input[type=submit]:hover {
     left: 40%;
   }
   .bubble__genie__advice {
-    left: 40%;
+    left: 38%;
+    border-radius: 50%;
+    height: 350;
+    width: 350;
   }
 }
 @media (min-width: 1500px) {

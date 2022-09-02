@@ -516,9 +516,6 @@
 
     </div>
 
-
-
-
     <script>
         function changedata(parameter) {
 
@@ -561,7 +558,6 @@
                 elem.classList.remove('inactive');
             }
         }
-
 
         const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
         const buttons = document.querySelectorAll("button");
