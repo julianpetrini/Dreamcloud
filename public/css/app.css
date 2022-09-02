@@ -10980,10 +10980,6 @@ textarea.form-control-lg {
           animation: 4s Infinite floating;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  transition: transform 0.2s;
-}
-.bubble__why:hover {
-  transform: scale(1.05);
 }
 
 .bubble__inspired {
@@ -11001,10 +10997,6 @@ textarea.form-control-lg {
   -webkit-animation-delay: 1.2s;
           animation-delay: 1.2s;
   font-size: 1.1rem;
-  transition: transform 0.2s;
-}
-.bubble__inspired:hover {
-  transform: scale(1.05);
 }
 
 .bubble__genie__advice {
@@ -11020,7 +11012,7 @@ textarea.form-control-lg {
   top: 35%;
   left: 26%;
   z-index: 1;
-  transition: transform 0.2s;
+  transition: transform 0.4s;
   font-size: 1rem;
   -webkit-animation: fadeIn 2s;
           animation: fadeIn 2s;
@@ -11058,11 +11050,9 @@ textarea.form-control-lg {
   top: 40%;
   left: 26%;
   z-index: 1;
-  /* move circle in the actual middle */
   font-size: 2.3rem;
   -webkit-animation: 3s Infinite dream_breath;
           animation: 3s Infinite dream_breath;
-  transition: transform 0.4s;
 }
 
 .bubble__dreams {
