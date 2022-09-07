@@ -11,7 +11,7 @@
 //BACKGROUND
 
 .bg_pattern {
-    padding: 20px;
+    // padding: 20px;
     margin: 20px;
     font-family: $font-family-FIRST;
     background: linear-gradient(
@@ -25,48 +25,17 @@
         rgba(4, 128, 198, 1) 100%
     );
     background: url(/img/bg.svg) no-repeat fixed center;
-    // background-size: cover;
+    
     color: rgb(255, 255, 255);
+    animation: fadeIn 1s;
 
-    // animation:spin 10s linear infinite;
-    // @keyframes spin{
-    //     from{transform:rotate(0deg)}
-    //     to{transform:rotate(360deg)}	
-    // }
 }
 
-.background-spin{
-
-    // padding: 20px;
-    // margin: 20px;
-    // font-family: $font-family-FIRST;
-    // background: linear-gradient(
-    //     121deg,
-    //     rgba(4, 102, 172, 1) 0%,
-    //     rgba(4, 156, 220, 1) 21%,
-    //     rgba(4, 212, 251, 1) 44%,
-    //     rgba(4, 180, 235, 1) 61%,
-    //     rgba(27, 196, 236, 1) 82%,
-    //     rgba(4, 172, 236, 1) 97%,
-    //     rgba(4, 128, 198, 1) 100%
-    // );
-    // background: url(/img/bg.svg) no-repeat fixed center;
-    // // background-size: cover;
-    // color: rgb(255, 255, 255);
-
-    // animation:spin 10s linear infinite;
-    // @keyframes spin{
-    //     from{transform:rotate(0deg)}
-    //     to{transform:rotate(360deg)}	
-    // }
-}
-
-//title text
-//div container
 .header {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
     // margin-top: 3.6rem;
 }
 .header__title {
@@ -90,6 +59,7 @@
     opacity: 0.19;
     position: absolute;
 }
+
 .bubble__link {
     color: $font-color-title;
     font-size: 18px;
@@ -108,13 +78,13 @@
     align-items: center;
     text-align: center;
     line-height: 0.9;
-
-    //////animation
+    transition: transform 0.2s;
+    &:hover {
+        transform: scale(1.1);
+    }
+    
 }
-// .bubble__link {
-//     color: $font-color-title;
-//     font-size: 20px;
-// }
+
 .bubble__why {
     border: 3px solid $the-why-stroke;
     background-color: $the-why-color;
@@ -128,12 +98,12 @@
     top: 20%;
     left: 10%;
 
-    transition: transform 0.2s;
+    //ANIMATION FLOATING
+    animation: 4s Infinite floating;
+    animation-delay: 0.3s;
 
-    &:hover {
-        transform: scale(1.05);
-    }
 }
+
 .bubble__inspired {
     border: 3px solid $get-inspired-stroke;
     background-color: $get-inspired-color;
@@ -147,12 +117,53 @@
     top: 20%;
     right: 10%;
 
+    //ANIMATION FLOATING
+    animation: 3s Infinite floating;
+    animation-delay: 1.2s;
+
     font-size: 1.1rem;
-    transition: transform 0.2s;
+   
+}
+.bubble__genie__advice {
+    display: none;
+    border: 3px solid $share-your-wish-stroke;
+    border-radius: 43% 57% 100% 0% / 76% 57% 43% 24%;
+    background-color: $wishes-button-color;
+
+    /* bubble size */
+    height: 180px;
+    width: 180px;
+
+    /* for absolute positioning */
+    position: absolute;
+    top: 35%;
+    left: 26%;
+    z-index: 1;
+
+    transition: transform 0.4s;
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.1);
+        background-color: $share-your-wish-color;
+        color: $font-color-title;
+    }
+
+    font-size: 1rem;
+    // animation: 3s Infinite dream_breath;
+
+    animation: fadeIn 2s;
+    // animation-delay: 0.5s;
+    // transition: transform 0.4s;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
     }
 }
+
 .bubble__wish {
     border: 3px solid $share-your-wish-stroke;
     background-color: $share-your-wish-color;
@@ -163,17 +174,14 @@
 
     /* for absolute positioning */
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* move circle in the actual middle */
-
+    top: 40%;
+    left: 26%;
+    z-index: 1;
+   
     font-size: 2.3rem;
 
-    // transition: transform .4s;
-    // &:hover{
-    //     transform: scale(1.05);
-    // }
+    animation: 3s Infinite dream_breath;
+    
 }
 .bubble__dreams {
     border: 3px solid $people-dream-stroke;
@@ -183,13 +191,32 @@
     height: 120px;
     width: 120px;
 
+    //ANIMATION FLOATING
+    animation: 3s Infinite floating;
+    animation-delay: 1s;
+
     /* for absolute positioning */
     position: absolute;
-    bottom: 20%;
-    right: 14%;
-    transition: transform 0.2s;
-    &:hover {
-        transform: scale(1.05);
+    bottom: 18%;
+    right: 10%;
+    
+    animation-name: dream_breath;
+    animation-duration: 4s;
+
+    @keyframes dream_breath {
+        // from {background-color: red;}
+        0% {
+            transform: scale(1);
+        }
+        25% {
+            transform: scale(1.05);
+        }
+        50% {
+            transform: scale(1.08);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 }
 
@@ -198,7 +225,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: center;
+    // justify-content: center;
+    //NEW STYLE FOR THE BUBBLES TEXT SIZE
+    align-items: flex-start;
+    justify-content: space-evenly;
 }
 .nav_bubble__why {
     border: 3px solid $the-why-stroke;
@@ -207,10 +237,7 @@
     /* bubble size */
     height: $nav_bubble_size;
     width: $nav_bubble_size;
-    // &:hover {
-    //     background-color: #fbab7e;
-    //     background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-    // }
+    
 
     &:hover {
         animation-name: test;
@@ -233,6 +260,7 @@
         }
     }
 }
+
 
 .nav_bubble__inspired {
     @extend .nav_bubble__why;
@@ -352,10 +380,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .nav_bubble_text {
     color: $font-color-title;
-    font-size: 8px;
+    //new size, before 8px
+    font-size: 13px;
     margin-top: 7px;
 
     text-decoration: none;
@@ -372,29 +402,25 @@
 
 ///////////////////////////////////////////////////////
 //GENIO ANIMACION
+.genie_pic {
+    max-width: 80vw;
+    animation: 1.6s 1 forwards ease-in lightSpeedLeft,
+        1.5s Infinite linear floating;
+    animation-delay: 0s, 1.6s;
+}
+
 .genius {
     position: fixed;
     width: 90%;
     bottom: -6rem;
     left: -4.5rem;
     transition: transform 0.4s;
+
     &:hover {
-        transform: scale(1.05);
+        transform: scale(1.2);
     }
 }
-svg#freepik_stories-wishes:not(.animated) .animable {
-    opacity: 0;
-}
-svg#freepik_stories-wishes.animated #freepik--Floor--inject-7 {
-    animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft,
-        1.5s Infinite linear floating;
-    animation-delay: 0s, 1s;
-}
-svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
-    animation: 1.6s 1 forwards ease-in lightSpeedLeft,
-        1.5s Infinite linear floating;
-    animation-delay: 0s, 1.6s;
-}
+
 @keyframes slideLeft {
     0% {
         opacity: 0;
@@ -469,26 +495,26 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 /////////////THE WHY
 .get__inspired__text_box {
     margin-top: 1rem;
-    background-color: rgba(26, 53, 97, 0.3);
+    background-color: rgba(26, 53, 97, 0.2);
+    box-shadow: $box-shadow;
     border-radius: 10px;
     max-width: 50vw;
 }
 
 .the__why__text_box {
-    //background-color: #021E5E;
-    // display: inline-block;
+   
     background-color: rgba(26, 53, 97, 0.3);
     // // height: 68vh;
     border-radius: 15px;
-    // padding: 1rem;
+   
 
     display: flex;
-    // background-color: rgba(26, 53, 97, 0.8);
-    // border-radius: 15px;
+    
     padding: 1rem;
     min-height: 60vh;
     flex-direction: column;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .get__inspired__big__text__box {
@@ -527,6 +553,14 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     margin: 1rem;
 }
 
+.container__of__vh {
+    min-height: 52vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: stretch;
+}
 .generic__title {
     font-family: $font-family-FIRST;
     font-weight: $font-title-weight;
@@ -536,6 +570,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     text-transform: uppercase;
     text-align: center;
     font-size: 2.2rem;
+    animation-delay: 2s;
+    animation: fadeIn 2s;
 }
 .generic__subtitle {
     @extend .generic__title;
@@ -562,16 +598,16 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     color: $font-color-title;
 
     border: none;
-    border-radius: 13px;
+    border-radius: 10px;
     margin-right: 7px;
 
     text-transform: uppercase;
     font-weight: $font-title-weight;
     &:hover {
-        background-color: #008f58;
-        // background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+        background-color: #000000;
+        
     }
-    // font-size: 0.5rem;
+   
 }
 .filter__buttons__goals {
     @extend .filter__buttons__dreams;
@@ -585,6 +621,10 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     @extend .filter__buttons__dreams;
     background-color: $the-why-color;
 }
+.filter__buttons__all {
+    @extend .filter__buttons__dreams;
+    background-color: $people-dream-color;
+}
 
 ////////////////////////////////////////////
 .dreams__box__header {
@@ -595,6 +635,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .dreams__box__title {
     text-transform: uppercase;
     font-weight: 650;
+    font-size: 1rem;
 }
 .dreams__box__dreams {
     background-color: $share-your-wish-color;
@@ -602,8 +643,31 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     padding: 0.7rem;
     border-radius: 20px;
     margin: 0.5rem;
+    text-align: center;
     text-transform: uppercase;
     font-weight: $font-title-weight;
+
+    box-shadow: $box-shadow-dreams;
+
+    animation: 5s Infinite dream_messages;
+
+    @keyframes dream_messages {
+        
+        0% {
+            transform: scale(1);
+        }
+        65% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    transition: transform 0.4s;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 .dreams__box__goals {
     @extend .dreams__box__dreams;
@@ -627,6 +691,9 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
     padding-top: 1rem;
     border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
     transition: transform 0.2s;
+
+    box-shadow: $box-shadow;
+
     &:hover {
         transform: scale(1.08);
     }
@@ -668,7 +735,6 @@ input[type="submit"]:hover {
 
 .share__form {
     border-radius: 15px;
-    // background-color: rgba(26, 53, 97, 0.8);
     padding: 20px;
 }
 
@@ -705,8 +771,14 @@ input[type="submit"]:hover {
     }
     .generic__subtitle {
         font-size: 1.8rem;
-        // margin-top: 3rem;
-        // margin-bottom: 2rem;
+    }
+
+    .container__of__vh {
+        align-items: center;
+    }
+
+    .dreams__box__dreams {
+        width: 50vw;
     }
 
     .img__responsive {
@@ -722,21 +794,32 @@ input[type="submit"]:hover {
     .bubble__why {
         height: 150;
         width: 150;
+        font-size: 2rem;
     }
 
     .bubble__inspired {
         height: 135;
         width: 135;
+        font-size: 1.6rem;
     }
 
     .bubble__dreams {
         height: 165;
         width: 165;
+        font-size: 2rem;
     }
 
     .bubble__wish {
         height: 250;
         width: 250;
+        top: 38%;
+        left: 35%;
+    }
+    .dreams__box__dreams {
+        animation: none;
+    }
+    .bubble__genie__advice {
+        top: 40%;
     }
 }
 
@@ -755,14 +838,12 @@ input[type="submit"]:hover {
         align-items: center;
     }
     .img__responsive {
-        // width: 80%;
-        max-width: 32vw;
+        width: 80%;
     }
 
     // GET INSPIRED SECTION
     .the__why__text_box {
-        // max-width: 43vw;
-        min-width: 84vw;
+        max-width: 45vw;
     }
 
     .the_why__text {
@@ -770,8 +851,7 @@ input[type="submit"]:hover {
     }
     .generic__subtitle {
         font-size: 1.8rem;
-        // margin-top: 3rem;
-        // margin-bottom: 2rem;
+     
     }
 
     // COMMENTS
@@ -788,17 +868,35 @@ input[type="submit"]:hover {
     .dreams__box__ideas {
         width: 50vw;
     }
-    // .the_why__text {
-    // }
-    //HOME
+    
 }
 
 @media (min-width: 1200px) {
     //LARGE DESKTOP
     // GET INSPIRED SECTION
 }
+//SPECIAL GENIE MESSAGGE FOR MOBILES
+@media (min-height: 890px) and (min-width: 414px) {
+    .bubble__genie__advice {
+        height: 250;
+        width: 250;
+        font-size: 1.3rem;
+    }
+}
 
-//GENIUS
+@media (min-height: 667px) and (min-width: 375px) {
+    .bubble__genie__advice {
+        top: 40%;
+    }
+}
+
+@media (min-height: 740px) and (min-width: 360px) {
+    .bubble__genie__advice {
+        top: 40%;
+    }
+}
+
+//GENIUS and Bubble
 @media (min-width: 496px) {
     .genius {
         position: fixed;
@@ -811,6 +909,15 @@ input[type="submit"]:hover {
         width: 80%;
         bottom: -2rem;
         left: 0.5rem;
+    }
+    .bubble__wish {
+        left: 36%;
+    }
+    .bubble__genie__advice {
+        top: 30%;
+        height: 250;
+        width: 250;
+        font-size: 1.6rem;
     }
 }
 
@@ -831,13 +938,13 @@ input[type="submit"]:hover {
 }
 @media (min-width: 1200px) {
     .genius {
-        // width: 33%;
-        // bottom: -3rem;
-        // left: 3.5rem;
+       
+        bottom: -8rem;
+        left: 7.5rem;
+    }
 
-        width: 45%;
-        bottom: -16rem;
-        left: 0.5rem;
+    .header {
+        margin-top: 2rem;
     }
 
     .nodatabase__genius {
@@ -845,6 +952,20 @@ input[type="submit"]:hover {
         width: 60%;
         bottom: -26rem;
         left: 9.5rem;
+    }
+    .bubble__wish {
+        left: 40%;
+    }
+    .bubble__genie__advice {
+        left: 38%;
+        border-radius: 50%;
+        height: 350;
+        width: 350;
+    }
+}
+@media (min-width: 1500px) {
+    .bubble__wish {
+        left: 42%;
     }
 }
 
@@ -861,4 +982,105 @@ input[type="submit"]:hover {
 .inactive {
     font-size: 25px;
     display: none;
+}
+
+.no_underline {
+    text-decoration: none;
+}
+
+///DOWNLOAD DREAM
+
+.card__box__generic {
+    
+    border-radius: 10px;
+    border: 3px solid $the-why-stroke;
+
+    padding: 1rem;
+
+    max-width: 400px;
+    height: auto;
+    text-align: center;
+   
+}
+
+.card__box__dreams {
+    background-color: $dreams_button_color;
+}
+.card__box__goals {
+    background-color: $goals-button-color;
+}
+.card__box__wishes {
+    background-color: $wishes-button-color;
+}
+.card__box__ideas {
+    background-color: $ideas_button_color;
+}
+
+.logo__dreamcloud {
+    text-align: center;
+}
+.logo__title {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    line-height: 0.1;
+    letter-spacing: 2px;
+}
+.logo__subtitle {
+    font-size: 0.5rem;
+    font-weight: 700;
+}
+
+.card__box__dream {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 1rem;
+}
+.card__box__author {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 0.95rem;
+}
+.card__box__date {
+    font-size: 0.9rem;
+    text-align: center;
+}
+.card__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card__box__type {
+    background-color: $share-your-wish-color;
+    color: $font-color-title;
+
+    border: none;
+    border-radius: 10px;
+    margin-right: 7px;
+
+    //TRYOUT
+
+    text-transform: uppercase;
+    font-weight: $font-title-weight;
+}
+.card__box__img__responsive {
+    @extend .img__responsive;
+    max-width: 90%;
+}
+.card__button__back {
+    background-color: $people-dream-color;
+    color: $home-button-color;
+    border: none;
+    border-radius: 10px;
+    margin-right: 7px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0.5rem;
+}
+.soon__text {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem;
+    font-weight: $font-title-weight;
 }

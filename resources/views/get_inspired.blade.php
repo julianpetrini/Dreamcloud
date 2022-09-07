@@ -9,7 +9,7 @@
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
         <a href="dreams" class="bubble__text">
-            <h1 class="nav_bubble_text">people's dreams</h1>
+            <h1 class="nav_bubble_text">dreams</h1>
         </a>
     </div>
 
@@ -28,7 +28,7 @@
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
         <a href="share" class="bubble__text">
-            <h1 class="nav_bubble_text">share your wish</h1>
+            <h1 class="nav_bubble_text">share</h1>
         </a>
     </div>
 
@@ -48,8 +48,8 @@
 </div>
 @foreach ($posts as $post)
     <div class="get__inspired__big__text__box">
-        <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"
-            alt="Card image cap">
+        <a href="inspired">
+        <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"alt="famous quote people"></a>
         {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
 
         <div class="get__inspired__text_box">

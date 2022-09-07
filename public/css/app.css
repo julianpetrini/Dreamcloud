@@ -3257,7 +3257,7 @@ textarea.form-control-lg {
   --bs-dropdown-inner-border-radius: calc(0.375rem - 1px);
   --bs-dropdown-divider-bg: var(--bs-border-color-translucent);
   --bs-dropdown-divider-margin-y: 0.5rem;
-  --bs-dropdown-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-dropdown-box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   --bs-dropdown-link-color: #212529;
   --bs-dropdown-link-hover-color: #1e2125;
   --bs-dropdown-link-hover-bg: #e9ecef;
@@ -5211,7 +5211,7 @@ textarea.form-control-lg {
   --bs-toast-border-width: 1px;
   --bs-toast-border-color: var(--bs-border-color-translucent);
   --bs-toast-border-radius: 0.375rem;
-  --bs-toast-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-toast-box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   --bs-toast-header-color: #6c757d;
   --bs-toast-header-bg: rgba(255, 255, 255, 0.85);
   --bs-toast-header-border-color: rgba(0, 0, 0, 0.05);
@@ -5418,7 +5418,7 @@ textarea.form-control-lg {
 @media (min-width: 576px) {
   .modal {
     --bs-modal-margin: 1.75rem;
-    --bs-modal-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    --bs-modal-box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   }
   .modal-dialog {
     max-width: var(--bs-modal-width);
@@ -5671,7 +5671,7 @@ textarea.form-control-lg {
   --bs-popover-border-color: var(--bs-border-color-translucent);
   --bs-popover-border-radius: 0.5rem;
   --bs-popover-inner-border-radius: calc(0.5rem - 1px);
-  --bs-popover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --bs-popover-box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   --bs-popover-header-padding-x: 1rem;
   --bs-popover-header-padding-y: 0.5rem;
   --bs-popover-header-font-size: 0.9rem;
@@ -7116,7 +7116,7 @@ textarea.form-control-lg {
 }
 
 .shadow {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+  box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25) !important;
 }
 
 .shadow-sm {
@@ -10906,24 +10906,26 @@ textarea.form-control-lg {
   }
 }
 .bg_pattern {
-  padding: 20px;
   margin: 20px;
   font-family: "Baloo Da 2", cursive;
   background: linear-gradient(121deg, rgb(4, 102, 172) 0%, rgb(4, 156, 220) 21%, rgb(4, 212, 251) 44%, rgb(4, 180, 235) 61%, rgb(27, 196, 236) 82%, rgb(4, 172, 236) 97%, rgb(4, 128, 198) 100%);
   background: url(/img/bg.svg) no-repeat fixed center;
   color: rgb(255, 255, 255);
+  -webkit-animation: fadeIn 1s;
+          animation: fadeIn 1s;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 3rem;
 }
 
 .header__title, .header__description {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
-  color: #F9FDFF;
+  color: #f9fdff;
   letter-spacing: 3px;
   line-height: 0.6;
   text-transform: uppercase;
@@ -10944,7 +10946,7 @@ textarea.form-control-lg {
 }
 
 .bubble__link {
-  color: #F9FDFF;
+  color: #f9fdff;
   font-size: 18px;
   text-decoration: none;
   border-radius: 50%;
@@ -10958,11 +10960,15 @@ textarea.form-control-lg {
   align-items: center;
   text-align: center;
   line-height: 0.9;
+  transition: transform 0.2s;
+}
+.bubble__link:hover {
+  transform: scale(1.1);
 }
 
 .bubble__why {
-  border: 3px solid #1EC0EF;
-  background-color: #DD7973;
+  border: 3px solid #1ec0ef;
+  background-color: #dd7973;
   /* bubble size */
   height: 80px;
   width: 80px;
@@ -10970,15 +10976,15 @@ textarea.form-control-lg {
   position: absolute;
   top: 20%;
   left: 10%;
-  transition: transform 0.2s;
-}
-.bubble__why:hover {
-  transform: scale(1.05);
+  -webkit-animation: 4s Infinite floating;
+          animation: 4s Infinite floating;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .bubble__inspired {
-  border: 3px solid #006FC0;
-  background-color: #55C2DA;
+  border: 3px solid #006fc0;
+  background-color: #55c2da;
   /* bubble size */
   height: 100px;
   width: 100px;
@@ -10986,54 +10992,128 @@ textarea.form-control-lg {
   position: absolute;
   top: 20%;
   right: 10%;
+  -webkit-animation: 3s Infinite floating;
+          animation: 3s Infinite floating;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
   font-size: 1.1rem;
-  transition: transform 0.2s;
-}
-.bubble__inspired:hover {
-  transform: scale(1.05);
 }
 
-.bubble__wish {
-  border: 3px solid #38C5FF;
-  background-color: #FFBD03;
+.bubble__genie__advice {
+  display: none;
+  border: 3px solid #38c5ff;
+  border-radius: 43% 57% 100% 0%/76% 57% 43% 24%;
+  background-color: #407bff;
   /* bubble size */
   height: 180px;
   width: 180px;
   /* for absolute positioning */
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* move circle in the actual middle */
+  top: 35%;
+  left: 26%;
+  z-index: 1;
+  transition: transform 0.4s;
+  font-size: 1rem;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
+}
+.bubble__genie__advice:hover {
+  transform: scale(1.1);
+  background-color: #ffbd03;
+  color: #f9fdff;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.bubble__wish {
+  border: 3px solid #38c5ff;
+  background-color: #ffbd03;
+  /* bubble size */
+  height: 180px;
+  width: 180px;
+  /* for absolute positioning */
+  position: absolute;
+  top: 40%;
+  left: 26%;
+  z-index: 1;
   font-size: 2.3rem;
+  -webkit-animation: 3s Infinite dream_breath;
+          animation: 3s Infinite dream_breath;
 }
 
 .bubble__dreams {
-  border: 3px solid #FFFFFF;
-  background-color: #5ADBB5;
+  border: 3px solid #ffffff;
+  background-color: #5adbb5;
   /* bubble size */
   height: 120px;
   width: 120px;
+  -webkit-animation: 3s Infinite floating;
+          animation: 3s Infinite floating;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   /* for absolute positioning */
   position: absolute;
-  bottom: 20%;
-  right: 14%;
-  transition: transform 0.2s;
+  bottom: 18%;
+  right: 10%;
+  -webkit-animation-name: dream_breath;
+          animation-name: dream_breath;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
-.bubble__dreams:hover {
-  transform: scale(1.05);
+@-webkit-keyframes dream_breath {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dream_breath {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.05);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .navbar {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-evenly;
 }
 
 .nav_bubble__why, .nav_bubble__home, .nav_bubble__dreams, .nav_bubble__wish, .nav_bubble__inspired {
-  border: 3px solid #1EC0EF;
-  background-color: #DD7973;
+  border: 3px solid #1ec0ef;
+  background-color: #dd7973;
   margin: 0.2rem;
   /* bubble size */
   height: 80px;
@@ -11047,36 +11127,36 @@ textarea.form-control-lg {
 }
 @-webkit-keyframes test {
   0% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
   25% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
   50% {
-    background-color: #006FC0;
+    background-color: #006fc0;
   }
   100% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
 }
 @keyframes test {
   0% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
   25% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
   50% {
-    background-color: #006FC0;
+    background-color: #006fc0;
   }
   100% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
 }
 
 .nav_bubble__inspired {
-  border: 3px solid #006FC0;
-  background-color: #55C2DA;
+  border: 3px solid #006fc0;
+  background-color: #55c2da;
 }
 .nav_bubble__inspired:hover {
   -webkit-animation-name: test;
@@ -11086,22 +11166,22 @@ textarea.form-control-lg {
 }
 @keyframes test {
   0% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
   25% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
   50% {
-    background-color: #006FC0;
+    background-color: #006fc0;
   }
   100% {
-    background-color: #55C2DA;
+    background-color: #55c2da;
   }
 }
 
 .nav_bubble__wish {
-  border: 3px solid #38C5FF;
-  background-color: #FFBD03;
+  border: 3px solid #38c5ff;
+  background-color: #ffbd03;
 }
 .nav_bubble__wish:hover {
   -webkit-animation-name: test;
@@ -11111,22 +11191,22 @@ textarea.form-control-lg {
 }
 @keyframes test {
   0% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
   25% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
   50% {
-    background-color: #006FC0;
+    background-color: #006fc0;
   }
   100% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
 }
 
 .nav_bubble__dreams {
-  border: 3px solid #FFFFFF;
-  background-color: #5ADBB5;
+  border: 3px solid #ffffff;
+  background-color: #5adbb5;
 }
 .nav_bubble__dreams:hover {
   -webkit-animation-name: test;
@@ -11136,22 +11216,22 @@ textarea.form-control-lg {
 }
 @keyframes test {
   0% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
   25% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
   50% {
-    background-color: #006FC0;
+    background-color: #006fc0;
   }
   100% {
-    background-color: #5ADBB5;
+    background-color: #5adbb5;
   }
 }
 
 .nav_bubble__home {
-  border: 3px solid #006FC0;
-  background-color: #F9FDFF;
+  border: 3px solid #006fc0;
+  background-color: #f9fdff;
 }
 .nav_bubble__home:hover {
   -webkit-animation-name: test;
@@ -11161,16 +11241,16 @@ textarea.form-control-lg {
 }
 @keyframes test {
   0% {
-    background-color: #DD7973;
+    background-color: #dd7973;
   }
   25% {
-    background-color: #FFBD03;
+    background-color: #ffbd03;
   }
   50% {
-    background-color: #006FC0;
+    background-color: #006fc0;
   }
   100% {
-    background-color: #F9FDFF;
+    background-color: #f9fdff;
   }
 }
 
@@ -11188,11 +11268,12 @@ textarea.form-control-lg {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
 .nav_bubble_text {
-  color: #F9FDFF;
-  font-size: 8px;
+  color: #f9fdff;
+  font-size: 13px;
   margin-top: 7px;
   text-decoration: none;
   border-radius: 50%;
@@ -11205,6 +11286,14 @@ textarea.form-control-lg {
   text-decoration: none;
 }
 
+.genie_pic {
+  max-width: 80vw;
+  -webkit-animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
+          animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
+  -webkit-animation-delay: 0s, 1.6s;
+          animation-delay: 0s, 1.6s;
+}
+
 .genius, .nodatabase__genius {
   position: fixed;
   width: 90%;
@@ -11213,25 +11302,7 @@ textarea.form-control-lg {
   transition: transform 0.4s;
 }
 .genius:hover, .nodatabase__genius:hover {
-  transform: scale(1.05);
-}
-
-svg#freepik_stories-wishes:not(.animated) .animable {
-  opacity: 0;
-}
-
-svg#freepik_stories-wishes.animated #freepik--Floor--inject-7 {
-  -webkit-animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft, 1.5s Infinite linear floating;
-          animation: 1s 1 forwards cubic-bezier(0.36, -0.01, 0.5, 1.38) slideLeft, 1.5s Infinite linear floating;
-  -webkit-animation-delay: 0s, 1s;
-          animation-delay: 0s, 1s;
-}
-
-svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
-  -webkit-animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
-          animation: 1.6s 1 forwards ease-in lightSpeedLeft, 1.5s Infinite linear floating;
-  -webkit-animation-delay: 0s, 1.6s;
-          animation-delay: 0s, 1.6s;
+  transform: scale(1.2);
 }
 
 @-webkit-keyframes slideLeft {
@@ -11329,7 +11400,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .footer__title, .footer__description {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
-  color: #F9FDFF;
+  color: #f9fdff;
   letter-spacing: 3px;
   line-height: 0.6;
   text-transform: uppercase;
@@ -11345,7 +11416,8 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 
 .get__inspired__text_box {
   margin-top: 1rem;
-  background-color: rgba(26, 53, 97, 0.3);
+  background-color: rgba(26, 53, 97, 0.2);
+  box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   border-radius: 10px;
   max-width: 50vw;
 }
@@ -11358,6 +11430,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   min-height: 60vh;
   flex-direction: column;
   justify-content: center;
+  margin-bottom: 1rem;
 }
 
 .get__inspired__big__text__box {
@@ -11369,7 +11442,7 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   font-size: 3.7vw;
   padding: 0.5rem;
   text-align: left;
-  color: #F9FDFF;
+  color: #f9fdff;
   margin: 0;
 }
 
@@ -11392,15 +11465,28 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 1rem;
 }
 
+.container__of__vh {
+  min-height: 52vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+}
+
 .generic__title, .dreams__title, .error__form__text, .generic__subtitle {
   font-family: "Baloo Da 2", cursive;
   font-weight: 800;
-  color: #F9FDFF;
+  color: #f9fdff;
   letter-spacing: 3px;
   line-height: 0.6;
   text-transform: uppercase;
   text-align: center;
   font-size: 2.2rem;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation: fadeIn 2s;
+          animation: fadeIn 2s;
 }
 
 .generic__subtitle {
@@ -11422,17 +11508,17 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
   margin: 2rem;
 }
 
-.filter__buttons__dreams, .filter__buttons__ideas, .filter__buttons__wishes, .filter__buttons__goals {
-  background-color: #FFBD03;
-  color: #F9FDFF;
+.filter__buttons__dreams, .filter__buttons__all, .filter__buttons__ideas, .filter__buttons__wishes, .filter__buttons__goals {
+  background-color: #ffbd03;
+  color: #f9fdff;
   border: none;
-  border-radius: 13px;
+  border-radius: 10px;
   margin-right: 7px;
   text-transform: uppercase;
   font-weight: 800;
 }
-.filter__buttons__dreams:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
-  background-color: #008f58;
+.filter__buttons__dreams:hover, .filter__buttons__all:hover, .filter__buttons__ideas:hover, .filter__buttons__wishes:hover, .filter__buttons__goals:hover {
+  background-color: #000000;
 }
 
 .filter__buttons__goals {
@@ -11440,11 +11526,15 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 }
 
 .filter__buttons__wishes {
-  background-color: #407BFF;
+  background-color: #407bff;
 }
 
 .filter__buttons__ideas {
-  background-color: #DD7973;
+  background-color: #dd7973;
+}
+
+.filter__buttons__all {
+  background-color: #5adbb5;
 }
 
 .dreams__box__header {
@@ -11456,41 +11546,73 @@ svg#freepik_stories-wishes.animated #freepik--Character--inject-7 {
 .dreams__box__title {
   text-transform: uppercase;
   font-weight: 650;
+  font-size: 1rem;
 }
 
 .dreams__box__dreams, .dreams__box__ideas, .dreams__box__wishes, .dreams__box__goals {
-  background-color: #FFBD03;
-  color: #F9FDFF;
+  background-color: #ffbd03;
+  color: #f9fdff;
   padding: 0.7rem;
   border-radius: 20px;
   margin: 0.5rem;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 800;
+  box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 rgba(13, 202, 240, 0.0901960784);
+  -webkit-animation: 5s Infinite dream_messages;
+          animation: 5s Infinite dream_messages;
+  transition: transform 0.4s;
+}
+@-webkit-keyframes dream_messages {
+  0% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes dream_messages {
+  0% {
+    transform: scale(1);
+  }
+  65% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.dreams__box__dreams:hover, .dreams__box__ideas:hover, .dreams__box__wishes:hover, .dreams__box__goals:hover {
+  transform: scale(1.05);
 }
 
 .dreams__box__goals {
   background-color: rgb(31, 135, 161);
-  color: #F9FDFF;
+  color: #f9fdff;
 }
 
 .dreams__box__wishes {
-  background-color: #407BFF;
-  color: #F9FDFF;
+  background-color: #407bff;
+  color: #f9fdff;
 }
 
 .dreams__box__ideas {
-  background-color: #DD7973;
-  color: #F9FDFF;
+  background-color: #dd7973;
+  color: #f9fdff;
 }
 
-.img__responsive {
+.img__responsive, .card__box__img__responsive {
   max-width: 300px;
   height: auto;
   padding-top: 1rem;
   border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
   transition: transform 0.2s;
+  box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
 }
-.img__responsive:hover {
+.img__responsive:hover, .card__box__img__responsive:hover {
   transform: scale(1.08);
 }
 
@@ -11518,11 +11640,11 @@ input[type=submit] {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: 800;
-  color: #F9FDFF;
+  color: #f9fdff;
 }
 
 input[type=submit]:hover {
-  background-color: #407BFF;
+  background-color: #407bff;
 }
 
 .share__form {
@@ -11559,7 +11681,13 @@ input[type=submit]:hover {
   .generic__subtitle {
     font-size: 1.8rem;
   }
-  .img__responsive {
+  .container__of__vh {
+    align-items: center;
+  }
+  .dreams__box__dreams, .dreams__box__goals, .dreams__box__wishes, .dreams__box__ideas {
+    width: 50vw;
+  }
+  .img__responsive, .card__box__img__responsive {
     max-width: 32vw;
     height: auto;
     display: block;
@@ -11569,18 +11697,30 @@ input[type=submit]:hover {
   .bubble__why {
     height: 150;
     width: 150;
+    font-size: 2rem;
   }
   .bubble__inspired {
     height: 135;
     width: 135;
+    font-size: 1.6rem;
   }
   .bubble__dreams {
     height: 165;
     width: 165;
+    font-size: 2rem;
   }
   .bubble__wish {
     height: 250;
     width: 250;
+    top: 38%;
+    left: 35%;
+  }
+  .dreams__box__dreams, .dreams__box__goals, .dreams__box__wishes, .dreams__box__ideas {
+    -webkit-animation: none;
+            animation: none;
+  }
+  .bubble__genie__advice {
+    top: 40%;
   }
 }
 @media (min-width: 992px) {
@@ -11593,11 +11733,11 @@ input[type=submit]:hover {
     flex-direction: column;
     align-items: center;
   }
-  .img__responsive {
-    max-width: 32vw;
+  .img__responsive, .card__box__img__responsive {
+    width: 80%;
   }
   .the__why__text_box, .get__inspired__big__text__box {
-    min-width: 84vw;
+    max-width: 45vw;
   }
   .the_why__text, .the__get__inspired__text, .nodatabase__the__text {
     font-size: 1.2rem;
@@ -11618,6 +11758,23 @@ input[type=submit]:hover {
     width: 50vw;
   }
 }
+@media (min-height: 890px) and (min-width: 414px) {
+  .bubble__genie__advice {
+    height: 250;
+    width: 250;
+    font-size: 1.3rem;
+  }
+}
+@media (min-height: 667px) and (min-width: 375px) {
+  .bubble__genie__advice {
+    top: 40%;
+  }
+}
+@media (min-height: 740px) and (min-width: 360px) {
+  .bubble__genie__advice {
+    top: 40%;
+  }
+}
 @media (min-width: 496px) {
   .genius, .nodatabase__genius {
     position: fixed;
@@ -11630,6 +11787,15 @@ input[type=submit]:hover {
     width: 80%;
     bottom: -2rem;
     left: 0.5rem;
+  }
+  .bubble__wish {
+    left: 36%;
+  }
+  .bubble__genie__advice {
+    top: 30%;
+    height: 250;
+    width: 250;
+    font-size: 1.6rem;
   }
 }
 @media (min-width: 718px) {
@@ -11648,9 +11814,11 @@ input[type=submit]:hover {
 }
 @media (min-width: 1200px) {
   .genius, .nodatabase__genius {
-    width: 45%;
-    bottom: -16rem;
-    left: 0.5rem;
+    bottom: -8rem;
+    left: 7.5rem;
+  }
+  .header {
+    margin-top: 2rem;
   }
   .nodatabase__genius {
     position: fixed;
@@ -11658,14 +11826,130 @@ input[type=submit]:hover {
     bottom: -26rem;
     left: 9.5rem;
   }
+  .bubble__wish {
+    left: 40%;
+  }
+  .bubble__genie__advice {
+    left: 38%;
+    border-radius: 50%;
+    height: 350;
+    width: 350;
+  }
+}
+@media (min-width: 1500px) {
+  .bubble__wish {
+    left: 42%;
+  }
 }
 .error__form__text {
   line-height: 1;
-  color: #FFBD03;
+  color: #ffbd03;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .inactive {
   font-size: 25px;
   display: none;
+}
+
+.no_underline {
+  text-decoration: none;
+}
+
+.card__box__generic {
+  border-radius: 10px;
+  border: 3px solid #1ec0ef;
+  padding: 1rem;
+  max-width: 400px;
+  height: auto;
+  text-align: center;
+}
+
+.card__box__dreams {
+  background-color: #ffbd03;
+}
+
+.card__box__goals {
+  background-color: rgb(31, 135, 161);
+}
+
+.card__box__wishes {
+  background-color: #407bff;
+}
+
+.card__box__ideas {
+  background-color: #dd7973;
+}
+
+.logo__dreamcloud {
+  text-align: center;
+}
+
+.logo__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 0.1;
+  letter-spacing: 2px;
+}
+
+.logo__subtitle {
+  font-size: 0.5rem;
+  font-weight: 700;
+}
+
+.card__box__dream {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+
+.card__box__author {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.card__box__date {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card__box__type {
+  background-color: #ffbd03;
+  color: #f9fdff;
+  border: none;
+  border-radius: 10px;
+  margin-right: 7px;
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.card__box__img__responsive {
+  max-width: 90%;
+}
+
+.card__button__back {
+  background-color: #5adbb5;
+  color: #f9fdff;
+  border: none;
+  border-radius: 10px;
+  margin-right: 7px;
+  text-transform: uppercase;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+.soon__text {
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem;
+  font-weight: 800;
 }

@@ -28,7 +28,7 @@
             <img class="nav_button_lamp"src="/img/lamp.svg">
         </a>
         <a href="share" class="bubble__text">
-            <h1 class="nav_bubble_text">share your wish</h1>
+            <h1 class="nav_bubble_text">share</h1>
         </a>
     </div>
 
@@ -511,20 +511,16 @@
         <button class="filter__buttons__goals" onclick="changedata(1)">goals</button>
         <button class="filter__buttons__wishes" onclick="changedata(2)">wishes</button>
         <button class="filter__buttons__ideas" onclick="changedata(3)">ideas</button>
+        <button class="filter__buttons__all" onclick="changedata(4)">all</button>
+
 
     </div>
-
-
-
 
     <script>
         function changedata(parameter) {
 
             // TODO: hide all entries
-            setInactive(document.getElementsByName('goals'));
-            setInactive(document.getElementsByName('dreams'));
-            setInactive(document.getElementsByName('wishes'));
-            setInactive(document.getElementsByName('ideas'));
+            showFiltered(['goals', 'dreams', 'wishes', 'ideas'], false);
 
             if (parameter == 0) {
                 setActive(document.getElementsByName('dreams'));
@@ -534,6 +530,20 @@
                 setActive(document.getElementsByName('wishes'));
             } else if (parameter == 3) {
                 setActive(document.getElementsByName('ideas'));
+            } else if (parameter == 4) {
+                showFiltered(['goals', 'dreams', 'wishes', 'ideas'], true);
+            }
+        }
+
+        function showFiltered(buttons, active) {
+            if (active) {
+                for (let b = 0; b < buttons.length; b++) {
+                    setActive(document.getElementsByName(buttons[b]));
+                }
+            } else {
+                for (let b = 0; b < buttons.length; b++) {
+                    setInactive(document.getElementsByName(buttons[b]));
+                }
             }
         }
 
@@ -549,59 +559,34 @@
             }
         }
 
+        const audio = new Audio("https://www.fesliyanstudios.com/play-mp3/387");
+        const buttons = document.querySelectorAll("button");
 
-
-        
-        // function myFunction() {
-        //     document.getElementsByClassName("dreams").style.transition = "2s";
-        //     document.getElementsByClassName("goals").style.transition = "2s";
-        //     document.getElementsByClassName("wishes").style.transition = "2s";
-        //     document.getElementsByClassName("ideas").style.transition = "2s";
-
-        // }
-
-        /////
+        buttons.forEach(button => {
+            button.addEventListener("click", () => {
+                audio.play();
+            });
+        });
     </script>
 
-
-
-    @foreach ($messages as $message)
-        <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
-            <div class="dreams__box__header">
-                <h3 class="dreams__box__title">{{ $message->username }}</h3>
-                <h3 class="dreams__box__title">{{ $message->created_at->format('Y-m-d') }}</h3>
-            </div>
-            <p class="dreams__box__content">{{ $message->comment }}</p>
-        </div>
-    @endforeach
-
+    {{-- VAMOS A AGREGAR UN "A" PARA VER EL DETALLE DEL SUENO SELECCIONADO --}}
+    <div class="container__of__vh">
+        @foreach ($messages as $message)
+            <a href="/result/{{ $message->id }}" class="no_underline">
+                <div class="dreams__box__{{ $message->wish }}" name="{{ $message->wish }}">
+                    <div class="dreams__box__header">
+                        <h3 class="dreams__box__title">{{ $message->username }}</h3>
+                        <h3 class="dreams__box__title">{{ $message->created_at->format('d-m-Y') }}</h3>
+                        {{-- OPCION PARA VER SI SOLO MUESTRO EL SUENO O CON LA INFO TAMBIEN INCLUIDA --}}
+                    </div>
+                    <p class="dreams__box__content">{{ $message->comment }}</p>
+                </div>
+            </a>
+        @endforeach
+    </div>
 
 
     @include ('layout/footer')
 
 
 @endif
-
-{{-- <div class="dreams__box__goals">
-    <div class="dreams__box__header">
-        <h3 class="dreams__box__title">Juan Carlos</h3>
-        <h3 class="dreams__box__title">10.08.2020</h3>
-    </div>
-    <p class="dreams__box__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima quia expedita in dolorum sequi quidem numquam maiores mollitia vel molestias est natus veritatis doloribus et magni impedit, tenetur dolor illum.</p>
-</div>
-
-<div class="dreams__box__wishes">
-    <div class="dreams__box__header">
-        <h3 class="dreams__box__title">Juan Carlos</h3>
-        <h3 class="dreams__box__title">10.08.2020</h3>
-    </div>
-    <p class="dreams__box__content">Lorem ipsum dolor sit amet consectetur  doloribus et magni impedit, tenetur dolor illum.</p>
-</div>
-
-<div class="dreams__box__ideas">
-    <div class="dreams__box__header">
-        <h3 class="dreams__box__title">Juan Carlos</h3>
-        <h3 class="dreams__box__title">10.08.2020</h3>
-    </div>
-    <p class="dreams__box__content">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
-</div> --}}
