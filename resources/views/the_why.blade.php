@@ -45,12 +45,18 @@
 
 <div class="title">
     <h1 class="generic__title">the why</h1>
+    <h2 class="nav_bubble_text">please select a language</h2>
+    <div class="flag_container">
+        <img class="nav_button_flag"src="/img/flag/germany.png" data-lang="german">
+        <img class="nav_button_flag"src="/img/flag/spain.png" data-lang="spanish">
+        <img class="nav_button_flag"src="/img/flag/united_kingdom.png" data-lang="english">
+    </div>
 </div>
 
 
 <div class="the__why__text_box">
     <h2 class="generic__subtitle">My name is Julian</h2>
-    <p class="the_why__text">As every kid, we believe. <br> In possibilities, in magic, in smiles. <br> Later, life goes
+    <p class="the_why__text" id="dynamicText">As every kid, we believe. <br> In possibilities, in magic, in smiles. <br> Later, life goes
         by. <br>
         Observing and learning the rules of the structure. How to process information, how to relate, and also how to
         think and play. Maybe not a conscious process, but as when we were new to computers, we installed a lot of

@@ -366,6 +366,29 @@
         }
     }
 }
+
+.flag_container{
+    
+    text-align: center;
+    filter: drop-shadow(0 0 0.1rem);
+    
+}
+//animacion para JS de la bandera
+#dynamicText {
+    transition: opacity 0.4s;
+}
+
+
+.nav_button_flag{
+    transition: transform 0.4s;
+    height: 3rem;
+    width: auto;
+    opacity: 1;
+}
+.nav_button_flag:hover{
+    transform: scale(1.2);
+}
+
 .nav_button_lamp {
     height: 65%;
     opacity: 1;
@@ -391,6 +414,7 @@
     text-decoration: none;
     border-radius: 50%;
     text-transform: uppercase;
+    text-align: center;
 
     font-family: $font-family-FIRST;
     font-weight: $font-title-weight;
@@ -399,6 +423,8 @@
 .bubble__text {
     text-decoration: none;
 }
+
+
 
 ///////////////////////////////////////////////////////
 //GENIO ANIMACION
