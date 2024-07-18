@@ -6,8 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Message;
 
 class MessageController extends Controller
+
+
 {
     public function showAll()
+
+    /* Este era el codigo anterior donde mostraba solo los 10 random, ahora simplificamos para que muestre todo
     {
     //   FOR PAGINATE THE SITE  $messages = Message::paginate(4);
 
@@ -28,7 +32,15 @@ class MessageController extends Controller
     return view('people_dreams', ['messages' => $messages]);
 
     }
+*/
 
+{
+    // Obtenemos todos los mensajes ordenados por la fecha de creación descendente
+    $messages = Message::all()->sortByDesc('created_at');
+
+    // Pasamos los mensajes a la vista 'people_dreams'
+    return view('people_dreams', ['messages' => $messages]);
+}
 
     public function showOne()
     {
