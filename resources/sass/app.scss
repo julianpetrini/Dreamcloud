@@ -1015,6 +1015,15 @@ input[type="submit"]:hover {
 }
 
 ///DOWNLOAD DREAM
+/// 
+.fade {
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
 
 .card__box__generic {
     
@@ -1085,6 +1094,7 @@ input[type="submit"]:hover {
     margin-right: 7px;
 
     //TRYOUT
+    
 
     text-transform: uppercase;
     font-weight: $font-title-weight;
@@ -1110,3 +1120,21 @@ input[type="submit"]:hover {
     margin: 1rem;
     font-weight: $font-title-weight;
 }
+
+.photo_output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //height: 100vh; /* Opcional: ajusta según el diseño */
+    
+    overflow: hidden; /* Evita barras de desplazamiento */
+}
+
+.photo_output canvas {
+    width: 100%; /* Asegura que el canvas no exceda el tamaño del contenedor */
+    height: 100%; /* Asegura que el canvas no exceda el tamaño del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

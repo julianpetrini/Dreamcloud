@@ -12,7 +12,8 @@
         
 
     {{-- CANVA --}}
-    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
 </head>
 
 <body class="bg_pattern">
@@ -21,6 +22,8 @@
     @yield('the_why')
 
     </div>
+    @stack('scripts')
+
 </body>
 
 </html>
