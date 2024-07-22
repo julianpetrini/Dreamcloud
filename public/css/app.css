@@ -11244,7 +11244,7 @@ textarea.form-control-lg {
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.934);
   box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
-  border-radius: 10px;
+  border-radius: 6px 44px 10px;
   max-width: 50vw;
 }
 
@@ -11363,14 +11363,18 @@ textarea.form-control-lg {
 
 .dreams__box__header {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
 }
 
 .dreams__box__title {
   text-transform: uppercase;
   font-weight: 650;
   font-size: 1rem;
+  color: #f9fdff;
+}
+.dreams__box__title p .dreams__box__content {
+  font-weight: 100;
 }
 
 .dreams__box__dreams, .dreams__box__ideas, .dreams__box__wishes, .dreams__box__goals {
@@ -11422,6 +11426,7 @@ textarea.form-control-lg {
   max-width: 300px;
   height: auto;
   padding-top: 1rem;
+  border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
   transition: transform 0.2s;
   box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
 }
