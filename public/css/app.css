@@ -11420,15 +11420,13 @@ textarea.form-control-lg {
   color: #f9fdff;
 }
 
-.img__responsive, .card__box__img__responsive {
+.img__responsive {
   max-width: 300px;
   height: auto;
-  padding-top: 1rem;
-  border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
   transition: transform 0.2s;
   box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
 }
-.img__responsive:hover, .card__box__img__responsive:hover {
+.img__responsive:hover {
   transform: scale(1.03);
 }
 
@@ -11503,7 +11501,7 @@ input[type=submit]:hover {
   .dreams__box__dreams, .dreams__box__goals, .dreams__box__wishes, .dreams__box__ideas {
     width: 50vw;
   }
-  .img__responsive, .card__box__img__responsive {
+  .img__responsive {
     max-width: 32vw;
     height: auto;
     display: block;
@@ -11548,7 +11546,7 @@ input[type=submit]:hover {
     flex-direction: column;
     align-items: center;
   }
-  .img__responsive, .card__box__img__responsive {
+  .img__responsive {
     width: 80%;
   }
   .the__why__text_box, .get__inspired__big__text__box {
@@ -11684,6 +11682,10 @@ input[type=submit]:hover {
   }
 }
 .card__box__generic {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   border-radius: 10px;
   border: 3px solid #1ec0ef;
   padding: 1rem;
@@ -11738,7 +11740,7 @@ input[type=submit]:hover {
 
 .card__box__dream {
   text-align: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   font-size: 1rem;
 }
 
@@ -11764,9 +11766,23 @@ input[type=submit]:hover {
   color: #f9fdff;
   border: none;
   border-radius: 10px;
-  margin-right: 7px;
+  width: 100%;
+  margin-bottom: 1rem;
   text-transform: uppercase;
   font-weight: 800;
+}
+
+.card__box__img__responsive {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+  height: auto;
+  transition: transform 0.2s;
+  box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+}
+.card__box__img__responsive:hover {
+  transform: scale(1.03);
 }
 
 .card__button__back {

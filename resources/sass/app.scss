@@ -732,11 +732,12 @@ p .dreams__box__content{
     color: $font-color-title;
 }
 .img__responsive {
+   
     // width: 100%;
     max-width: 300px;
     height: auto;
-    padding-top: 1rem;
-    border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
+    //margin-top: 1rem;
+    //border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
     transition: transform 0.2s;
 
     box-shadow: $box-shadow;
@@ -1048,6 +1049,11 @@ input[type="submit"]:hover {
 
 .card__box__generic {
     
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
     border-radius: 10px;
     border: 3px solid $the-why-stroke;
 
@@ -1109,7 +1115,7 @@ input[type="submit"]:hover {
 
 .card__box__dream {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-size: 1rem;
 }
 .card__box__author {
@@ -1132,18 +1138,37 @@ input[type="submit"]:hover {
 
     border: none;
     border-radius: 10px;
-    margin-right: 7px;
-
+    //margin-right: 7px;
+    width: 100%;
+    margin-bottom: 1rem;
     //TRYOUT
     
 
     text-transform: uppercase;
     font-weight: $font-title-weight;
 }
-.card__box__img__responsive {
-    @extend .img__responsive;
-    //max-width: 90%;
+.card__box__img__responsive{
+    
+       
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+         // width: 100%;
+    max-width: 300px;
+    height: auto;
+    //margin-top: 1rem;
+    //border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
+    transition: transform 0.2s;
+
+    box-shadow: $box-shadow;
+
+    &:hover {
+        transform: scale(1.03);
+    }
 }
+
+
 .card__button__back {
     background-color: $people-dream-color;
     color: $home-button-color;
