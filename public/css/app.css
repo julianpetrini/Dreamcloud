@@ -11236,16 +11236,19 @@ textarea.form-control-lg {
   font-size: 1rem;
 }
 
+.inspired {
+  text-decoration: none;
+}
+
 .get__inspired__text_box {
   margin-top: 1rem;
-  background-color: rgba(26, 53, 97, 0.2);
+  background-color: rgba(0, 0, 0, 0.934);
   box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   border-radius: 10px;
   max-width: 50vw;
 }
 
 .the__why__text_box, .get__inspired__big__text__box {
-  background-color: rgba(26, 53, 97, 0.3);
   border-radius: 15px;
   display: flex;
   padding: 1rem;
@@ -11256,8 +11259,9 @@ textarea.form-control-lg {
 }
 
 .get__inspired__big__text__box {
-  background-color: rgba(26, 53, 97, 0);
   align-items: center;
+  z-index: 1;
+  position: relative;
 }
 
 .the_why__text, .nodatabase__the__text, .the__get__inspired__text {
@@ -11379,6 +11383,8 @@ textarea.form-control-lg {
   text-transform: uppercase;
   font-weight: 800;
   box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 rgba(13, 202, 240, 0.0901960784);
+  flex-direction: column;
+  align-items: center;
   animation: 5s Infinite dream_messages;
   transition: transform 0.4s;
 }
@@ -11416,12 +11422,11 @@ textarea.form-control-lg {
   max-width: 300px;
   height: auto;
   padding-top: 1rem;
-  border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
   transition: transform 0.2s;
   box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
 }
 .img__responsive:hover, .card__box__img__responsive:hover {
-  transform: scale(1.08);
+  transform: scale(1.03);
 }
 
 input[type=text],
@@ -11682,22 +11687,33 @@ input[type=submit]:hover {
   max-width: 400px;
   height: auto;
   text-align: center;
+  animation: card_shado_move 5s infinite;
+}
+@keyframes card_shado_move {
+  50% {
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 28px 0 #0dcaf0, 28px 28px 28px 0 rgba(13, 202, 240, 0.0901960784);
+  }
 }
 
 .card__box__dreams {
-  background-color: #ffbd03;
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+  animation-delay: 0s, 0.9;
 }
 
 .card__box__goals {
-  background-color: rgb(31, 135, 161);
+  background-color: #1f87a1;
+  background-image: linear-gradient(90deg, #1f87a1 0%, #1bc4ec 100%);
 }
 
 .card__box__wishes {
-  background-color: #407bff;
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 }
 
 .card__box__ideas {
-  background-color: #dd7973;
+  background-color: #FAD961;
+  background-image: linear-gradient(90deg, #FAD961 0%, #dd7973 100%);
 }
 
 .logo__dreamcloud {
@@ -11748,10 +11764,6 @@ input[type=submit]:hover {
   margin-right: 7px;
   text-transform: uppercase;
   font-weight: 800;
-}
-
-.card__box__img__responsive {
-  max-width: 90%;
 }
 
 .card__button__back {

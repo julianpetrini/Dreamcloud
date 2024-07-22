@@ -43,19 +43,27 @@
     </div>
 </div>
 
-<div class="title">
-    <h1 class="generic__title">get inspired</h1>
+<div class="genius" onclick="genieMessage()">
+
+    <img src={{ asset('img/Genie_white.svg') }} alt="genie_flying" class="genie_pic">
+
 </div>
+
+
+{{--<div class="title">
+    <h1 class="generic__title">cambios</h1>
+</div>--}}  
 @foreach ($posts as $post)
     <div class="get__inspired__big__text__box">
-        <a href="inspired">
+      {{--  <a href="inspired">
         <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"alt="famous quote people"></a>
-        {{-- <h2 class="generic__subtitle">{{ $post->title }}</h2> --}}
-
-        <div class="get__inspired__text_box">
-            <p class="the__get__inspired__text">{{ $post->content }}</p>
-            <h2 class="generic__subtitle">by {{ $post->author }}</h2>
+         <h2 class="generic__subtitle">{{ $post->title }}</h2> 
+--}}<a href="inspired" class="inspired">
+        <div class="get__inspired__text_box ">
+            <p class="the__get__inspired__text ">{{ $post->content }}</p>
+        {{--    <h2 class="generic__subtitle">by {{ $post->author }}</h2>--}}
         </div>
+    </a>
 @endforeach
 
 </div>

@@ -55,7 +55,7 @@
 
 
 <div class="the__why__text_box">
-    <h2 class="generic__subtitle">My name is Julian</h2>
+   {{-- <h2 class="generic__subtitle">My name is Julian</h2> --}}
     <p class="the_why__text" id="dynamicText">As every kid, we believe. <br> In possibilities, in magic, in smiles. <br> Later, life goes
         by. <br>
         Observing and learning the rules of the structure. How to process information, how to relate, and also how to

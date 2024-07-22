@@ -221,62 +221,39 @@
         // to screenshot the div
 
         function takeshot() {
-    // Guardar la posición de desplazamiento
-    var scrollX = window.scrollX;
-    var scrollY = window.scrollY;
-    // Asegúrate de que la ventana esté en la parte superior
-    window.scrollTo(0, 0);
+            window.scrollTo(0,0);
 
-    var result = document.getElementById("output");
-    var photoElement = document.getElementById("photo");
+            var result = document.getElementById("output");
+            
 
-    html2canvas(photoElement, {
-        useCORS: true,
-        backgroundColor: null,
-        scale: 2, // Aumentar la escala para una mejor resolución
-        width: photoElement.offsetWidth,
-        height: photoElement.offsetHeight
-    }).then(function(canvas) {
-        // Convertir el canvas a una imagen
-        var imgData = canvas.toDataURL("image/png");
+            html2canvas(document.getElementById("photo"), {
+                allowTaint: true,
+                backgroundColor: null,
+                scale: 1,
+                
+                
+                
 
-        // Crear un enlace para descargar la imagen
-        var link = document.createElement('a');
-        link.href = imgData;
-        link.download = 'card_image.png';
-        link.click();
+                
+                
+            }).then(function(canvas) {
 
-        // Compartir en redes sociales
-        document.getElementById("soon").innerHTML = `
-            <button onclick="shareOnSocial('whatsapp', '${imgData}')">Share on WhatsApp</button>
-            <button onclick="shareOnSocial('facebook', '${imgData}')">Share on Facebook</button>
-            <button onclick="shareOnSocial('instagram', '${imgData}')">Share on Instagram</button>
-        `;
-    }).catch(function(error) {
-        console.error('Error capturing screenshot:', error);
-    }).finally(function() {
-        // Restaurar la posición de desplazamiento
-        window.scrollTo(scrollX, scrollY);
-    });
-}
+                //canvas.style.border = "3px solid #1ec0ef";
+                //canvas.style.borderRadius = "11px";
+                //canvas.style.boxShadow = "0 0 10px rgba(0,0,0,0.1)";
+                //canvas.style.padding = "1rem";
+               
+               
+                // canvas.style.width = '800px';
+                // canvas.style.height = '600px';
+                result.appendChild(canvas);
+                document.getElementById("soon").innerHTML = "Here you will be able to download your card";
 
+                
 
-function shareOnSocial(platform, imgData) {
-    var url;
-    switch(platform) {
-        case 'whatsapp':
-            url = `https://api.whatsapp.com/send?text=${encodeURIComponent('Check out this image: ')} ${imgData}`;
-            break;
-        case 'facebook':
-            url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imgData)}`;
-            break;
-        case 'instagram':
-            alert("Instagram sharing is not supported directly via web. Please download the image and share manually.");
-            return;
-    }
-    window.open(url, '_blank');
-}
+            } );
 
+        }
 
 
         function getRandomImage() {
