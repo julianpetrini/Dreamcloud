@@ -11242,10 +11242,12 @@ textarea.form-control-lg {
 
 .get__inspired__text_box {
   margin-top: 1rem;
-  background-color: rgba(0, 0, 0, 0.934);
-  border-radius: 6px 44px 10px;
+  background-color: rgba(13, 202, 250, 0.934);
+  border-radius: 36px 22px 50px 0px;
   max-width: 50vw;
   transition: all 0.5s ease; /* transición suave */
+  box-shadow: 0 0 43px rgba(10, 78, 92, 0.6);
+  border: 3px solid #1ec0ef;
 }
 
 .get__inspired__click__text__box {
@@ -11254,7 +11256,7 @@ textarea.form-control-lg {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  border-radius: 6px 44px 10px;
+  border-radius: 86px 44px 66px 0px;
   border: 3px solid #1ec0ef;
   padding: 1rem;
   max-width: 50vw;
