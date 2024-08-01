@@ -43,16 +43,24 @@
     </div>
 </div>
 
+
+
+
 <div class="title">
     <h1 class="generic__title">the why</h1>
     <h2 class="nav_bubble_text">please select a language</h2>
-    <div class="flag_container">
-        <img class="nav_button_flag"src="/img/flag/germany.png" data-lang="german">
-        <img class="nav_button_flag"src="/img/flag/spain.png" data-lang="spanish">
-        <img class="nav_button_flag"src="/img/flag/united_kingdom.png" data-lang="english">
+    <div class="language-selection">
+        <button class="language-button " >
+            <img src="/img/flag/spain.png" class="nav_button_flag" alt="Español" data-lang="spanish"> Español
+        </button>
+        <button class="language-button " >
+            <img src="/img/flag/united_kingdom.png" class="nav_button_flag" alt="English"data-lang="english"> English
+        </button>
+        <button class="language-button ">
+            <img src="/img/flag/germany.png" class="nav_button_flag" alt="Deutsch"data-lang="german"> Deutsch
+        </button>
     </div>
 </div>
-
 
 <div class="the__why__text_box">
    {{-- <h2 class="generic__subtitle">My name is Julian</h2> --}}

@@ -11273,6 +11273,7 @@ textarea.form-control-lg {
 }
 
 .the__get__inspired__text {
+  padding: 1.3rem;
   text-align: center;
 }
 
@@ -11789,6 +11790,14 @@ input[type=submit]:hover {
 .language-button {
   background: none;
   border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.language-selection {
+  display: flex;
 }
 
 .card__button__back {

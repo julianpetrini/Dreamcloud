@@ -46,19 +46,22 @@
 {{-- Selección de idioma --}}
 
 
-
-
-<div class="language-selection">
-    <button class="language-button {{ $selectedLanguage == 'es' ? 'active' : '' }}" onclick="changeLanguage('es')">
-        <img src="/img/flag/spain.png" class="nav_button_flag" alt="Español">
-    </button>
-    <button class="language-button {{ $selectedLanguage == 'en' ? 'active' : '' }}" onclick="changeLanguage('en')">
-        <img src="/img/flag/united_kingdom.png" class="nav_button_flag" alt="English">
-    </button>
-    <button class="language-button {{ $selectedLanguage == 'de' ? 'active' : '' }}" onclick="changeLanguage('de')">
-        <img src="/img/flag/germany.png" class="nav_button_flag" alt="Deutsch">
-    </button>
+<div class="title">
+        <h2 class="nav_bubble_text">The Genie says</h2>
+        <div class="language-selection">
+            <button class="language-button {{ $selectedLanguage == 'es' ? 'active' : '' }}" onclick="changeLanguage('es')">
+                <img src="/img/flag/spain.png" class="nav_button_flag" alt="Español"> Español
+            </button>
+            <button class="language-button {{ $selectedLanguage == 'en' ? 'active' : '' }}" onclick="changeLanguage('en')">
+                <img src="/img/flag/united_kingdom.png" class="nav_button_flag" alt="English"> English
+            </button>
+            <button class="language-button {{ $selectedLanguage == 'de' ? 'active' : '' }}" onclick="changeLanguage('de')">
+                <img src="/img/flag/germany.png" class="nav_button_flag" alt="Deutsch"> Deutsch
+            </button>
+        </div>
 </div>
+
+
 
 
 <div class="genius" >
@@ -86,31 +89,20 @@
 
 </div>
 
+{{-- JavaScript para cambiar el idioma --}}
+<script>
+    var relatedPosts = @json($relatedPosts);
+
+    function changeLanguage(language) {
+        var post = relatedPosts.find(p => p.language === language);
+        if (post) {
+            document.querySelector('.the__get__inspired__text').textContent = post.content;
+            // Aquí también podrías actualizar otras partes del contenido como autor, etc.
+        }
+    }
+</script>
 
 
-{{-- ORIGINAL STYLING --}}
-{{-- <div class="the__why__text_box">
-    <h2 class="generic__subtitle">an old tale</h2>
-    <p class="the_why__text">As every kid, we believe. In possibilities, in magic, in smiles. Later, life goes by.
-        Observing and learning the rules of the structure. How to process information, how to relate, and also how to
-        <img src="{{ asset('img/aladdin_disney.jpg') }}" class="img__responsive" alt="">
-        think and play. Maybe not a conscious process, but as when we were new to computers, we installed a lot of
-        programs without knowing quite much about them. That's life. I think everyone should create their tools to be
-        able to develop themselves. Your way of the process the info into the dreams or goals you aim for. This is a
-
-        <img src="{{ asset('img/aladdin_disney2.jpg') }}" class="img__responsive" alt="">
-        game to play with another way of thinking. Maybe too philosophical or without strong content to the rules world,
-        but don't forget every major development came from some idea most people could comprehend until it was real.
-        This is it. It has more than just a share. It is also to create a database in the cloud full of positive and
-        <img src="{{ asset('img/Aladdin-and-the-Wonderful-Lamp_Edmund-Dulac.png') }}" class="img__responsive"
-            alt="">
-        encouraging intentions, dreams, and so on. Like a pyramid in the middle of the desert that reflects into the
-        galaxy. The cloud.
-        <img src="{{ asset('img/aladdin_disney3.jpg') }}" class="img__responsive" alt="">
-    </p>
-
-
-</div> --}}
 
 
 @include ('layout/footer')

@@ -367,6 +367,8 @@
     }
 }
 
+
+
 .flag_container{
     
     text-align: center;
@@ -570,6 +572,7 @@
 }
 
 .the__get__inspired__text {
+    padding: 1.3rem;
     @extend .the_why__text;
     text-align: center;
 }
@@ -1171,6 +1174,14 @@ input[type="submit"]:hover {
 .language-button{
     background: none;
     border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.language-selection{
+    display: flex;
 }
 
 
