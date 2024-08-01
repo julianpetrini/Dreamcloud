@@ -107,11 +107,7 @@
                 link.click();
 
                 // Actualizar la interfaz para compartir
-                document.getElementById("soon").innerHTML = `
-                    <button onclick="shareOnSocial('whatsapp', '${imgData}')">Share on WhatsApp</button>
-                    <button onclick="shareOnSocial('facebook', '${imgData}')">Share on Facebook</button>
-                    <button onclick="shareOnSocial('instagram', '${imgData}')">Share on Instagram</button>
-                `;
+               
             }).catch(function(error) {
                 console.error('Error capturing screenshot:', error);
             }).finally(function() {
@@ -119,21 +115,7 @@
             });
         }
 
-        function shareOnSocial(platform, imgData) {
-            var url;
-            switch (platform) {
-                case 'whatsapp':
-                    url = `https://api.whatsapp.com/send?text=${encodeURIComponent('Check out this image: ')} ${imgData}`;
-                    break;
-                case 'facebook':
-                    url = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(imgData)}`;
-                    break;
-                case 'instagram':
-                    alert("Instagram sharing is not supported directly via web. Please download the image and share manually.");
-                    return;
-            }
-            window.open(url, '_blank');
-        }
+        
     </script>
 
     <div class="soon__text" id="soon"></div>
