@@ -64,7 +64,7 @@
 
 
 
-<div class="genius" >
+<div class="genius" onclick="genieMessage()">
 
     <img src={{ asset('img/Genie_white.svg') }} alt="genie_flying" class="genie_pic">
 
@@ -75,12 +75,12 @@
     <h1 class="generic__title">cambios</h1>
 </div>--}}  
 
-    <div class="get__inspired__big__text__box">
+    <div class="get__inspired__big__text__box" >
       {{--  <a href="inspired">
         <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"alt="famous quote people"></a>
          <h2 class="generic__subtitle">{{ $post->title }}</h2> 
 --}}<a href="inspired" class="inspired">
-        <div class="get__inspired__text_box ">
+        <div class="get__inspired__text_box" id="get_inspired_text_box">
             <p class="the__get__inspired__text ">{{ $post->content }}</p>
         {{--    <h2 class="generic__subtitle">by {{ $post->author }}</h2>--}}
         </div>
@@ -88,6 +88,13 @@
 
 
 </div>
+
+<a href="why" class="bubble__link bubble__genie__advice" id="genie_advice">
+    Everything flows in life as in this site. <br> You will always find new answers
+    <img class="button_lamp"src="/img/lamp.svg">
+</a>
+
+
 
 {{-- JavaScript para cambiar el idioma --}}
 <script>
@@ -100,6 +107,22 @@
             // Aquí también podrías actualizar otras partes del contenido como autor, etc.
         }
     }
+
+    function genieMessage() {
+        var textBox = document.querySelector('.get__inspired__text_box');
+
+        if (textBox.classList.contains('get__inspired__text__box')) {
+            textBox.classList.remove('get__inspired__text__box');
+            textBox.classList.add('get__inspired__click__text__box');
+        } else {
+            textBox.classList.remove('get__inspired__click__text__box');
+            textBox.classList.add('get__inspired__text__box');
+        }
+
+    }
+
+
+
 </script>
 
 

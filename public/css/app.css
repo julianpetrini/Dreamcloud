@@ -11243,9 +11243,30 @@ textarea.form-control-lg {
 .get__inspired__text_box {
   margin-top: 1rem;
   background-color: rgba(0, 0, 0, 0.934);
-  box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
   border-radius: 6px 44px 10px;
   max-width: 50vw;
+  transition: all 0.5s ease; /* transición suave */
+}
+
+.get__inspired__click__text__box {
+  background-color: #0dcaf0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 6px 44px 10px;
+  border: 3px solid #1ec0ef;
+  padding: 1rem;
+  max-width: 50vw;
+  height: auto;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(13, 202, 240, 0.6); /* sombra inicial más amplia */
+  transition: all 0.5s ease; /* transición suave */
+}
+@keyframes card_shado_move {
+  50% {
+    box-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1215686275), -1px 0 40px 0 #0dcaf0, 40px 40px 40px 0 rgba(13, 202, 240, 0.3); /* sombra animada más amplia */
+  }
 }
 
 .the__why__text_box, .get__inspired__big__text__box {
