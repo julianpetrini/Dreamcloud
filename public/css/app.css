@@ -11798,6 +11798,7 @@ input[type=submit]:hover {
 
 .language-selection {
   display: flex;
+  justify-content: center;
 }
 
 .card__button__back {
