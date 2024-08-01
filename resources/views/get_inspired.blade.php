@@ -43,7 +43,25 @@
     </div>
 </div>
 
-<div class="genius" onclick="genieMessage()">
+{{-- Selección de idioma --}}
+
+
+
+
+<div class="language-selection">
+    <button class="language-button {{ $selectedLanguage == 'es' ? 'active' : '' }}" onclick="changeLanguage('es')">
+        <img src="/img/flag/spain.png" class="nav_button_flag" alt="Español">
+    </button>
+    <button class="language-button {{ $selectedLanguage == 'en' ? 'active' : '' }}" onclick="changeLanguage('en')">
+        <img src="/img/flag/united_kingdom.png" class="nav_button_flag" alt="English">
+    </button>
+    <button class="language-button {{ $selectedLanguage == 'de' ? 'active' : '' }}" onclick="changeLanguage('de')">
+        <img src="/img/flag/germany.png" class="nav_button_flag" alt="Deutsch">
+    </button>
+</div>
+
+
+<div class="genius" >
 
     <img src={{ asset('img/Genie_white.svg') }} alt="genie_flying" class="genie_pic">
 
@@ -53,7 +71,7 @@
 {{--<div class="title">
     <h1 class="generic__title">cambios</h1>
 </div>--}}  
-@foreach ($posts as $post)
+
     <div class="get__inspired__big__text__box">
       {{--  <a href="inspired">
         <img class="img__responsive" src="data:image/jpg;base64,{{ chunk_split(base64_encode($post->postPic)) }}"alt="famous quote people"></a>
@@ -64,7 +82,7 @@
         {{--    <h2 class="generic__subtitle">by {{ $post->author }}</h2>--}}
         </div>
     </a>
-@endforeach
+
 
 </div>
 

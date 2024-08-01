@@ -11786,6 +11786,11 @@ input[type=submit]:hover {
   transform: scale(1.03);
 }
 
+.language-button {
+  background: none;
+  border: none;
+}
+
 .card__button__back {
   background-color: #5adbb5;
   color: #f9fdff;

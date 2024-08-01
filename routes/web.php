@@ -55,4 +55,4 @@ Route::post('/create', [MessageController::class, 'create'])->name('create');
 ///// BLOG CONTROLLER
 
 
-Route::get('/inspired', [BlogController::class, 'showAll']);
+Route::get('/inspired', [BlogController::class, 'showGetInspired'])->name('get_inspired');
