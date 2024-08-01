@@ -11778,6 +11778,7 @@ input[type=submit]:hover {
   margin-right: auto;
   max-width: 300px;
   height: auto;
+  border-radius: 91% 9% 94% 6%/9% 96% 4% 91%;
   transition: transform 0.2s;
   box-shadow: 1px 1px 0 -4px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01), 28px 28px 28px 0 rgba(34, 33, 81, 0.25);
 }

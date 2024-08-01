@@ -39,7 +39,7 @@
 
     <div class="filter__buttons">
         <a href="/dreams" class="card__button__back">back</a>
-        <button class="filter__buttons__ideas" onclick="takeshot()">Download</button>
+        <button class="filter__buttons__ideas" onclick="takeshot()">Create and Download Image</button>
     </div>
 
     <div class="card__container">
@@ -127,6 +127,5 @@
             window.open(url, '_blank');
         }
     </script>
-
-    <div id="soon"></div>
+@include('layout/footer')
 </body>
