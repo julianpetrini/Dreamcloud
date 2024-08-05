@@ -9,7 +9,7 @@ class BlogController extends Controller
 {
     // Método para la vista "get_inspired" que en title diga get
     public function showGetInspired(Request $request) {
-        $language = $request->input('language', 'es');
+        $language = $request->input('language', 'en');
         $post = Blog::where('title', 'get')
                     ->where('language', $language)
                     ->inRandomOrder()
